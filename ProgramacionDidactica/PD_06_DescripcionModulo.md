@@ -4,7 +4,7 @@ Dentro de este Ciclo, la presente programación didáctica hace referencia
 al módulo de *Sistemas Operativos en Red* (SOX).
 
 De las unidades de competencia del *Catálogo Nacional de Cualificaciones Profesionales* incluidas en el título, las unidades de
-competencia asociadas al módulo MME son:
+competencia asociadas al módulo **SOX** son:
 
 * **UC0219_2**: Instalar y configurar el software base en sistemas microinformáticos.
 * **UC0221_2**: Instalar, configurar y mantener paquetes informáticos de propósito general y aplicaciones específicas.
