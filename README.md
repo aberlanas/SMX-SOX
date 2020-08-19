@@ -1,5 +1,10 @@
 # SMX-SOX
+
 Recursos para el Módulo de Sistsemas Operativos en Red del Ciclo de Grado Medio de Sistemas Microinformáticos y Redes
+
+## Makefile
+
+	Debido a la gran cantidad de unidades y utilidades que se presentan en este repositorio, se ha creado un pequeño Makefile para la ayuda a la generación de los diferentes recursos en PDF, HTML, etc desde Markdown y OrgMode.
 
 ## Construyendo con Pandoc
 
@@ -7,6 +12,6 @@ Debido a la gran cantidad opciones y parámetros que se van utilizando en los di
 
 * pandoc
 * texlive-extra-utils
-* texlive-lang-spanish
+* texlive-lang-spanish 
 * texlive-latex-extra
 

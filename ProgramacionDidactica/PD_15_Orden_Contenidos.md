@@ -36,136 +36,61 @@ se presentan y estos contenidos.
 
 ## Contenidos del currículo
 
-*C1 : Identificación de los bloques funcionales de un sistema microinformático*
-
-* Principales funciones de cada bloque.
-* Localización de los bloques funcionales en un ordenador de sobremesa, portátil, PDA, móvil, entre otros.
-* Microprocesadores, buses, y periféricos internos.
-* Tipos de memoria. Características y funciones de cada tipo.
-* Localización de los distintos tipos de memoria de un ordenador de sobremesa, portátil, PDA, móvil, entre otros.
-* Tarjetas controladoras y específicas.
-* Software base y de aplicación.
- 
----
-
-*C2 : Funcionalidad de los componentes de las placas base*
-
-* Características de los microprocesadores.
-* Control de temperaturas en un sistema microinformático.
-* El chipset de la placa base.
-* Dispositivos integrados en placa.
-* La memoria en una placa base.
-* El programa de configuración de la placa base.
-* Bus Externo.
-* Conectores E/S.
-* Formatos de placa base.
-* La BIOS.
-
----
-
-*C3 : Análisis del mercado de componentes de equipos microinformáticos*
-
-* El chasis.
-* La memoria RAM.
-* Discos fijos y controladoras de disco.
-* Soportes de memoria auxiliar y unidades de lectura/grabación.
-* El adaptador gráfico y el monitor de un equipo microinformático.
-* Conectividad LAN y WAN de un sistema microinformático.
-* Componentes OEM y componentes «retail».
-* Controladores de dispositivos.
-* Otros componentes: IEEE 1394, WiFi 802.11a/b/g/n, SATA,etc.
-
----
-
-*C4 : Ensamblado de equipos microinformáticos*
-
-* Secuencia de montaje de un ordenador.
-* Herramientas y útiles.
-* Precauciones y advertencias de seguridad.
-* Instalación de la placa base en el chasis
-* Ensamblado del procesador.
-* Refrigerado del procesador.
-* Fijación de los módulos de memoria RAM.
-* Fijación y conexión de las unidades de disco Fijo.
-* Fijación y conexión de las unidades de lectura/grabación en soportes de memoria auxiliar.
-* Fijación y conexión del resto de adaptadores y componentes.
-* Utilidades de chequeo y diagnóstico.
-
----
-
-*C5 : Medición de parámetros eléctricos*
-
-* Tipos de señales.
-* Valores tipo.
-* Bloques de una fuente de alimentación.
-* Sistemas de alimentación interrumpida.
-
----
-
-*C6 : Mantenimiento de equipos microinformáticos*
-
-* Técnicas de mantenimiento preventivo.
-* Detección de averías en un equipo microinformático.
-* Señales de aviso, luminosas y acústicas.
-* Fallos comunes.
-* Ampliaciones de hardware.
-* Incompatibilidades.
-
----
-
-*C7 : Instalación de Software*
-
-* Opciones de arranque de un equipo.
-* Arranque de un equipo desde soportes auxiliares.
-* Utilidades para la creación de imágenes de partición/disco.
-* Comprobación y restauración de imágenes.
-* Aplicaciones de nuevas tendencias en equipos informáticos.
-
----
-
-*C8 : Protección y seguridad de los datos*
-
-* Sistemas de protección de datos RAID.
-* Sistemas de almacenamiento SCSI, SATA, SATA2, SAS, etc.
-* Software de copias de seguridad y restauración.
-* Software de recuperación de datos.
-
----
-
-*C9 : Tendencias en el mercado informático*
-
-* Empleo de barebones para el montaje de equipos.
-* El ordenador multimedia de salón: HTPC.
-* Equipos con demandas específicas: Estaciones edición de vídeo y CAD-CAM.
-* Informática móvil.
-* Móviles.
-* Sistemas de posicionamiento y navegación.
-* PDA.
-* Blackberry.
-* Modding.
-
----
-
-*C10 : Operación con periféricos*
-
-* Técnicas de mantenimiento preventivo.
-* Impresoras.
-* Periféricos de entrada.
-* Periféricos Multimedia.
-* Videoproyectores. Fijación y Conexión.
-* Sistemas de Audio.
-* Periféricos para la adquisición de imágenes fijas y en movimiento.
-* Periféricos para la impresión profesional.
-
----
-
-*C11 : Cumplimiento de las normas de prevención de riesgos laborales y protección ambiental*
-
-* Identificación de riesgos.
-* Determinación de las medidas de prevención de riesgos laborales.
-* Prevención de riesgos laborales en los procesos de montaje y mantenimiento.
-* Equipos de protección individual.
-* Cumplimiento de la normativa de prevención de riesgos laborales.
-* Cumplimiento de la normativa de protección ambiental.
-
----
+Instalación de sistemas operativos en red:
+– Comprobación de los requisitos técnicos.
+– Preparación de la instalación. Particiones y sistema de archi-
+vos.
+– Componentes.
+– Métodos y automatización de la instalación.
+– Personalización del entorno de usuario.
+– Actualización del sistema operativo en red.
+– Elaboración de la documentación sobre la instalación y las
+incidencias surgidas en el proceso.
+– Instalación de sistemas operativos en red en máquinas vir-
+tuales.
+Gestión de usuarios y grupos:
+– Cuenta de usuario y grupo.
+– Tipos de perfiles de usuario. Perfiles móviles.
+– Gestión de grupos. Tipos y ámbitos. Propiedades. Estrate-
+gias de utilización.
+– Usuarios y grupos predeterminados y especiales del sistema.
+– Cuentas de usuario. Plantillas.
+– Cuentas de sistema.
+Gestión de dominios:
+– Servicio de directorio y dominio.
+– Elementos del servicio de directorio.
+– Funciones del dominio.
+– Instalación de un servicio de directorio. Configuración bási-
+ca.
+– Creación de dominios.
+– Objetos que administra un dominio: usuarios globales, gru-
+pos, equipos entre otros.
+– Creación de relaciones de confianza entre dominios.
+– Creación de agrupaciones de elementos: nomenclatura.
+– Utilización de herramientas de administración de dominios.
+– Delegación de la administración.
+Gestión de los recursos compartidos en red:
+– Permisos y derechos.
+– Compartir archivos y directorios a través de la red.
+– Configuración de permisos de recurso compartido.
+– Configuración de impresoras compartidas en red.
+– Seguridad en el acceso a los recursos compartidos.
+– Utilización en redes homogéneas.
+Monitorización y uso del sistema operativo en red:
+– Arranque del sistema operativo en red.
+– Descripción de los fallos producidos en el arranque: posibles
+soluciones.
+– Utilización de herramientas para el control y seguimiento
+del rendimiento del sistema operativo en red.
+– Gestión de discos. Cuotas.
+– Gestión de los procesos relativos a los servicios del sistema
+operativo en red.
+– Automatización de las tareas del sistema.
+Integración de sistemas operativos en red libres y propietarios:
+– Descripción de escenarios heterogéneos.
+– Instalación, configuración y uso de servicios de red para
+compartir recursos.
+– Configuración de recursos compartidos en red.
+– Seguridad de los recursos compartidos en red.
+– Terminales gráficos para acceso remoto.
+– Utilización en redes heterogéneas.
