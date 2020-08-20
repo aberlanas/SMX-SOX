@@ -14,19 +14,14 @@ fomentando de esta manera su aprendizaje.
 
 ## Listado de Unidades
 
-* Unidad 01 : Introducción y Sistema Binario.
-* Unidad 02 : Protección ambiental y herramientas.
-* Unidad 03 : Componentes básicos.
-* Unidad 04 : Placa base.
-* Unidad 05 : Microprocesadores.
-* Unidad 06 : Memoria.
-* Unidad 07 : Almacenamiento Externo.
-* Unidad 08 : Tarjetas.
-* Unidad 09 : Ensamblaje de un ordenador.
-* Unidad 10 : Periféricos.
-* Unidad 11 : Nuevas tendencias.
-* Unidad 12 : Mantenimiento.
-* Unidad 13 : Técnicas y herramientas de diagnóstico.
-* Unidad 14 : Particiones y Arranque.
-* Unidad 15 : Utilidades de mantenimiento y Backups.
+* Unidad 01 : Introducción y Virtualización.
+* Unidad 02 : PowerShell y BASH.
+* Unidad 03 : Usuarios, Grupos y Permisos.
+* Unidad 04 : Sistemas de Ficheros.
+* Unidad 05 : Software y Actualizaciones.
+* Unidad 06 : Administración del dominio.
+* Unidad 07 : Acceso al Dominio.
+* Unidad 08 : Recursos compartidos.
+* Unidad 09 : Rendimiento y Auditorias.
+
 

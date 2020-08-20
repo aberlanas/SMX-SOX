@@ -9,10 +9,12 @@ clean:
 	@echo " * Clean workspace "
 
 files:
+	@echo " [ Step : files ]"
 	@echo " * Creating folder [ PDFS ]"
-	mkdir -p PDFS
+	@mkdir -p PDFS
 
 prog-didactica: files
+	@echo " [ Step : prog-didactica ]"
 	@echo " * [ PDF ] : Programacion Didactica ..."
 	@pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ProgramacionDidactica_SOX.pdf ProgramacionDidactica/PD_*.md 
 	@echo " * [ PDF Result ] : $(PDF_PATH)/ProgramacionDidactica_SOX.pdf"
