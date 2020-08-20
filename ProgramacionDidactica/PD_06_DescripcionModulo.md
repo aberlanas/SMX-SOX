@@ -1,3 +1,4 @@
+\newpage
 # Descripción del Módulo
 
 Dentro de este Ciclo, la presente programación didáctica hace referencia

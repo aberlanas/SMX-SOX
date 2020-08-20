@@ -1,3 +1,4 @@
+\newpage
 # Contextualización del centro
 
 La ciudad es de nivel socio-económico medio, y existen empresas en las

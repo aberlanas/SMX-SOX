@@ -1,3 +1,4 @@
+\newpage
 # Descripción del Ciclo
 
 Este ciclo formativo (SMX) está dividido en 11 módulos profesionales

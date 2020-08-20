@@ -34,63 +34,77 @@ bloques temáticos. A la hora de desarrollar esta programación didáctica se ha
 numerado para poder establecer una relación entre las unidades didácticas que
 se presentan y estos contenidos.
 
+\newpage
 ## Contenidos del currículo
 
-Instalación de sistemas operativos en red:
-– Comprobación de los requisitos técnicos.
-– Preparación de la instalación. Particiones y sistema de archi-
-vos.
-– Componentes.
-– Métodos y automatización de la instalación.
-– Personalización del entorno de usuario.
-– Actualización del sistema operativo en red.
-– Elaboración de la documentación sobre la instalación y las
-incidencias surgidas en el proceso.
-– Instalación de sistemas operativos en red en máquinas vir-
-tuales.
-Gestión de usuarios y grupos:
-– Cuenta de usuario y grupo.
-– Tipos de perfiles de usuario. Perfiles móviles.
-– Gestión de grupos. Tipos y ámbitos. Propiedades. Estrate-
-gias de utilización.
-– Usuarios y grupos predeterminados y especiales del sistema.
-– Cuentas de usuario. Plantillas.
-– Cuentas de sistema.
-Gestión de dominios:
-– Servicio de directorio y dominio.
-– Elementos del servicio de directorio.
-– Funciones del dominio.
-– Instalación de un servicio de directorio. Configuración bási-
-ca.
-– Creación de dominios.
-– Objetos que administra un dominio: usuarios globales, gru-
-pos, equipos entre otros.
-– Creación de relaciones de confianza entre dominios.
-– Creación de agrupaciones de elementos: nomenclatura.
-– Utilización de herramientas de administración de dominios.
-– Delegación de la administración.
-Gestión de los recursos compartidos en red:
-– Permisos y derechos.
-– Compartir archivos y directorios a través de la red.
-– Configuración de permisos de recurso compartido.
-– Configuración de impresoras compartidas en red.
-– Seguridad en el acceso a los recursos compartidos.
-– Utilización en redes homogéneas.
-Monitorización y uso del sistema operativo en red:
-– Arranque del sistema operativo en red.
-– Descripción de los fallos producidos en el arranque: posibles
-soluciones.
-– Utilización de herramientas para el control y seguimiento
-del rendimiento del sistema operativo en red.
-– Gestión de discos. Cuotas.
-– Gestión de los procesos relativos a los servicios del sistema
-operativo en red.
-– Automatización de las tareas del sistema.
-Integración de sistemas operativos en red libres y propietarios:
-– Descripción de escenarios heterogéneos.
-– Instalación, configuración y uso de servicios de red para
-compartir recursos.
-– Configuración de recursos compartidos en red.
-– Seguridad de los recursos compartidos en red.
-– Terminales gráficos para acceso remoto.
-– Utilización en redes heterogéneas.
+| **Instalación de sistemas operativos en red** |
+|-----------------------------------------------|
+| Comprobación de los requisitos técnicos. |
+| Preparación de la instalación. Particiones y sistema de archivos.|
+|Componentes.|
+|Métodos y automatización de la instalación. |
+| Personalización del entorno de usuario. |
+| Actualización del sistema operativo en red. |
+| Elaboración de la documentación sobre la instalación y las incidencias surgidas en el proceso.|
+| Instalación de sistemas operativos en red en máquinas virtuales.|
+
+----
+
+| **Gestión de usuarios y grupos**                                             |
+|------------------------------------------------------------------------------|
+| Cuenta de usuario y grupo.                                                   |
+| Tipos de perfiles de usuario. Perfiles móviles.                              |
+| Gestión de grupos. Tipos y ámbitos. Propiedades. Estrategias de utilización. |
+| Usuarios y grupos predeterminados y especiales del sistema.                  |
+| Cuentas de usuario. Plantillas.                                              |
+| Cuentas de sistema.                                                          |
+
+----
+
+| **Gestión de dominios**|
+|----------------------------|
+| Servicio de directorio y dominio.|
+| Elementos del servicio de directorio.|
+| Funciones del dominio.|
+| Instalación de un servicio de directorio. Configuración básica.|
+| Creación de dominios.|
+| Objetos que administra un dominio: usuarios globales, grupos, equipos entre otros.|
+| Creación de relaciones de confianza entre dominios.|
+| Creación de agrupaciones de elementos: nomenclatura.|
+| Utilización de herramientas de administración de dominios.|
+| Delegación de la administración.|
+
+---
+
+| **Gestión de los recursos compartidos en red**|
+|-------------------------------------------|
+| Permisos y derechos.|
+| Compartir archivos y directorios a través de la red.|
+| Configuración de permisos de recurso compartido.|
+| Configuración de impresoras compartidas en red.|
+| Seguridad en el acceso a los recursos compartidos.|
+| Utilización en redes homogéneas.|
+
+---
+
+|**Monitorización y uso del sistema operativo en red**|
+|------------------------------------------------|
+| Arranque del sistema operativo en red.|
+| Descripción de los fallos producidos en el arranque: posibles soluciones.|
+| Utilización de herramientas para el control y seguimiento del rendimiento del sistema operativo en red.|
+| Gestión de discos. Cuotas.|
+|Gestión de los procesos relativos a los servicios del sistema operativo en red.|
+|Automatización de las tareas del sistema.|
+
+---
+
+|**Integración de sistemas operativos en red libres y propietarios**|
+|---------------------------------------------------------------|
+| Descripción de escenarios heterogéneos.|
+| Instalación, configuración y uso de servicios de red para compartir recursos.|
+| Configuración de recursos compartidos en red.|
+| Seguridad de los recursos compartidos en red.|
+| Terminales gráficos para acceso remoto.|
+| Utilización en redes heterogéneas.|
+
+---
