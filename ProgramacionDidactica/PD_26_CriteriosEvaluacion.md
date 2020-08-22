@@ -1,5 +1,4 @@
 \newpage
-
 # Criterios de evaluación
 
 Un criterio de evaluación es la pauta o norma mediante la cual se lleva a

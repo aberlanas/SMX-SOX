@@ -1,5 +1,4 @@
 \newpage 
-
 # Unidad 06 : Administración del Dominio
 
 ## Temporalización

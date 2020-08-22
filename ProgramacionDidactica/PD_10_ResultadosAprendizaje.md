@@ -1,6 +1,4 @@
-
 \newpage
-
 # Resultados de aprendizaje y criterios de evaluación
 
 Los resultados de aprendizaje son el conjunto de saberes que el alumnado ha de construir y organizar en sus esquemas de conocimiento, las
