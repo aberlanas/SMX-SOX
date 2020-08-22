@@ -9,6 +9,7 @@ criterios de evaluación estos están relacionados con los mismos.
 
 Los resultados de aprendizaje ligados a este módulo están especificados en el BOE, y son los siguientes,
 
+\newpage
 ## Resultado 01
 
 Instala sistemas operativos en red describiendo sus características e interpretando la documentación técnica.
@@ -26,6 +27,8 @@ Instala sistemas operativos en red describiendo sus características e interpret
 | 01.g          | Se han aplicado preferencias en la configuración  del entorno personal. |
 | 01.h          | Se ha actualizado el sistema operativo en red.                          |
 | 01.i          | Se ha comprobado la conectividad del servidor con los equipos cliente.  |
+
+---
 
 ## Resultado 02 
 
@@ -45,6 +48,8 @@ herramientas del sistema.
 | 02.h         | Se han planificado perfiles móviles de usuarios                                                                     |
 | 02.i         | Se han utilizado herramientas para la administración de usuarios y grupos, incluidas en el sistema operativo en red |
 
+---
+
 ## Resultado 03
 
 Realiza tareas de gestión sobre dominios identificando necesidades y aplicando herramientas de de administración de dominios.
@@ -62,6 +67,8 @@ Realiza tareas de gestión sobre dominios identificando necesidades y aplicando 
 | 03.g         | Se ha analizado la estructura del servicio de directorio.                               |
 | 03.h         | Se han utilizado herramientas de administración de dominios.                            |
 
+---
+
 ## Resultado 04
 
 Gestiona los recursos compartidos del sistema, interpretando especificacionesy determinando niveles de seguridad.
@@ -78,6 +85,8 @@ Gestiona los recursos compartidos del sistema, interpretando especificacionesy d
 | 04.f         | Se han establecido niveles de seguridad para controlar el acceso del cliente a los recursos compartidos en red. |
 | 04.g         | Se ha trabajdo en grupo para comprobar el acceso a los recursos compartidos del sistema.                        |
 
+---
+
 ## Resultado 05
 
 Realiza tareas de monitorización y uso del sistema operativo en red, describiendo las herramientas utilizadas e identificando las principales incidencias.
@@ -92,6 +101,8 @@ Realiza tareas de monitorización y uso del sistema operativo en red, describien
 | 05.d         | Se han realizado tareas de mantenimiento del software instalado en el sistema.                                      |
 | 05.e         | Se han ejecutado operaciones para la automatización de tareas del sistema.                                          |
 | 05.f         | Se ha interpretado la información de configuración del sistema operativo en red.                                    |
+
+---
 
 ## Resultado 06 
 
@@ -109,6 +120,4 @@ Realiza tareas de integración de sistemas operativos libres y propietarios, des
 | 06.f         | Se ha trabajado en grupo.                                                                                       |
 | 06.h         | Se han establecido niveles de seguridad para controlar el acceso del usuario a los recursos compartidos en red. |
 | 06.i         | Se ha comprobado el funcionamiento de los servicios instalados.                                                 |
-
-
-
+---

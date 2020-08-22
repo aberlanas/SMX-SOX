@@ -1,114 +1,103 @@
 \newpage
-# Resultados de aprendizaje y criterios de evaluación
+# Docencia en Inglés
 
-Los resultados de aprendizaje son el conjunto de saberes que el alumnado ha de construir y organizar en sus esquemas de conocimiento, las
-habilidades cognitivas y destrezas motrices que deberán ser desplegadas en sus actuaciones, así como las actitudes que es necesario ir inculcando y
-desarrollando en el alumnado. Estos saberes, aplicados en un entorno laboral, se convertirán en competencias laborales.
-De acuerdo con la normativa vigente, los objetivos específicos están expresados en términos de resultados de aprendizaje. En el apartado de los
-criterios de evaluación estos están relacionados con los mismos.
+Dentro de lo establecido en la legislación que rige el ordenamiento del módulo se establece que los contenidos del módulo **Inglés Técnico II-M** pueden ser impartidos por profesorado que tenga la *Capacitación en lenguas extranjeras: inglés*, incluyendo en el horario de un módulo la carga lectiva que le pertence al módulo de Inglés. 
 
-Los resultados de aprendizaje ligados a este módulo están especificados en el BOE, y son los siguientes,
+A lo largo de todo el curso se introducirán contenidos en Inglés, en forma de manuales, hojas de referencia, descripciones de configuración, etc. Acercando al alumnado al uso real de la lengua inglesa en el mundo de la informática, donde es la lengua dominante.
 
+La capacidad del alumnado de leer e interpretar documentación técnica, así como la consulta en páginas web de referencia para la solución de incidencias o puesta en marcha de servicios es totalmente imprescindible en el mundo de las TIC y esta documentación se encuentra siempre en inglés.
+
+Se describen aquí los *Resultados de Aprendizaje* asociados al módulo de  **Inglés Técnico II-M**, que se tendrán en cuenta para la creación y diseño de las actividades que tendrán lugar a lo largo del curso, de tal manera que el alumnado pueda contar con estos conocimientos adquiridos en el momento de finalizar el módulo y el ciclo. 
+
+También se describen los diferentes criterios de evaluación que se verán implicados en el proceso de enseñanza-aprendizaje.
+
+\newpage
 ## Resultado 01
 
-Instala sistemas operativos en red describiendo sus características e interpretando la documentación técnica.
+Produce mensajes orales sencillos en lengua inglesa, en situaciones habituales del ámbito social y profesional de la empresa reconociendo y aplicando las normas propias de la lengua inglesa.
 
 ### Criterios de evaluación
 
 | Identificador | Criterio                                                                |
 | -:            | -----------                                                             |
-| 01.a          | Se ha realizado el estudio de compatibilidad del sistema informático.   |
-| 01.b          | Se han diferenciado los modos de instalación.                           |
-| 01.c          | Se ha planificado y realizado el particionado del disco del servidor.   |
-| 01.d          | Se han seleccionado y aplicado los sistemas de archivos                 |
-| 01.e          | Se han seleccionado los componentes a instalar.                         |
-| 01.f          | Se han aplicado procedimientos para la automatización de instalaciones. |
-| 01.g          | Se han aplicado preferencias en la configuración  del entorno personal. |
-| 01.h          | Se ha actualizado el sistema operativo en red.                          |
-| 01.i          | Se ha comprobado la conectividad del servidor con los equipos cliente.  |
+| 01.a          | Se han identificado mensajes de saludos, presentación y despedida, con el protocolo y las pautas de cortesía asociadas.   |
+| 01.b          | Se han utilizado con fluidez mensajes propuestos en la gestión de citas.|
+| 01.c          | Se ha transmitido mensajes relativos a justificación de retrasos, ausencias o cualquier otra eventualidad.   |
+| 01.d          | Se han empleado con suficiente fluidez las expresiones habituales para el requerimiento de la identificación de los interlocutores.                 |
+| 01.e          | Se han identificado mensajes sencillos relacionados con el sector.    |
 
-## Resultado 02 
+---
 
-Gestiona usuarios y grupos de sistemas operativos en red, interpretando especificaciones y aplicando
-herramientas del sistema.
+## Resultado 02
+
+Mantiene conversaciones en lengua inglesa, sencillas y rutinarias del sector interpretando la información de partida.
 
 ### Criterios de evaluación:
 | Identificado | Criterio                                                                                                            |
 | -:           | --------                                                                                                            |
-| 02.a         | Se han configurado y gestionado cuentas de usuario                                                                  |
-| 02.b         | Se han configurado y gestinado perfiles de usuario                                                                  |
-| 02.c         | Se han configurado y gestionado cuentas de equipo                                                                   |
-| 02.d         | Se han distinguido el propósito de los grupos, sus tipos y ámbitos                                                  |
-| 02.e         | Se han configurado y gestionado grupos                                                                              |
-| 02.f         | Se ha gestionado la pertenencia de usarios a grupos.                                                                |
-| 02.g         | Se han identificado las características de usuarios y grupos predeterminados y especiales                           |
-| 02.h         | Se han planificado perfiles móviles de usuarios                                                                     |
-| 02.i         | Se han utilizado herramientas para la administración de usuarios y grupos, incluidas en el sistema operativo en red |
+| 02.a         | Se ha utilizado un vocabulario técnico básico adecuado al contexto de la situación.                                 |
+| 02.b         | Se han utilizado los mensajes adecuados de saludos, presentación, identificación y otros, con las pautas de cortesía asociadas dentro del contexto de la conversación. |
+| 02.c         | Se han atendido consultas directas telefónicamente con supuestos clientes y proveedores. |
+| 02.d         | Se ha identificado la información facilitada y requerimientos realizados por el interlocutor. |
+| 02.e         | Se han formulado las preguntas necesarias para favorecer y confirmar la recepción correcta del mensaje. |
+| 02.f         | Se han proporcionado las respuestas correctas a los requerimientos e instrucciones recibidos. |
+| 02.g         | Se han realizado las anotaciones oportunas en inglés en caso de ser necesario.|
+| 02.h         | Se han utilizado las fórmulas comunicativas básicas más usuales utilizadas en el sector. |
+| 02.i         | Se han comprendido sin dificultad los puntos principales de la información. |
+
+---
 
 ## Resultado 03
 
-Realiza tareas de gestión sobre dominios identificando necesidades y aplicando herramientas de de administración de dominios.
+Cumplimenta documentos rutinarios de carácter técnico en inglés, reconociendo y aplicando las normas propias de la lengua inglesa.
 
 ### Criterios de evaluación
 
 | Identificado | Criterio                                                                                |
 | -:           | --------                                                                                |
-| 03.a         | Se ha identificado la función del servicio de directorio, sus elementos y nomenclatura  |
-| 03.b         | Se ha reconocido el concepto de dominio y sus funciones                                 |
-| 03.c         | Se han establecido relaciones de confianza entre dominios.                              |
-| 03.d         | Se ha realizado la instalación del servicio de directorio.                              |
-| 03.e         | Se ha realizado la configuración básica del servicio de directorio.                     |
-| 03.f         | Se han utilizado agrupaciones de eleemntos para la creación de modelos administrativos. |
-| 03.g         | Se ha analizado la estructura del servicio de directorio.                               |
-| 03.h         | Se han utilizado herramientas de administración de dominios.                            |
+| 03.a         | Se ha identificado un vocabulario básico de uso general la documentación propia del sector. |
+| 03.b         | Se ha identificado las características básicas y datos clave del documento. |
+| 03.c         | Se ha analizado el contenido y finalidad de distintos documentos tipo de otros paises en inglés. |
+| 03.d         | se han cumplimentado documentos profesionales relacionados con el sector. |
+| 03.e         | Se han redactado cartas de agradecimiento a proveedores y clientes en inglés. |
+| 03.f         | Se han cumplimentado documentos de incidencias y reclamaciones. |
+| 03.g         | Se ha recepcionado y remitido e-mails y faxes en inglés con las expresiones correctas de cortesía, saludo y despedida. |
+| 03.h         | Se han utilizado las herramientas informáticas en la redacción y cumplimentación de los documentos. |
+
+---
 
 ## Resultado 04
 
-Gestiona los recursos compartidos del sistema, interpretando especificacionesy determinando niveles de seguridad.
+Redacta documentos sencillos de carácter administrativo laboral reconociendo y aplicando las normas propias de la lengua inglesa y del sector.
 
 ### Criterios de evaluación
 
 | Identificado | Criterio                                                                                                        |
 | -:           | --------                                                                                                        |
-| 04.a         | Se ha reconocido la diferencia entre permiso y derecho.                                                         |
-| 04.b         | Se han identificado los recursos del sistema que se van a compartir y en qué condiciones                        |
-| 04.c         | Se han asignado permisos a los recursos del sistema que se van a compartir.                                     |
-| 04.d         | Se han compartido impresoras en red.                                                                            |
-| 04.e         | Se ha utilizado el entorno gráfico para compartir recursos.                                                     |
-| 04.f         | Se han establecido niveles de seguridad para controlar el acceso del cliente a los recursos compartidos en red. |
-| 04.g         | Se ha trabajdo en grupo para comprobar el acceso a los recursos compartidos del sistema.                        |
+| 04.a         | Se ha identificado un vocabulario básico de uso general en la documentación propia del ámbito laboral.|
+| 04.b         | Se ha elaborado un *Currículum Vitae* siguiendo el modelo europeo (europass) u otros propios de los países de habla inglesa.|
+| 04.c         | Se han identificado bolsas de empleo en inglés accesibles por medios tradicionales y utilizando las nuevas tecnologías.|
+| 04.d         | Se ha redactado la carta de presentación para una oferta de empleo.|
+| 04.e         | Se han descrito las habilidades personales más adecuadas a la solicitud de una oferta de empleo.|
+| 04.f         | Se ha insertado un Currículum Vitae en una bolsa de empleo en inglés.|
+| 04.g         | Se han redactado cartas de citación, rechazo y selección para un proceso de selección en la empresa.|
+| 04.h         | Se ha desarrollado una actitud de respeto hacía las distintas formas de estructurar el entorno laboral.  |
+| 04.i         | Se ha valorado la lengua inglesa como medio de relación y entendimiento en el contexto laboral. |
+
+---
 
 ## Resultado 05
 
-Realiza tareas de monitorización y uso del sistema operativo en red, describiendo las herramientas utilizadas e identificando las principales incidencias.
+Interpreta textos, documentos, conversaciones, grabaciones u otros en lengua inglesa relacionados con la cultura general de
+negocio y empresa utilizando las herramientas de apoyo más adecuadas.
 
 ### Criterios de evaluación
 
 | Identificado | Criterio                                                                                                            |
 | -:           | --------                                                                                                            |
-| 05.a         | Se han descrito las características de los programas de monitorización.                                             |
-| 05.b         | Se han idetificando problemas de rendimiento en los dispositivos de almacenamiento.                                 |
-| 05.c         | Se han observado la actividad del sistema  operativo en red a partir de las trazas generadas por el propio sistema. |
-| 05.d         | Se han realizado tareas de mantenimiento del software instalado en el sistema.                                      |
-| 05.e         | Se han ejecutado operaciones para la automatización de tareas del sistema.                                          |
-| 05.f         | Se ha interpretado la información de configuración del sistema operativo en red.                                    |
+| 05.a         | Se ha interpretado información básica sobre la empresa, el producto y el servicio. |
+| 05.b         | Se han interpretados estadísticas y gráficos en inglés sobre el ámbito profesional. |
+| 05.c         | Se han aplicado los conocimientos de la lengua inglesa a las nuevas Tecnologías de la Comunicación y de la Información. |
+| 05.d         | Se ha valorado la dimensión de la lengua inglesa como medio de comunicación base en la relación empresarial, tanto europea como mundial. |
 
-## Resultado 06 
-
-Realiza tareas de integración de sistemas operativos libres y propietarios, describiendo las ventajas de compartir recursos e instalando software específico.
-
-### Criterios de evaluación
-
-| Identificado | Criterio                                                                                                        |
-| -:           | --------                                                                                                        |
-| 06.a         | Se ha identificado la necesidad de compartir recursos en red entre diferentes sistemas operativos.              |
-| 06.b         | Se ha comprobado la conectividad de la red en un escenario heterogéneo.                                         |
-| 06.c         | Se ha descrito la funcionalidad de los servicios que permiten compartir recursos en red.                        |
-| 06.d         | Se han instalado y configurado servicios para compartir recursos en red.                                        |
-| 06.e         | Se ha accedido a sistemas de archivos en red desde equipos con diferentes sistemas operativos.                  |
-| 06.f         | Se ha trabajado en grupo.                                                                                       |
-| 06.h         | Se han establecido niveles de seguridad para controlar el acceso del usuario a los recursos compartidos en red. |
-| 06.i         | Se ha comprobado el funcionamiento de los servicios instalados.                                                 |
-
-
-
+---

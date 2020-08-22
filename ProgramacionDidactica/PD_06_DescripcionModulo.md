@@ -12,7 +12,6 @@ competencia asociadas al módulo **SOX** son:
 * **UC0958_2**: Ejecutar procedimientos de administración y mantenimiento en el software base y de aplicación del cliente.
 * **UC0959_2** : Mantener la seguridad de los subsistemas físicos y lógicos en sistemas informáticos.
 
-## TODO
 La formación del módulo contribuye a alcanzar los
 objetivos generales a), c), d), f), g), h), i), j), k), l), m) y ñ)
 del ciclo formativo, y las competencias a), c), e), f), h), l),
