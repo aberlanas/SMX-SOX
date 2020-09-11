@@ -1,0 +1,87 @@
+#+Title: Unidad 01 - Introducción y Virtualización
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX}
+#+LATEX_HEADER: \fancyhead[L]{Unidad 01: Infraestructura]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+
+* Infraestructura
+
+Vamos a comenzar repasando los conceptos que vimos a lo largo del año pasado de configuración
+e instalación de máquinas virtuales.
+
+Para la realización de las prácticas de este módulo, y del módulo de SER (/Servicios en Red/),
+utilizaremos 4 Máquinas Virtuales (cómo /mínimo/).
+
+- Windows 10 - *Client*
+- Windows 2019 - *Server*
+- Xubuntu 20.04 - *Client*
+- Ubuntu Server 20.04 - *Server*
+
+A lo largo del curso estas máquinas irán comunicándose entre ellas, y las configuraremos en redes
+diferentes, en estructuras diferentes, etc.
+
+Adjunto tabla resumen de las caracterísiticas de las máquinas.
+
+#+ATTR_LaTeX: :align |r|c|c|c|c|
+| Máquina        | S.O                 | Tarjetas de red | Disco Duro | Usuario Admin |
+|----------------+---------------------+-----------------+------------+---------------|
+| Win10-Client   | Windows 10          |               1 | 50GB       | Win4dm1n      |
+| Windows-Server | Windows 2019        |               2 | 50GB       | Win4dm1n      |
+| Xubuntu-Client | Xubuntu 20.04       |               1 | 10GB       | Lin4dm1n      |
+| Ubuntu-Server  | Ubuntu-Server 20.04 |               2 | 14GB       | Lin4dm1n      |
+
+Todas las máquinas configurar con el parámetro de : =Usar Caché de E/S del Anfitrión=.
+
+Por ahora, poner todas las máquinas con las tarjetas de red en *Adaptador Puente*, de tal 
+manera que puedan ser accedidas desde cualquier ordenador de la red.
+
+** Tarea 01 : MiniPing.sh
+
+Realizar un /script/ en Bash que utilizando variables (por ahora definidas en el propio 
+fichero), compruebe mediante el comando ping (/por ejemplo/), si las máquinas instaladas
+están accesibles.
+
+
+#+BEGIN_SRC bash
+#!/bin/bash
+
+# Las Ips estan a modo de ejemplo.
+LIN_SRV_IP="192.168.4.254"
+LIN_CLIENT_IP="192.168.4.1"
+WIN_SRV_IP="127.0.0.1"
+WIN_CLIENT_IP="192.168.4.2"
+
+# Comprobar para cada uno de ellos la conectividad, mostrando 
+# un mensaje de error en caso de que no haya sido posible 
+# realizar una conexion con el (ping).
+
+# DO STUFF HERE
+
+exit 0
+
+#+END_SRC
+
+Indicadle al profesor que habéis terminado para que pueda revisarlo.
+
+Se valorará:
+
++ Qué funcione.
++ Qué esté documentado.
++ Qué la información esté presentada correctamente.
++ Posibles mejoras.
+
+** Tarea 02 : MiniPingPowerShell.ps1
+
+Intentad realizar el mismo script pero en otro lenguaje de =Shell=: /PowerShell/ el de Windows.
+
+
