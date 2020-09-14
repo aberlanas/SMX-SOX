@@ -63,6 +63,32 @@ manera que puedan ser accedidas desde cualquier ordenador de la red.
    Si para /estar más cómodos/ realizamos este tipo de acciones, no estamos siendo 
    especialmente /profesionales/.
 
+
+\newpage
+
+
+    #+BEGIN_SRC ditaa :file infraetructura.png
+
+               +---------+       +---------+
+               |         |       |         |
+               | Windows |------>| Windows |
+               | Server  |       |  10     |
+               | 2019    |       |         | 
+               +---------+       +---------+
+
+
+              +---------+       +---------+
+              |         |       |         |
+              | Ubuntu  |------>| Xubuntu |
+              | Server  |       |  20.04  |
+              | 20.04   |       |         | 
+              +---------+       +---------+
+
+
+    #+END_SRC
+
+
+
 * Tarea 01 : MiniPing.sh
 
 Realizar un /script/ en Bash que utilizando variables (por ahora definidas en el propio 
@@ -98,6 +124,8 @@ Se valorará:
 + Qué la información esté presentada correctamente.
 + Posibles mejoras.
 
+
+\newpage
 * Tarea 02 : MiniPingPowerShell.ps1
 
   A continuación os presento un pequeño Script en =PowerShell= que realiza la /misma función/
@@ -145,5 +173,7 @@ Una vez ejecutado y comprobado que funciona, realizad las siguientes modificacio
 4. Añadir un mensaje de /error/ que aparezca cuando la conectividad no sea posible.
 5. Mostrar en Verde cuando tengamos conectividad y en Rojo el mensaje de /error/.
 
+
+Tras cada una de ellas, avisadme y le doy el visto bueno.
 
 
