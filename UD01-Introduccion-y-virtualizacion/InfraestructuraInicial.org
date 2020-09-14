@@ -14,7 +14,7 @@
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
 
 
-* Infraestructura
+* Infraestructura Inicial
 
 Vamos a comenzar repasando los conceptos que vimos a lo largo del año pasado de configuración
 e instalación de máquinas virtuales.
@@ -45,7 +45,25 @@ Todas las máquinas configurar con el parámetro de : =Usar Caché de E/S del An
 Por ahora, poner todas las máquinas con las tarjetas de red en *Adaptador Puente*, de tal 
 manera que puedan ser accedidas desde cualquier ordenador de la red.
 
-** Tarea 01 : MiniPing.sh
+** Sobre la Instalación de Windows 10 
+
+   Para la correcta configuración y puesta en marcha de Windows luego más adelante, 
+   debéis utilizar la versión *Pro*, ya que será la que nos permitirá realizar las
+   funciones de /Unión al dominio/, /creación de usuarios/, etc.
+
+** Sobre la Instalación de Ubuntu Server
+
+   Debido a que los Sistemas Operativos de Servidores suelen no tener disponible
+   un acceso gráfico, a lo largo del curso vamos realizar todas las configuraciones
+   sobre *Ubuntu Server* mediante la línea de comandos.
+
+   Tareas como la ejecución de comandos, copiar y pegar desde internet, etc. Lo resolveremos
+   mediante =SSH= u otras herramientas parecidas.
+
+   Si para /estar más cómodos/ realizamos este tipo de acciones, no estamos siendo 
+   especialmente /profesionales/.
+
+* Tarea 01 : MiniPing.sh
 
 Realizar un /script/ en Bash que utilizando variables (por ahora definidas en el propio 
 fichero), compruebe mediante el comando ping (/por ejemplo/), si las máquinas instaladas
@@ -65,7 +83,7 @@ WIN_CLIENT_IP="192.168.4.2"
 # un mensaje de error en caso de que no haya sido posible 
 # realizar una conexion con el (ping).
 
-# DO STUFF HERE
+#DO STUFF HERE
 
 exit 0
 
@@ -80,8 +98,52 @@ Se valorará:
 + Qué la información esté presentada correctamente.
 + Posibles mejoras.
 
-** Tarea 02 : MiniPingPowerShell.ps1
+* Tarea 02 : MiniPingPowerShell.ps1
 
-Intentad realizar el mismo script pero en otro lenguaje de =Shell=: /PowerShell/ el de Windows.
+  A continuación os presento un pequeño Script en =PowerShell= que realiza la /misma función/
+  que el script presentado antes en =Bash=.
+
+#+BEGIN_SRC PowerShell
+
+# Esto es un Script realizado en PowerShell.
+
+# La idea de este Script es que compruebe la conectividad con diferentes 
+# maquinas. Lo Iremos ampliando a medida que lo necesitemos.
+
+Write-Host " Welcome to the MiniPing.sh"
+
+$LIN_SRV_IP="192.168.1.1"
+$LIN_CLIENT_IP="192.168.1.2"
+$WIN_SRV_IP="192.168.1.1"
+$WIN_CLIENT_IP="192.168.1.12"
+
+Write-Host " * Testing Connection with: $LIN_SRV_IP"
+
+if ( (Test-NetConnection $LIN_SRV_IP).PingSucceeded){
+    Write-Host " $LIN_SRV_IP is Ok"
+}
+
+#+END_SRC  
+
+La tarea consiste en crearlo en una máquina en Windows 10. Para la creación del mismo
+podeis utilizar el /Entorno Integrado de Desarrollo (IDE)/: =PowerShell ISE= y debéis 
+crear el Script y ejecutarlo.
+
+Una vez ejecutado y comprobado que funciona, realizad las siguientes modificaciones:
+
+1. Cambiar la IP de $LIN_SRV_IP a 172.29.0.254. Comprobad que resultado da.
+2. Cambiar la IP de $LIN_SRV_IP a vuestra máquina anfitriona. Comprobad el resultado.
+3. Ampliar las comprobaciones de IP para que también compruebe:
+
+   - 172.29.0.1
+   - 172.29.0.254
+   - Vuestra máquina anfitriona.
+
+   Todas las comprobaciones han de ejecutarse en el mismo Script, añadiendo 
+   lo que consideréis necesario para ello.
+
+4. Añadir un mensaje de /error/ que aparezca cuando la conectividad no sea posible.
+5. Mostrar en Verde cuando tengamos conectividad y en Rojo el mensaje de /error/.
+
 
 
