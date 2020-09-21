@@ -415,7 +415,7 @@ hipervisor.
 \newpage
 
 
-* Tarea 06 : Compartir Recursos 1
+* Tarea 06 : CompartircRecursos 1l
   :PROPERTIES:
   :CUSTOM_ID: tarea-compartir-recursos-i
   :END:
@@ -582,7 +582,7 @@ USTOM_ID: ejercicio
 Realiza todas las configuraciones que hemos visto en la tarea y avisa al
 profesor para que compruebe que todo funciona.
 
-\newpage
+\newpag
 * Tarea 07 [ CLIL ] : Why is Virtualization Useful?
 
   Lee el texto que aparece a continuación y contexta a las preguntas:

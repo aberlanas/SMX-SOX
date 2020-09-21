@@ -1,4 +1,4 @@
-% Created 2020-09-21 lun 06:30
+% Created 2020-09-21 lun 09:46
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -40,7 +40,7 @@
 
 
 \section{Virtualización}
-\label{sec:org259beaf}
+\label{sec:org9703e57}
 
 La virtualización es la tecnlogía que nos permite trabajar con el \emph{Hardware}
 como si fuera \emph{Software}. 
@@ -99,7 +99,7 @@ Iremos viendo más detalles de la Virtualización a lo largo del curso, ya que s
 de una de las herramientas más potentes para los Administradores de Sistemas.
 
 \subsection{Guest y Host}
-\label{sec:org071f078}
+\label{sec:org39cb999}
 
 A medida que vayamos leyendo documentación veremos muchas maneras de referirse a las máquinas virtualizadas y a los hypervisores. Una de las nomenclaturas que más puede aparecer son las palabras Guest y Host :
 
@@ -109,7 +109,7 @@ A medida que vayamos leyendo documentación veremos muchas maneras de referirse 
 
 \newpage
 \section{Configuración de la red en los entornos virtuales}
-\label{sec:org94a5dd4}
+\label{sec:orge05ed68}
 En los sistemas de virtualización, sean cuales sean, uno de los recursos
 más importantes que tendremos que administrar es la red. En los sistemas
 de información, los servidores y los recursos compartidos entre las
@@ -139,7 +139,7 @@ múltiples opciones, y deberemos seleccionar el que más se adecue a cada
 uno de los casos en los que nos podremos encontrar.
 
 \subsection{Hardware de Red Virtualizado}
-\label{sec:org0358126}
+\label{sec:org3cc124d}
 Para cada una de las tarjetas de red que podemos conectar a nuestras
 MVs, podemos seleccionar cual es \emph{modelo} de tarjeta que utilizaremos.
 
@@ -159,7 +159,7 @@ de un software adicional para la gestión de la red. Dejaremos el que
 viene por defecto en la mayoria de los casos de este módulo.
 
 \subsubsection{VirtualBox y los JumboFrames}
-\label{sec:org9a02c63}
+\label{sec:org075b5b1}
 Si estamos utilizando \emph{Jumbo Frames} en nuestra red, es necesario que
 utilizemos los modelos basados en Intel, ya que no tenemos soporte para
 los mismos en el hardware Virtualizado de AMD. Sin embargo, esto lo
@@ -169,7 +169,7 @@ trabajar con los recursos de la manera deseada.
 
 \newpage
 \subsection{No conectado}
-\label{sec:org26c76ff}
+\label{sec:org2a2c9f6}
 En este modo VirtualBox le dirá al SO Virtualizado (\emph{Guest}) que tiene
 una tarjeta de red pero esta no se encuentra \textbf{CONECTADA}, es decir es
 como si no tuviera cable conectado. Esto será util para simular que la
@@ -181,7 +181,7 @@ ejercicios de simulación que podremos realizar.
 \end{center}
 
 \subsection{NAT}
-\label{sec:org4f621de}
+\label{sec:org5e7dd86}
 Network Address Translation (\textbf{NAT}) es el modo de conexión que viene por
 defecto cuando creamos una máquina virtual. Si estamos configurando una
 máquina para instalar cierto software, comprobar que todo funciona, o
@@ -215,7 +215,7 @@ Limitaciones de NAT]]
 
 \newpage
 \subsection{Red NAT}
-\label{sec:org890c87a}
+\label{sec:org1cb3c4d}
 Este servicio funciona de una manera similar a como funciona nuestro
 Router en casa o en una pequeña empresa. Se agrupan los sistemas en una
 red y se impide que los sistemas ajenos a ella (más allá del router)
@@ -240,7 +240,7 @@ Red NAT]]
 
 \newpage
 \subsection{Adaptador puente}
-\label{sec:orgf5c3290}
+\label{sec:orgd321e77}
 La configuración de adaptador puente nos permite interactuar con el
 entorno de red del Hipervisor como si la Máquina Virtual se encontrara
 en la misma Red. Genera una nueva interfaz de red por software,
@@ -258,7 +258,7 @@ nivel.
 
 \newpage
 \subsection{Red interna}
-\label{sec:orgb530bff}
+\label{sec:orga998019}
 Cuando configuramos las máquinas virtuales en este modo, lo que
 generamos es un \emph{switch} virtual al cual podemos ir conectando máquinas,
 pero no podemos interactuar desde fuera del Hipervisor con esta red.
@@ -278,7 +278,7 @@ diferentes servicios que van asociados al dominio.
 
 \newpage
 \subsection{Solo anfitrion}
-\label{sec:org1303126}
+\label{sec:org1757c7f}
 Se trata de una configuración de red que es un híbrido entre el modo de
 \emph{Adaptador puente} y \emph{Red Interna}:
 
@@ -313,7 +313,7 @@ el servidor de la Base de Datos.
 
 \newpage
 \subsection{Adaptador Genérico}
-\label{sec:org3d6c9c5}
+\label{sec:orgf21d23f}
 Se trata de un modo similar al \emph{Adaptador Puente} pero permite al
 usuario seleccionar el Driver que debe ser utilizado para emular esta
 tarjeta.
@@ -324,7 +324,7 @@ tarjeta.
 
 \newpage
 \subsection{Enlaces sobre la red}
-\label{sec:org85938bb}
+\label{sec:org233bb72}
 \begin{itemize}
 \item \href{https://www.virtualbox.org/manual/ch06.html}{Manual de VirtualBox}
 \end{itemize}
@@ -332,7 +332,7 @@ tarjeta.
 
 \newpage
 \section{Recursos compartidos}
-\label{sec:org6afac1a}
+\label{sec:org1242027}
 Hemos visto como se gestiona la red y los recursos de red en los
 sistemas de virtualización. Además de la red, existen otros como discos
 duros USB, Carpetas Compartidas entre máquinas, audio de los sistemas
@@ -345,7 +345,7 @@ sistemas.
 \end{center}
 
 \subsection{Permisos y vboxusers}
-\label{sec:orgd78054c}
+\label{sec:org4bbb538}
 En GNU/LinuX el acceso a los diferentes dispositivos hardware por parte
 de los usuarios (ya veremos más adelante todo esto en profundidad) está
 gestionado mediante pertenencia a grupos de usuarios.
@@ -368,19 +368,19 @@ grupos y permisos son comprobados y establecidos durante el arranque de
 la máquina.
 
 \subsection{Audio}
-\label{sec:org5c7061e}
+\label{sec:org876bcd8}
 VirtualBox nos permite configurar el sistema de audio de la Máquina
 Virtual para que suene a través del sistema de sonido del anfitrión
 (Hipervisor).
 
 \subsection{Puertos Serie}
-\label{sec:org0146fe4}
+\label{sec:orgc2ac850}
 Los puertos serie también pueden ser emulados dentro de las máquinas
 virtuales, esto puede ser usado para hacer \emph{debug} o interactuar con
 algunos sistemas cuyo mecanismo de comunicación no es el habitual.
 
 \subsection{USB}
-\label{sec:org7c56940}
+\label{sec:org38858fa}
 Muchas veces cuando estemos trabajando con las máquinas virtuales
 necesitaremos copiar algo \emph{dentro} o \emph{desde} una memória USB que
 conectamos al hipervisor, así como configurar ciertos dispositivos
@@ -414,7 +414,7 @@ tendremos que indicar en cada arranque de la máquina virtual, o
 establecer un filtro. Esto lo veremos una práctica.
 
 \subsection{Carpetas compartidas}
-\label{sec:org879d7c2}
+\label{sec:org89a7185}
 Las carpetas compartidas es uno de los recursos más útiles que
 encontraremos en el VirtualBox, ya que nos permitirá el paso de ficheros
 cómodamente entre el hipervisor y el sistema virtualizado.
@@ -434,8 +434,8 @@ hipervisor.
 \newpage
 
 
-\section{Tarea 06 : Compartir Recursos 1}
-\label{sec:org1c79179}
+\section{Tarea 06 : CompartircRecursos 1l}
+\label{sec:org482a01e}
 Vamos a realizar una tarea en la que configuraremos una máquina Xubuntu
 para que podamos compartir una serie de recursos entre el Hipervisor y
 la máquina virtual.
@@ -476,7 +476,7 @@ basta con que ejecutemos el \emph{autorun} que nos aparecerá cuando
 insertemos el CD en nuestro sistema virtualizado.
 
 \subsection{Instalación de las Guest Additions}
-\label{sec:orga5efee1}
+\label{sec:org2a15294}
 En el menú \emph{Dispositivos} del VirtualBox y con la máquina virtual
 encendida y con la sesión iniciada, activamos la opción:
 
@@ -510,7 +510,7 @@ a realizar ahora, sin embargo son un buen punto de partida para
 establecer un entorno de trabajo y pruebas más eficiente y cómodo.
 
 \subsection{Instalando desde el terminal}
-\label{sec:orgfd95107}
+\label{sec:org071d74b}
 Para abrir un terminal, pulsaremos botón derecho en el explorador de
 ficheros y seleccionaremos la opción: \textbf{Abrir un terminal aquí}.
 
@@ -547,7 +547,7 @@ acostumbrando ya\ldots{}), nos daremos cuenta de que nos pide \emph{Por favor} q
 instalemos : \emph{gcc, make y perl} para nuestra distribución.
 
 \subsection{Instalando paquetes requeridos}
-\label{sec:orgea8c576}
+\label{sec:org3cf4bed}
 Por ahora lo que haremos será ejecutar una orden en la terminal que nos
 descarga los paquetes desde los repositorios y nos los instala. Esto lo
 veremos con mucho más detalle en temas futuros, pero lo vamos a
@@ -569,7 +569,7 @@ nos pide confirmación, tal y como vemos en la imágen.
 \end{center}
 
 \subsection{Continuamos la instalación}
-\label{sec:org5f6f8ed}
+\label{sec:org15d52b0}
 Ahora si volvemos a ejecutar el script de \emph{autorun.sh} no nos dará
 ningún mensaje de error.
 
@@ -585,7 +585,7 @@ virtualizado.
 \end{center}
 
 \subsection{Portapapeles}
-\label{sec:orgb03ba06}
+\label{sec:org0acea38}
 Ahora ya tenemos el portapapeles compartido habilitado entre nuestro
 hipervisor y la máquina virtual, podemos decidir, la direccionalidad de
 este portapapeles.
@@ -611,9 +611,9 @@ USTOM\(_{\text{ID}}\): ejercicio
 Realiza todas las configuraciones que hemos visto en la tarea y avisa al
 profesor para que compruebe que todo funciona.
 
-\newpage
+\newpag
 \section{Tarea 07 [ CLIL ] : Why is Virtualization Useful?}
-\label{sec:org70a18dd}
+\label{sec:orgf96a36f}
 
 Lee el texto que aparece a continuación y contexta a las preguntas:
 
