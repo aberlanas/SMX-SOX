@@ -415,10 +415,10 @@ hipervisor.
 \newpage
 
 
-* Tarea 06 : CompartircRecursos 1l
-  :PROPERTIES:
-  :CUSTOM_ID: tarea-compartir-recursos-i
-  :END:
+* Tarea 06 : Compartir Recursos 1
+
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
 
 Vamos a realizar una tarea en la que configuraremos una máquina Xubuntu
 para que podamos compartir una serie de recursos entre el Hipervisor y
@@ -583,7 +583,13 @@ Realiza todas las configuraciones que hemos visto en la tarea y avisa al
 profesor para que compruebe que todo funciona.
 
 \newpag
+
+\newpage
 * Tarea 07 [ CLIL ] : Why is Virtualization Useful?
+
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+
 
   Lee el texto que aparece a continuación y contexta a las preguntas:
   
@@ -592,8 +598,9 @@ profesor para que compruebe que todo funciona.
 
   
 
-\newpage
-  ---
+\newpage 
+
+ ---
   The techniques and features that Oracle VM VirtualBox provides are useful
   in the following scenarios:
 

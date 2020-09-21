@@ -159,8 +159,8 @@ crear el Script y ejecutarlo.
 
 Una vez ejecutado y comprobado que funciona, realizad las siguientes modificaciones:
 
-1. Cambiar la IP de $LIN_SRV_IP a 172.29.0.254. Comprobad que resultado da.
-2. Cambiar la IP de $LIN_SRV_IP a vuestra máquina anfitriona. Comprobad el resultado.
+1. Cambiar la IP de =$LIN_SRV_IP= a 172.29.0.254. Comprobad que resultado da.
+2. Cambiar la IP de =$LIN_SRV_IP= a vuestra máquina anfitriona. Comprobad el resultado.
 3. Ampliar las comprobaciones de IP para que también compruebe:
 
    - 172.29.0.1
