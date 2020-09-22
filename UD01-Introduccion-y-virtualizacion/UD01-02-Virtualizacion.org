@@ -430,7 +430,7 @@ hipervisor. No solo a través de la configuración de la red, sino también
 herramientas útiles para el trabajo diario con estas máquinas virtuales:
 
 - Establecer carpetas compartidas entre el /Hipervisor/ y la MV
-- La posibilidad de añadir texto/enlaces/... en el hipervisor y pegar
+- La posibilidad de añadir texto /enlaces/... en el hipervisor y pegar
   ese contenido en el sistema virtualizado (y /viceversa/).
 - Permitir el uso de /arrastrar y soltar/ ficheros entre el Hipervisor y
   la MV.
@@ -566,9 +566,9 @@ hipervisor y la máquina virtual, podemos decidir, la direccionalidad de
 este portapapeles.
 
 - Inhabilitado
-- Hipervisor -> MV
-- MV -> Hipervisor
-- MV <-> Hipervisor
+- Hipervisor $\rightarrow$ MV
+- MV $\leftarrow$ Hipervisor
+- MV $\leftrightarrow$ Hipervisor
 
 Esto nos será muy útil para seguir manuales, buscar errores en Internet
 cuando la máquina virtualizada no tenga conexión o cuando no tengamos el
@@ -576,13 +576,12 @@ navegador abierto, para la elaboración de documentación, etc.
 
 [[file:imgs/VBox_GuestAdd_LinuX_027.png]]\\
 
-USTOM_ID: ejercicio
-  :EN
-
 Realiza todas las configuraciones que hemos visto en la tarea y avisa al
 profesor para que compruebe que todo funciona.
 
 \newpag
+
+\newpage
 
 \newpage
 * Tarea 07 [ CLIL ] : Why is Virtualization Useful?
