@@ -1,0 +1,62 @@
+#+Title: Unidad 01 - Why is Virtualization useful?
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - CLIL}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Why is Virtualization useful?}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Tarea 06 [ CLIL ] : Why is Virtualization Useful?
+
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+
+  Lee el texto que aparece a continuación y contexta a las preguntas 
+  que aparecen a continuación.
+
+  El texto ha sido extraido del Manual de VirtualBox.
+
+  A medida que vayas leyendo el texto, apunta por columnas las palabras
+  o expresiones que:
+
+  + Palabras que /intuyes lo que significan por el contexto/.
+  + Palabras que /no sabes lo que significan/.
+
+    | Intuidas | Desconocidas |
+    |----------+--------------|
+
+\newpage 
+* Text
+  The techniques and features that Oracle VM VirtualBox provides are useful
+  in the following scenarios:
+
+   + *Running multiple operating systems simultaneously*
+       Oracle VM VirtualBox enables you to run more than one OS at a time. This way, you can run software written for one OS on another, such as Windows software on Linux or a Mac, without having to reboot to use it. Since you can configure what kinds of virtual hardware should be presented to each such OS, you can install an old OS such as DOS or OS/2 even if your real computer's hardware is no longer supported by that OS.
+   + *Easier software installations* 
+       Software vendors can use virtual machines to ship entire software configurations. For example, installing a complete mail server solution on a real machine can be a tedious task. With Oracle VM VirtualBox, such a complex setup, often called an appliance, can be packed into a virtual machine. Installing and running a mail server becomes as easy as importing such an appliance into Oracle VM VirtualBox.
+   + *Testing and disaster recovery* 
+       Once installed, a virtual machine and its virtual hard disks can be considered a container that can be arbitrarily frozen, woken up, copied, backed up, and transported between hosts.
+       On top of that, with the use of another Oracle VM VirtualBox feature called snapshots, one can save a particular state of a virtual machine and revert back to that state, if necessary. This way, one can freely experiment with a computing environment. If something goes wrong, such as problems after installing software or infecting the guest with a virus, you can easily switch back to a previous snapshot and avoid the need of frequent backups and restores.
+       Any number of snapshots can be created, allowing you to travel back and forward in virtual machine time. You can delete snapshots while a VM is running to reclaim disk space.
+   + *Infrastructure consolidation*
+       Virtualization can significantly reduce hardware and electricity costs. Most of the time, computers today only use a fraction of their potential power and run with low average system loads. A lot of hardware resources as well as electricity is thereby wasted. So, instead of running many such physical computers that are only partially used, one can pack many virtual machines onto a few powerful hosts and balance the loads between them.
+\newpage
+
+* Questions.
+
+  1. Realiza un listado de las palabras que no conoces su significado.
+  2. ¿Qué significa la expresión : /ship entire software configurations/.?
+  3. Explica la frase: /a virtual machine and its virtual hard disks can be considered a container that can be arbitrarily frozen, woken up, copied, backed up, and transported between hosts/.
+  4. ¿Qué nos aportan los /snapshots/?.¿Qué recursos del /anfitrión/ utilizan?
+  5. En el último punto (/Infraestructure consolidation/), explica en castellano porqué
+     las Herramientas de Virtualización pueden reducir el uso de los recursos energéticos.
+  
+     
