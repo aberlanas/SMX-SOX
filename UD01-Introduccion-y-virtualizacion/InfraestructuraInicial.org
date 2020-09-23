@@ -30,6 +30,10 @@ utilizaremos 4 Máquinas Virtuales (cómo /mínimo/).
 A lo largo del curso estas máquinas irán comunicándose entre ellas, y las configuraremos en redes
 diferentes, en estructuras diferentes, etc.
 
+** Usuarios Administradores
+
+
+
 Adjunto tabla resumen de las caracterísiticas de las máquinas.
 
 #+ATTR_LaTeX: :align |r|c|c|c|c|
