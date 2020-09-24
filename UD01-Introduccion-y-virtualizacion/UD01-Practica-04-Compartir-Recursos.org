@@ -51,10 +51,6 @@ Crearemos una carpeta cuyo nombre será:
 Una vez creada, vamos al VirtualBox y en el menú de carpetas compartidas
 seleccionamos esa carpeta que acabamos de crear.
 
-[[file:imgs/VBox_SharedFolder_001.png]]  
-
-[[file:imgs/VBox_SharedFolder_002.png]]  
-
 ** Creación del punto de montaje en el Sistema Virtualizado
    :PROPERTIES:
    :CUSTOM_ID: creación-del-punto-de-montaje-en-el-sistema-virtualizado
@@ -84,8 +80,6 @@ La creamos mediante la terminal con la orden:
     mkdir CompartidaVBox
 #+END_EXAMPLE
 
-#+CAPTION: mkdir CompartidaVBox
-[[file:imgs/VBox_SharedFolder_006.png]]
 
 \newpage
 ** Montaje de la carpeta compartida
@@ -113,7 +107,7 @@ montajes de unidades.
 #+END_EXAMPLE
 
 #+CAPTION: sudo mount ...
-[[file:imgs/VBox_SharedFolder_011.png]]
+[[file:imgs/Tarea_VBoxShared_04.png]]
 
 Si la terminal no nos muestra ningún mensaje, entonces es que la
 operación ha sido efectuada con éxito.
@@ -132,9 +126,6 @@ Y luego el comando :
 
 Comprobamos que no existe ningún fichero en la carpeta, al igual que
 desde el hipervisor.
-
-#+CAPTION: Carpeta Montada
-[[file:imgs/VBox_SharedFolder_012.png]]
 
 \newpage
 ** Comprobación del resultado
@@ -168,7 +159,7 @@ Para salir de /nano/ hay que pulsar *^x*(/Ctrl+x/).
 El fichero ahora está accesible desde los dos sistemas.
 
 #+CAPTION: Fichero Compartido
-[[file:imgs/VBox_SharedFolder_014.png]]
+[[file:imgs/Tarea_VBoxShared_05.png]]
 
 ** Ultimos pasos
 
