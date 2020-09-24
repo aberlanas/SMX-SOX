@@ -69,7 +69,7 @@ práctica serán desarrollados más adelante en el módulo.
 La ruta elejida en el ejemplo es :
 
 #+BEGIN_EXAMPLE
-    /home/admin/CompartidaVBox
+    /home/linadmin/CompartidaVBox
 #+END_EXAMPLE
 
 #+BEGIN_QUOTE
@@ -170,13 +170,7 @@ El fichero ahora está accesible desde los dos sistemas.
 #+CAPTION: Fichero Compartido
 [[file:imgs/VBox_SharedFolder_014.png]]
 
-** Consideraciones adicionales
-   :PROPERTIES:
-   :CUSTOM_ID: consideraciones-adicionales
-   :END:
-
-Estas dos consideraciones no son obligatorias, pero pueden ser
-realizadas si las consideramos interesantes.
+** Ultimos pasos
 
 *** mount
     :PROPERTIES:
@@ -189,18 +183,15 @@ carpeta compartida, es que hemos realizado de manera correcta su
 montaje.
 
 *** /etc/fstab
-    :PROPERTIES:
-    :CUSTOM_ID: etcfstab
-    :END:
 
-Si quisieramos realizar esta compartición de carpetas de manera
-persistente deberíamos indicarlo en el fichero de puntos de montaje del
-equipo. Esto también se verá en temas posteriores.
+    Si quisieramos realizar esta compartición de carpetas de manera
+    persistente deberíamos indicarlo en el fichero de puntos de montaje del
+    equipo. Esto también se verá en temas posteriores.
 
-Se puede añadir la línea:
+    Se puede añadir la línea:
 
 #+BEGIN_EXAMPLE
-    VBoxshared  /home/admin/CompartidaVBox   vboxsf  uid=1000,gid=1000 0 1 
+    VBoxshared  /home/linadmin/CompartidaVBox   vboxsf  uid=1000,gid=1000 0 1 
 #+END_EXAMPLE
 
 al final del fichero /etc/fstab.
@@ -218,11 +209,11 @@ Para comprobar que todo ha ido bien, podemos ejecutar :
     sudo mount -a 
 #+END_EXAMPLE
 
-que repasa el fichero de //etc/fstab/ y monta todas las rutas indicadas.
+que repasa el fichero de =/etc/fstab/= y monta todas las rutas indicadas.
 Si hubiera algún error, nos lo diría ahora.
 
 #+BEGIN_QUOTE
-  *Importante*: el fichero /etc/fstab es uno de los más importantes en
+  *Importante*: el fichero =/etc/fstab= es uno de los más importantes en
   un sistema GNU/LinuX, y su edición ha de realizarse con cuidado. Si
   dejamos un fichero con errores y reiniciamos la máquina, lo más
   probable es que no consigamos arrancar de manera exitosa. Debemos de
@@ -230,10 +221,8 @@ Si hubiera algún error, nos lo diría ahora.
 #+END_QUOTE
 
 ** Ejercicio
-   :PROPERTIES:
-   :CUSTOM_ID: ejercicio
-   :END:
 
 Realiza los pasos que se han descrito en la práctica y adjunta una
 captura de pantalla que muestre el contenido del mismo fichero
 accediendo desde desde ambos sistemas (/Guest/ y /Host/)
+
