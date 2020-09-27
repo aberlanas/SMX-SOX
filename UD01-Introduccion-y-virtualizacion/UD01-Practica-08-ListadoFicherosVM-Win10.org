@@ -1,0 +1,289 @@
+#+Title: Unidad 01 - Práctica 08 - Ficheros de las Máquinas Virtuales - Windows
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Práctica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: Práctica 08]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage 
+* Práctica 08
+
+  En la realización de esta práctica vamos realizar una serie de operaciones
+  y comprobaciones referentes a los diferentes ficheros que utiliza /VirtualBox/
+  y otros entornos de Virtualización para simular las máquinas virtuales.
+
+  El objetivo de esta práctica es que vayais relacionandoos con los diferentes
+  tipos de fichero y que vayamos familiarizándonos/recordando con las rutas.
+
+  /AVISO A NAVEGANTES/
+  
+  A lo largo de la práctica se os va a pedir que vayáis ejecutando comandos y que obtengáis 
+  determinada información. Abrir un documento de /LibreOffice/ e ir adjuntando capturas y 
+  descripciones.
+
+  $\hrule$
+
+** Repaso de Carpetas y Ficheros.  
+
+   En temas posteriores veremos más detenidamente los sistemas de ficheros, pero 
+   por ahora vamos a tener en cuenta para la realización de esta práctica los siguientes
+   puntos.
+
+*** Carpetas Personales 
+
+    Tanto en los Sistemas GNU/LinuX como en los Sistemas Windows existen una serie de /Carpetas/
+    que se crean para cada uno de l@s usuari@s y es donde las aplicaciones que se ejecutan
+    por parte de l@s mism@s escriben los datos y configuraciones.
+
+    Estas carpetas son de utilización común por parte de l@s usuari@s, pero aunque existen
+    algunas /especialmente conocidas/, vale la pena repasarlas. Para ello utilizaremos
+    la *Línea de comandos*, o ~Shell~, tal y como hemos ido viendo en prácticas anteriores.
+
+    Para lanzarla podemos ejecutar : Botón derecho del ratón sobre el Icono de Windows y
+    seleccionamos la opción: ~Windows PowerShell~
+
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/Practica-08-01.png]]
+
+
+    Aunque en un primer momento nos pueda parecer una "caja negra", esto es una de las herramientas
+    más útiles de las que dispone un Administrador de Sistemas.
+
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/powercli.png]]
+
+
+    Al igual que los programas de /Exploración de ficheros/, la Terminal tiene /abierto/ en cada 
+    momento una única /Carpeta/ que es lo que denominamos *Directorio de Trabajo* (/Working Directory/).
+
+    Eso significa que si ejecutamos un comando para la creación de un fichero o directorio 
+    desde la terminal, por poner un ejemplo sencillo, la ruta se *calculará* desde donde nos
+    encontremos.
+
+    Conocer como movernos por las carpetas de nuestro SO es algo muy importante, y que trabajaremos
+    a lo largo del curso en multitud de ocasiones.
+
+    Presento una pequeña tabla de comandos con su descripción que nos ayudarán a manejarnos con la 
+    línea de comandos:
+
+    | Comando            | Función                             | Ejemplo  de Ejecución             |
+    |--------------------+-------------------------------------+-----------------------------------|
+    | =Set-Location=     | Cambiar de directorio de trabajo    | =Set-Location Desktop\=           |
+    | =New-Item=         | Crear un nuevo directorio/fichero   | =New-Item -type Directory Prueba= |
+    | =New-Item=         | Crear un nuevo directorio/fichero   | =New-Item -type File hola.txt=    |
+    | =Get-ChildItem=    | Listar contenido de un directorio   | =Get-ChildItem=                   |
+    | =Get-ItemProperty= | Muestra información de un fichero   | =Get-ItemProperty hola.txt=       |
+    | =Copy-Item=        | Copia un fichero o directorio       | =Copy-Item hola.txt destino.txt=  |
+    | =Move-Item=        | Mueve o renombra un fichero         | =Move-Item destino.txt final.txt= |
+    | =Remove-Item=      | Borra un fichero o directorio       | =Remove-Item hola.txt=            |
+    | =tree=             | Muestra la estructura del árbol     | =tree .=                          |
+    | =Get-Location=     | Muestra el Working Directory actual | =Get-Location=                    |
+    
+\newpage
+    *ENTREGA*:
+
+    Ejecuta todos los comandos que aparecen en la tabla y comprueba que realizan la función indicada. Para cada uno 
+    de ellos realiza una pequeña captura donde aparezca que se ha ejecutado.
+    
+    Navegando por el sistema de archivos obtén las rutas a las siguientes carpetas, para cada una de ellas, adjunta una 
+    captura de pantalla del resultado:
+
+    | Nombre común de la carpeta   | Ruta Completa |
+    |------------------------------+---------------|
+    | Carpeta Personal             |               |
+    | Escritorio                   |               |
+    | Papelera de reciclaje        |               |
+
+
+\newpage
+
+** Ubicación de las Máquinas Virtuales  
+   
+   Durante la creación de las mismas, cada una de las máquinas (normalmente) se situa
+   en una carpeta dentro de nuestra *Carpeta personal*:
+
+   Por ejemplo, en el caso de una máquina creada con nombre =Xubuntu=, la ruta a la carpeta
+   que contiene los diferentes ficheros es:
+
+   =C:\Users\Angel\VirtualBox VMs\Xubuntu\=
+
+   Vamos a situar la Terminal en ese directorio o carpeta y vamos a ejecutar una serie de comandos 
+   que nos aportarán más información acerca de la máquina virtual.
+
+#+BEGIN_SRC shell
+   Set-Location "VirtualBox VMs\Xubuntu\"
+#+END_SRC
+
+  Si ejecutamos ahora:
+#+BEGIN_SRC shell
+
+#+END_SRC
+
+  Debe aparecer algo similar a esto:
+
+  #+ATTR_LATEX: :width 12cm
+  [[./imgs/Practica-08-02.png]]
+  
+  *ENTREGA*
+
+  Ejecutad la orden en vuestra máquina, adaptándo la ruta de la Máquina Virtual a una que tengais instalada.
+
+\newpage
+** Ficheros y Descripción
+
+   Vamos a ver ahora algunos ficheros relativos a las máquinas virtuales, su función, así como diferentes
+   comandos que nos permitirán /extraer información/ y trabajar con estos ficheros.
+
+   Durante la descripción, siempre aparecerán los ficheros referentes a /mi máquina/, pero cada un@ debe 
+   adaptarlo a sus necesidades.
+
+\newpage
+*** Xubuntu.vbox: Get-Content y Select-String
+
+    El fichero =.vbox= es un fichero de tipo =XML= que contiene la información relativa a la Máquina Virtual,
+    que nosotros hemos configurado utilizando la /GUI/ (*aka.* /Graphical User Interface/).
+    
+    Si ejecutamos el comando:
+
+#+BEGIN_SRC shell
+Get-Content Xubuntu.vbox
+#+END_SRC
+
+    En la terminal aparecerá el *contenido* del fichero. Se trata de un tipo de fichero bastante /Human Readable/, pero
+    recordad que ha sido diseñado para que sea interpretado y utilizado por los sistemas de virtualización.
+
+    Si le echamos un vistazo al contenido del fichero podemos extraer información /interesante/ =^_^=.
+
+      #+ATTR_LATEX: :width 12cm
+      [[./imgs/Practica-08-03.png]]
+  
+    La primera línea del fichero nos indica que se trata un fichero de tipo ~XML~. A lo largo de la vida de un informático,
+    nos encontraremos con este tipo de ficheros en más ocasiones de las que podáis imaginar.
+
+    Lo siguiente que nos aparece es una *ADVERTENCIA*, nos indica que *No editemos este fichero*.
+
+    *ENTREGA:*
+
+    Realizad una traducción de las tres líneas siguientes (desde =<!--= hasta =-->=).
+
+    $\hrule$
+    \newpage
+    Muchas veces nos veremos en la situación de que no queremos /leer/ toda la información, que contiene
+    un fichero, por ejemplo en este caso nos puede interesar tan solo obtener la cantidad
+    de ~RAM~ asignada a esta máquina virtual.
+
+    Si buscamos en el contenido del fichero, podemos ver que aparece descrito de esta manera:
+
+#+BEGIN_SRC xml
+    <Memory RAMSize="4096">
+#+END_SRC
+
+    Ahora que ya lo /sabemos/, podríamos /buscarlo/, es decir podríamos buscar en el contenido del fichero
+    aquellas líneas que contuvieran la palabra =RAMSize=.
+
+    Para ello contamos en Windows PowerShell con uno de los comandos más útiles para todos los administradores, =Select-String=.
+
+    #+ATTR_LATEX: :width 10cm
+    [[./imgs/regular_expressions.png]]
+    
+    \newpage
+    
+#+BEGIN_SRC PowerShell
+    Get-Content  Xubuntu.vbox | Select-String RAMSize
+#+END_SRC
+    
+    Nos debe devolver algo similar a esto:
+
+      #+ATTR_LATEX: :width 12cm
+      [[./imgs/Practica-08-04.png]]
+
+    *ENTREGA*
+    
+    Realizad la ejecución de este último comando en vuestra máquina, adjuntad la captura de pantalla de la
+    ejecución del mismo.
+    
+    \newpage
+
+*** Xubuntu.vdi y file
+
+    Al lado del fichero =Xubuntu.vbox= podemos encontrar el fichero =Xubuntu.vdi=. Este fichero especialmente
+    grande es el *Disco Duro* de la máquina virtual.
+
+    Para comprobar que /tipo/ de fichero es, podemos ejecutar el comando =file=, indicándole como primer argumento
+    la ruta fichero a comprobar:
+
+    #+BEGIN_SRC PowerShell
+    Get-ItemProperty Xubuntu.vdi
+    #+END_SRC
+    
+    Aparecerá algo como esto:
+    #+ATTR_LATEX: :width 12cm
+    [[./imgs/Practica-08-05.png]]
+
+    *ENTREGA*
+    
+    Realizad la ejecución de este último comando en vuestra máquina, adjuntad la captura de pantalla de la
+    ejecución del mismo.
+    
+    \newpage
+
+*** Logs y tree
+
+    En la carpeta =Logs= podemos ver que hay varios ficheros que contienen un /registro/ de los diferentes
+    mensajes que ha ido notificando el VirtualBox cuando esta máquina se ha puesto en marcha.
+
+    Estos ficheros de /registro/ también conocidos como /logs/ deben de ser consultados por parte de los 
+    Administradores de Sistemas y los desarrolladores para comprobar que todo está marchando correctamente.
+
+    Muchas veces (muchas, en verdad), consultaremos este tipo de ficheros para comprobar cosas como:
+
+    - Cuando se apagó una máquina.
+    - A que hora se conectó un usuario a un servicio o máquina.
+    - Qué ocurrió justo antes de que una catástrofe ocurriera.
+    - ...
+
+    En prácticas posteriores veremos utilidades para la comprobación de estos ficheros de registro, pero por 
+    ahora (que ya vamos bien), vamos a mostrar la /estructura en árbol/ que contien estos ficheros.
+
+    Utilizando el comando =tree /F= desde la carpeta de la Máquina Virtual podemos ver que aparece algo similar a esto:
+
+    #+ATTR_LATEX: :width 12cm
+    [[./imgs/Practica-08-06.png]]
+
+    *ENTREGA* 
+
+    Realizad los mismos pasos y adjuntad la salida en vuestro ordenador.
+
+    \newpage
+
+** La práctica hace al maestr@.
+
+   #+ATTR_LATEX: :width 12cm
+    [[./imgs/practice.jpeg]]
+   
+   Realiza un Script en PowerShell que al ejecutarse realice las siguientes tareas:
+
+   0. Borrar en tu carpeta personal el directorio que se crea en el paso 1 (si existe),
+      con el objetivo de que la ejecución repetida del script no dé errores.
+   1. Crear en tu carpeta personal una carpeta cuyo nombre sea tu primer apellido.
+   2. Cambiar el directorio de trabajo a esa carpeta recién creada.
+   3. Crear un fichero que se llame =practica.txt=.
+   4. Crear una carpeta que se llame =CarpetaVerde=.
+   5. Crear una carpeta que se llame =CarpetaImportante=.
+   6. Crear una carpeta que se llame =CarpetaNoMenosImportante=.
+   7. Crear una carpeta dentro de =CarpetaVerde= que se llame =CarpetaMorada=.
+   8. Crear una carpeta dentro de =CarpetaMorada= que se llame =CarpetaNegra=.
+   9. Dentro de la =CarpetaImportante= crear un fichero llamado =miClaveDelTikTok.key=.
+   10. Utilizando =Write-Host= y la /redirección/ que escriba /tu nombre/ en el fichero =practica.txt=.
+   11. Copiar el fichero =practica.txt= a cada una de las carpetas que tienen un color en su nombre.
+   12. Copiar el fichero de la máquina virtual (=*.vbox=) a la carpeta =CarpetaNoMenosImportante=.
+
+   Avisa al profesor cuando termines. El Script debe llamarse: =nombreAlumno-UD01-repaso.ps1=
