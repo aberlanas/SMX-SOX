@@ -107,7 +107,27 @@
 
 \newpage
 
+
+\newpage
 ** Ubicación de las Máquinas Virtuales  
+
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]x
+   
+   *NOTA PARA LOS HYPERVISORES EN WINDOWS*
+
+   Para tod@s aquell@s que estén haciendo esta práctica en un entorno Windows, para la
+   realización de las prácticas que van a continuación,  podéis utilizar los ficheros 
+   de ejemplo que están en Aules en el fichero comprimido.
+   
+   + =FicherosEjemplo.tar.gz=
+
+   Descargarlos y usarlos como si fueran los ficheros de la máquina real, adaptando
+   la ruta y las indicaciones de acceso al lugar donde se encuentran.
+
+
+   $\hrule$
+
    
    Durante la creación de las mismas, cada una de las máquinas (normalmente) se situa
    en una carpeta dentro de nuestra *Carpeta personal*:

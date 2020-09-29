@@ -1,0 +1,45 @@
+#+Title: Unidad 01 - VBoxManage I
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD01: VBoxManage I]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+
+* Tarea VBoxManage I
+
+  #+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+
+  Utilizando el comando =VBoxManage= realiza un /Script/ que realice 
+  las siguientes acciones:
+
+  + *Listar* las máquinas Virtuales disponibles en el /Anfitrión/.
+  + Para cada una de ellas, listar los adaptadores de red que tiene 
+    la /Máquina Virtual/, indicando que tipo de Conectividad tiene:
+
+    + NAT
+    + Bridge
+    + No conectado
+    + ...
+
+  El script se debe llamar: =myVBoxManage.sh=
+
+  Se valorará:
+
+  + Estructura del Script.
+  + Comentarios.
+  + Adecuación a lo que se pide.
+  + Que funcione correctamente.
+  + Que funcione siempre y trate los errores posibles.
+
+
