@@ -120,7 +120,7 @@
    realización de las prácticas que van a continuación,  podéis utilizar los ficheros 
    de ejemplo que están en Aules en el fichero comprimido.
    
-   + =FicherosEjemplo.tar.gz=
+   + =FicherosEjemplo.zip=
 
    Descargarlos y usarlos como si fueran los ficheros de la máquina real, adaptando
    la ruta y las indicaciones de acceso al lugar donde se encuentran.
@@ -271,6 +271,13 @@ cat Xubuntu.vbox
     Aparecerá algo como esto:
     #+ATTR_LATEX: :width 12cm
     [[./imgs/Practica-07-05.png]]
+
+
+    #+ATTR_LATEX: :width 1cm
+    [[./imgs/amongus.png]]
+
+    En el caso de que estéis usando el fichero de Ejemplo, esta parte hacerla 
+    sobre el fichero "=.pdf=" que está dentro del fichero comprimido.
 
     *ENTREGA*
     
