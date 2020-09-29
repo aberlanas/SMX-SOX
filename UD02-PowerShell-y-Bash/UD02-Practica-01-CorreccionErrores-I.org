@@ -1,0 +1,122 @@
+#+Title: Unidad 02 - Corrección de Errores I
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD02: PowerShell y BASH]}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Practica 01
+  
+  En esta práctica vamos a comenzar por ir resolviendo pequeños problemas
+  presentes en /scripts/ ya creados.
+
+  La complejidad irá en aumento, pero vale la pena esforzarse.
+
+  ¿Cómo hago esta práctica?¿El PDF no me colorea los fallos? Son preguntas
+  que es posible que os hagáis, pero en el caso de que no veáis el problema
+  a /simple vista/, seguid estos sencillos pasos:
+
+  + Cogéis el editor de texto sencillo (/nano/,/mousepad/,...) que queráis.
+  + Pegáis el script en el editor, le dáis permisos, y tratar de ejecutarlo.
+  + En la ejecución obtendréis más información útil que os ayudará a averiguar
+    qué está pasando.
+
+    En todos los Scripts hay /al menos/ un fallo.
+
+** script-bash-01
+
+   Este Script debe preguntar por su nombre al usuario y luego escribirlo.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+echo "Cual es tu nombre:"
+echo $NOMBRE
+
+exit 0
+
+#+END_SRC
+
+** script-bash-02
+
+   Este Script debe obtener el nombre de la máquina donde
+   se ejecuta y luego escribirlo 3 veces.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+NOMBRE_MAQUINA=$(hostname)
+for vez in 1 2 3; do
+    echo $vez
+done
+
+exit 0
+
+#+END_SRC
+
+** script-bash-03
+
+   Este Script debe obtener la ruta a la carpeta personal del usuario y 
+   sustituir las "/" por "\" y mostrar la nueva ruta.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+
+RUTA=$(pwd)
+echo $RUTA|tr "\/" "\\"
+
+exit 0
+
+#+END_SRC
+
+** script-bash-04
+
+   Este Script debe crear una carpeta en /tmp/ que se llame como el usuario que lo ejecuta
+   y luego hacer un enlace /simbólico/ a esa carpeta desde donde se ejecute
+   con nombre : =enlace=.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+mkdir -p /tmp/$USER
+ln -s enlace /tmp/$USER
+
+exit 0
+
+#+END_SRC
+** script-bash-05
+
+   Este Script debe crear 3 Carpetas en =/tmp= y luego recorrerlas copiando
+   en cada una de ellas el fichero =/etc/hosts=.
+   
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+
+for CARPETANUM in 1 2 3; do
+
+mkdir -p /tmp/carpeta_$CARPETANUM
+
+done
+
+cp /etc/hosts /tmp/carpeta_$CARPETANUM
+
+exit 0
+
+#+END_SRC

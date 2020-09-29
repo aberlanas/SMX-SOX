@@ -8,8 +8,12 @@ PDF_PATH:=$(shell readlink -f PDFS)
 clean:
 	@echo " * Clean workspace "
 	@echo " -- UD 01 "
-	rm UD01-Introduccion-y-virtualizacion/*.pdf
-	rm UD01-Introduccion-y-virtualizacion/*.tex
+	rm -f UD01-Introduccion-y-virtualizacion/*.pdf
+	rm -f UD01-Introduccion-y-virtualizacion/*.tex
+
+	@echo " -- UD 02 "
+	rm -f UD02-PowerShell-y-Bash/*.pdf
+	rm -f UD02-PowerShell-y-Bash/*.tex
 
 files:
 	@echo " [ Step : files ]"
