@@ -1,4 +1,4 @@
-#+Title: Unidad 02 - Corrección de Errores I
+#+Title: Unidad 02 - Scripts Impostores
 #+Author: Angel Berlanas Vicente
 
 #+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
@@ -14,8 +14,21 @@
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
 
 \newpage
-* Practica 01
+* Practica : Scripts Impostores 
+
+  Vamos a trabajar como /verdader@s/ administrador@s de sistemas, 
+  utilizando todo nuestro /intelecto/.
   
+  Esta práctica se puede hacer en clase o en una máquina virtual con
+  Xubuntu (por ejemplo).
+
+  Debéis entregar todos los scripts corregidos, con el nombre que se indica 
+  en cada uno (en total 15).
+
+#+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+   
+
   En esta práctica vamos a comenzar por ir resolviendo pequeños problemas
   presentes en /scripts/ ya creados.
 
@@ -32,6 +45,7 @@
 
     En todos los Scripts hay /al menos/ un fallo.
 
+\newpage 
 ** script-bash-01
 
    Este Script debe preguntar por su nombre al usuario y luego escribirlo.
@@ -46,7 +60,7 @@ echo $NOMBRE
 exit 0
 
 #+END_SRC
-
+\newpage
 ** script-bash-02
 
    Este Script debe obtener el nombre de la máquina donde
@@ -64,7 +78,7 @@ done
 exit 0
 
 #+END_SRC
-
+\newpage
 ** script-bash-03
 
    Este Script debe obtener la ruta a la carpeta personal del usuario y 
@@ -81,7 +95,7 @@ echo $RUTA|tr "\/" "\\"
 exit 0
 
 #+END_SRC
-
+\newpage
 ** script-bash-04
 
    Este Script debe crear una carpeta en /tmp/ que se llame como el usuario que lo ejecuta
@@ -98,6 +112,8 @@ ln -s enlace /tmp/$USER
 exit 0
 
 #+END_SRC
+
+\newpage
 ** script-bash-05
 
    Este Script debe crear 3 Carpetas en =/tmp= y luego recorrerlas copiando
@@ -120,3 +136,197 @@ cp /etc/hosts /tmp/carpeta_$CARPETANUM
 exit 0
 
 #+END_SRC
+
+\newpage
+
+** script-bash-06
+
+   Este Script debe crear una secuencia de Carpetas en =/tmp= y 
+   luego copiar en el nivel más profundo la carpeta =/etc/netplan/=.
+   
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+mkdir /tmp/carp_1/carp_2/carp_3/
+
+cp /etc/netplan /tmp/carp_1/carp_2/carp_3/
+
+exit 0
+
+#+END_SRC
+
+\newpage
+
+
+** script-bash-07
+
+   El Script comprueba que se le pasa /al menos un/ argumento y
+   devuelve *todos* los argumento indicados pasados a MAYÚSCULAS.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+echo $1 | tr  [:lower:]' '[:upper:]'
+
+#+END_SRC
+
+\newpage
+
+** script-bash-08
+
+   Este Script muestra las diferentes IPs y la máscaras de esas IPs del 
+   equipo.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+ip addr | grep inet6 | cut -d " " -f6
+
+#+END_SRC
+
+\newpage
+
+** script-bash-09
+
+   Por cada una de las IPs, realizar un ping a la propia dirección
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+IPMAQUINA=$(ip addr | grep inet | cut -d " " -f6| tr "\n" " ")
+for AUXIP in $IPMAQUINA; do
+    ping -c 1 $AUXIP
+done
+
+exit 0
+#+END_SRC
+
+\newpage
+
+
+** script-bash-10
+
+   Este script cuenta el número de /procesos/ en el equipo
+   que incluyen el primer argumento indicado al Script en algúna 
+   parte de la descripción o indicador.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+PROCESO=$2
+
+ps aux| grep $PROCESO| wc -l
+
+exit 0
+#+END_SRC
+
+\newpage
+
+
+** script-bash-11
+
+   Este script muestra los  /procesos/ en el equipo
+   que pertenecen al usario indicado como argumento.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+USUARIO=$1
+
+ps aux| grep $USUARIO
+
+exit 0
+#+END_SRC
+
+\newpage
+
+** script-bash-12
+   
+   Este Script finaliza cuando existe un fichero en =/tmp/=
+   que se llame =DetenLaMaquina=
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+while /bin/true; do
+
+   if [ ! -f /tmp/DetenLaMaquina ]; then
+	echo " Alabado sea el FINAL"
+       exit 0
+   fi
+   echo " Esperando a la llegada de nuestro Salvador"
+   sleep 2
+
+done
+
+exit 0
+#+END_SRC
+
+\newpage
+
+
+
+** script-bash-13
+
+   Este Script lista los ficheros de nuestra carpeta de =Música= 
+   que acaban en =.mp3= y para cada uno de ellos muestra un mensaje 
+   indicando su tamaño y a continuación su ruta.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+find ~/Música -name "*.mp3" -exec echo "" du -hs {} \;
+
+#+END_SRC
+
+\newpage
+
+
+
+** script-bash-14
+
+   Este Script lista los ficheros de nuestra carpeta de =Música= 
+   que acaban en =.mp3= y para cada uno de ellos muestra un mensaje 
+   indicando su propietario.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+find ~/Música -name "*.mp3" -exec ls -alF {} | cut -d " " -f3 \;
+
+#+END_SRC
+
+\newpage
+
+
+** script-bash-15
+
+   Este Script comprueba que todos los ficheros de las rutas =/usr/bin= y 
+   =/usr/sbin/= son ejecutables. Si NO ES EJECUTABLE muestra la ruta al 
+   fichero que NO LO ÉS.
+
+#+BEGIN_SRC shell
+
+#!/bin/bash
+
+for f in $(find /usr/bin); do
+  if [ -x $f ]; then
+    echo $f
+  fi
+done
+
+done
+
+#+END_SRC
+
+\newpage
