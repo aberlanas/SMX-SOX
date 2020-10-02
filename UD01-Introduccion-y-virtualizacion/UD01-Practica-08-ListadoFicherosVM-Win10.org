@@ -292,10 +292,50 @@ Get-Content Xubuntu.vbox
 
    #+ATTR_LATEX: :width 12cm
     [[./imgs/practice.jpeg]]
+
+    /AVISO:/ Es importante que os aseguréis de que si ejecutamos un Script
+   varias veces el resultado siempre es el mismo, es decir, tiene que tener
+   en cuenta que ha podido ejecutarse en previas ocasiones y tal vez existan
+   acciones que no deban hacerse.
+   
+   Vamos a poner un ejemplo:
+
+   Si un =script= nada más empezar crea una carpeta en la ruta =C:\TMP\Canada=
+
+   #+BEGIN_SRC shell
+   New-Item -Type Directory "C:\TMP\Canada"
+   # Doing stuff here ^_^
+   # ...
+   #+END_SRC
+   
+   Si lo ejecutamos varias veces, /cada vez/ intentará crear la carpeta =C:\TMP\Canada=
+   así que sería conveniente que en este tipo de situaciones, contáramos con algunas
+   comprobaciones para asegurarnos de que todo va /a ir bien/ en el caso de que 
+   lo ejecutemos de manera repetida.
+
+   Por poner un ejemplo:
+
+   #+BEGIN_SRC shell
+
+   $RUTA_A_CANADA="C:\TMP\Canda"
+
+   # Sanity Checks
+   if (Test-Path $RUTA_A_CANADA) {
+     Write-Host " * El directorio ya existe ... "
+     Remove-Item -Force -Recurse $RUTA_A_CANADA
+   fi
+
+   New-Item -Type Directory $RUTA_A_CANADA
+
+   # Doing stuff here ^_^
+   # ...
+
+   #+END_SRC
+
    
    Realiza un Script en PowerShell que al ejecutarse realice las siguientes tareas:
 
-   0. Borrar en tu carpeta personal el directorio que se crea en el paso 1 (si existe),
+   0. Borrar en tu carpeta personal el directorio que se crea en el paso siguiente (si existe),
       con el objetivo de que la ejecución repetida del script no dé errores.
    1. Crear en tu carpeta personal una carpeta cuyo nombre sea tu primer apellido.
    2. Cambiar el directorio de trabajo a esa carpeta recién creada.
@@ -311,3 +351,4 @@ Get-Content Xubuntu.vbox
    12. Copiar el fichero de la máquina virtual (=*.vbox=) a la carpeta =CarpetaNoMenosImportante=.
 
    Avisa al profesor cuando termines. El Script debe llamarse: =nombreAlumno-UD01-repaso.ps1=
+   
