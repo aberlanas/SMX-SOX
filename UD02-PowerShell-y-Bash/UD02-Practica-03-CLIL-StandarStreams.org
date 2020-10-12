@@ -1,0 +1,165 @@
+#+Title: Unidad 02 - Práctica : Standar Streams
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD02: PowerShell y BASH}
+
+#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+\newpage
+* Practica : Standar Streams
+
+  Esta práctica consta de dos partes diferenciadas, en un primer momento veremos un pequeño texto en Inglés
+  extraido de la página de la Wikipedia que explica cuales son y cómo funcionan 3 de de los grandes mecanismos
+  de comunicación entre procesos y otros procesos o entre procesos y el usuario.
+  
+  Aunque en un inicio esto ya lo habéis utilizado, muchas veces ha sido de manera intuitiva y sin tener en cuenta
+  cómo está funcionando en realidad por debajo.
+
+  Conocer cómo funciona la comunicación nos permitirá más adelante centrarnos en la resolución de los problemas 
+  que podamos tener.
+  
+  Esta práctica se puede hacer en clase o en una máquina virtual con
+  Xubuntu (por ejemplo).
+
+  En la segunda parte de la práctica se proponen una serie de Scripts que no hacen lo que deberían. Corregidlos 
+  y ampliarlos para que se adapten al enunciado establecido en cada uno de ellos.
+
+  #+ATTR_LATEX: :width 50px
+  [[file:imgs/amongus.png]]
+   
+
+\newpage 
+** Parte I : Standar Streams - CLIL
+
+   In computer programming, standard streams are interconnected input and output 
+   communication channels between a computer program and its environment when it begins execution. 
+
+   The three input/output (I/O) connections are called :
+   
+   - standard input (stdin) 
+   - standard output (stdout) 
+   - standard error (stderr). 
+
+   Originally I/O happened via a physically connected system console (input via keyboard, output via monitor), 
+   but standard streams abstract this. When a command is executed via an interactive shell, 
+   the streams are typically connected to the text terminal on which the shell is running, 
+   but can be changed with redirection or a pipeline. 
+   
+   More generally, a child process inherits the standard streams of its parent process. 
+
+*** Application   
+
+    Users generally know standard streams as input and output channels that handle data 
+    coming from an input device, or that write data from the application. 
+
+    The data may be text with any encoding, or binary data. 
+    
+    In many modern systems, the standard error stream of a program is redirected into a log file, typically for error analysis purposes.
+
+    Streams may be used to chain applications, meaning that the output stream of 
+    one program can be redirected to be the input stream to another application. 
+    
+    In many operating systems this is expressed by listing the application names, 
+    separated by the vertical bar character, for this reason often called the pipeline character. 
+
+    A well-known example is the use of a pagination application, such as more, 
+    providing the user control over the display of the output stream on the display
+   
+*** Standard input (stdin)
+    
+    Standard input is a stream from which a program reads its input data. 
+    The program requests data transfers by use of the read operation.
+    Not all programs require stream input. 
+
+    For example, the dir and ls programs (which display file names contained in a directory) may take command-line arguments, 
+    but perform their operations without any stream data input.
+
+    Unless redirected, standard input is inherited from the parent process. 
+    In the case of an interactive shell, that is usually associated with the keyboard.
+
+    The file descriptor for standard input is 0 (zero).
+
+*** Standard output (stdout)
+
+    Standard output is a stream to which a program writes its output data. 
+    
+    The program requests data transfer with the write operation. 
+    Not all programs generate output. For example, the file rename command (variously called mv, move, or ren) is silent on success.
+
+    Unless redirected, standard output is inherited from the parent process. 
+    In the case of an interactive shell, that is usually the text terminal which initiated the program.
+
+    The file descriptor for standard output is 1 (one).
+
+*** Standard error (stderr)
+    
+    Standard error is another output stream typically used by programs to output error messages or diagnostics. 
+    It is a stream independent of standard output and can be redirected separately. 
+    This solves the semi-predicate problem, allowing output and errors to be distinguished, 
+    and is analogous to a function returning a pair of values – see Semi-predicate problem: Multi valued return. 
+
+    The usual destination is the text terminal which started the program to provide the best chance of being 
+    seen even if standard output is redirected (so not readily observed). 
+    
+    For example, output of a program in a pipeline is redirected to input of the next program, 
+    but errors from each program still go directly to the text terminal.
+
+    It is acceptable and normal to direct standard output and standard error to the same destination,
+    such as the text terminal. Messages appear in the same order as the program writes them.
+    
+    The file descriptor for standard error is defined by POSIX as 2 (two)
+
+    Bourne-style shells allow standard error to be redirected to the same destination that standard output is directed to using 
+
+    =2>&1=
+
+*** More info
+
+    * [[http://www.linfo.org/standard_input.html][Standard Input Definition]]
+    * [[http://www.linfo.org/standard_output.html][Standard Output Definition]]
+    * [[http://www.linfo.org/standard_error.html][Standard Error Definition]]
+
+
+** Answer the next questions (in English)
+
+*** Question 1
+
+    What is the difference between =>= and =>>= in Standard Error and Standard Output Streams?
+
+*** Question 2
+
+    What is a log?, explain it in a few sentences.
+
+*** Question 3
+
+    If you launch a program from a typical /Shell/ (for example Xfce-Terminal), which of the Streams 
+    remains attached to it? 
+
+*** Question 4
+
+    If you need to store the Standard Output and the Standard Error in the same file : =/tmp/myApp.log=
+    Which of the next redirections you need to use?
+
+    + a) =< /tmp/myApp.log=
+    + b) => /tmp/myApp.log=
+    + c) =>> /tmp/myApp.log=
+    + d) =2> /tmp/myApp.log=
+    + e) =2>&1 /tmp/myApp.log=
+    + f) =2>&1 /tmp/myApp.log=
+
+    Why? Explain the differences.
+
+** Parte II : Fix and Repair
+
+   In the compressed file (UD02-task-03-stream-scripts.tar.gz), are a fistful of Scripts, please read them
+   carefully and Fix (or expand) them.
+    
+   
