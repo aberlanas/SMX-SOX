@@ -15,6 +15,11 @@ clean:
 	rm -f UD02-PowerShell-y-Bash/*.pdf
 	rm -f UD02-PowerShell-y-Bash/*.tex
 
+	@echo " -- UD 03 "
+	rm -f UD03-Usuarios-Grupos-Permisos/*.pdf
+	rm -f UD03-Usuarios-Grupos-Permisos/*.tex
+
+
 files:
 	@echo " [ Step : files ]"
 	@echo " * Creating folder [ PDFS ]"
