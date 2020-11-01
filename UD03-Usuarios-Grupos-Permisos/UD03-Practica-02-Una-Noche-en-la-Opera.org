@@ -143,7 +143,30 @@ Lo que nos pide és:
 2. Que cada grupo de instrumentos pueda /leer/ las de su grupo, pero no /escribir/.
 3. El director puede /leer  y escribir/ todas las partituras (para eso es el director).
 
-Y sin más dilación...*¡MÚSICA MAESTRO!*
+
+*** Usuario espectador
+    
+    Para que los espectadores puedan ver cual es el /programa/ del concierto, se ha pensado
+    en que se cree un usuario =espectador= y se configure el acceso por SSH a la máquina
+    de los atriles para mostrar el /programa/.
+
+    Para la configuración de este usuario =espectador=, se deberá configurar el *Servicio OpenSSH Server*, 
+    tal y como se pide para que se cumplan los requisitos:
+
+    - Antes de pedir el /password/ de los usuarios debe mostrar un =Banner= que indica que estamos 
+      conectándo con el *Servidor* de la Orquesta. 
+      Se adjunta el fichero del *banner* en la práctica, =banner-orquesta.txt=, debeis situarlo 
+      en la carpeta =/etc/= y modificar la directiva correspondiente para que el servicio lo aplique.
+     
+    - En el caso de que inicie sesión (/login/) el usuario =espectador=, debe hacer una acción predeterminada
+      y única: *Mostrar el contenido de la carpeta =/srv/sox/= que contendrá las diferentes obras, a modo de 
+      listado del /programa/ musical.
+
+      Adjuntamos una captura de como podría quedar.
+      
+      #+CAPTION: Login por SSH como usuario =espectador=
+      #+ATTR_LATEX: :width 9cm
+      [[file:imgs/espectador-ssh.png]]
 
 \newpage
 ** ACTO II : Andante 
@@ -152,6 +175,7 @@ Y sin más dilación...*¡MÚSICA MAESTRO!*
    :END:
 
    #+CAPTION: Sinfonietta
+   #+ATTR_LATEX: :width 6cm
    [[file:imgs/sinfonietta.jpg]]
 
    Ya parece que la orquesta comienza a aclararse con los atriles...y para
