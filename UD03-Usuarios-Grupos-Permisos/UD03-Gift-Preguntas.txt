@@ -1,0 +1,104 @@
+// question: 0  name: Switch category to top/Categoria per defecte en 2CFM Sistemes operatius en xarxa 20//21   1600450138
+$CATEGORY: top/Categoria per defecte en 2CFM Sistemes operatius en xarxa 20//21   1600450138
+
+
+// question: 0  name: Switch category to top/Categoria per defecte en 2CFM Sistemes operatius en xarxa 20//21   1600450138/UD03-UsuariosPermisosGrupos
+$CATEGORY: top/Categoria per defecte en 2CFM Sistemes operatius en xarxa 20//21   1600450138/UD03-UsuariosPermisosGrupos
+
+
+// question: 2235906  name: 00-PermisosBasicos
+::00-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Qué significan las letras <strong>rwx</strong> en los permisos de un fichero? <br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Lectura, Escritura y Ejecución.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Lectura, Añadir al Final y Ejecución.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Lectura, Escritura y Copiado.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// name: 01-PermisosBasicos
+::01-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Qué significan las letras <strong>rwx</strong> en los permisos de un directorio? <br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Lectura, Escritura y Atravesamiento.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Lectura, Escritura y Ejecución.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Lectura, Escritura y Copiado.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::02-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Qué significan las letras <strong>-rwx------</strong> en los permisos de un fichero? <br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">El propietario puede leer, escribir y ejecutar, el resto nada.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Los miembros del grupo pueden leer, escribir y ejecutar, el resto nada.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Esos permisos no son posibles.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::03-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Qué significan las letras <strong>-rwsr-xr-x</strong> en los permisos de un fichero? <br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Al ejecutar el fichero tenemos los permisos de propietario.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">El propietario del grupo pueden leer, escribir y ejecutar, el solo leer.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">El propietario del grupo pueden leer, escribir y ejecutar, el solo ejecutar.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::04-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de los siguientes apartados es cierto si hablamos de los grupos?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">Nos simplifican la administración de permisos.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Cada usuario solo puede pertenecer a un grupo.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Cada grupo tiene como máximo 5 usuarios.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::05-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de los siguientes apartados es cierto si hablamos de los usuarios?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">No todos los usuarios tienen contraseña.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Todos los usuarios tienen contraseña.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Solo se crean en la instalación.<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::06-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de las siguientes órdenes daría como resultado los permisos rw-rw-r-- en el fichero a.out?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">chmod 664 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 775 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 220 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::06-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de las siguientes órdenes daría como resultado los permisos rwxr-xr-x en el fichero a.out?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">chmod 755 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 644 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 100 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::07-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de las siguientes órdenes daría como resultado los permisos rwxr--r-- en el fichero a.out?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">chmod 744 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 544 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 011 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::08-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de las siguientes órdenes daría como resultado los permisos rw-rw-r-- en el fichero a.out?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">chmod 664 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 775 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 220 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::09-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de las siguientes órdenes daría como resultado el cambio de propietario en el fichero a.out?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">chown newuser:newuser a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod newuser a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod -R newuser:newuser a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+
+// question: 2235906  name: 00-PermisosBasicos
+::10-PermisosBasicos::[html]<p dir\="ltr" style\="text-align\: left;">¿Cuál de las siguientes órdenes daría como resultado los permisos r--r--r-x en el fichero a.out?<br></p>{
+	=<p dir\="ltr" style\="text-align\: left;">chmod 445 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 447 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">chmod 002 a.out<br></p>
+	~<p dir\="ltr" style\="text-align\: left;">Ninguna de las otras opciones es correcta.<br></p>
+}
+

@@ -82,7 +82,7 @@ exit 0
 ** script-bash-03
 
    Este Script debe obtener la ruta a la carpeta personal del usuario y 
-   sustituir las "/" por "\" y mostrar la nueva ruta.
+   sustituir las "/" por "\" y mostrar la nueva ruta. /Sin mostrar ningún aviso/.
 
 #+BEGIN_SRC shell
 
@@ -102,6 +102,8 @@ exit 0
    y luego hacer un enlace /simbólico/ a esa carpeta desde donde se ejecute
    con nombre : =enlace=.
 
+   Un enlace simbólico es un  acceso directo a un determinado fichero o directorio.
+   
 #+BEGIN_SRC shell
 
 #!/bin/bash

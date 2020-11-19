@@ -19,6 +19,13 @@
 
   Comenzaremos por NFS como posible sistema de ficheros remoto. 
 
+  *NFS* son las siglas de Network FileSystem (Sistema de Ficheros en Red), que es uno de los
+  más populares sistemas de compartición de archivos. Es muy famoso y para tod@s los curiosos
+  se trata de un /protocolo a nivel de aplicación/ (OSI). 
+
+  Las versiones 2 y 3 son válidas y se utilizan ampliamente, pero no fué hasta la versión 4 cuando se implementó
+  la seguridad mediante /tickets de Kerberos/, esto se verá más adelante en el módulo. Por ahora que sepáis que 
+  la versión implementada es la 3 en ambos puntos de montaje (los que aparecen en la Práctica).
 
 * Práctica 
 
@@ -78,4 +85,5 @@
    - El comando que se ejecuta para comprobar : ~/RELLENA-LA-RUTA-AQUI/~
    - La salida del comando : ~crontab -l~ redirigida a un fichero.
    - Una captura donde se muestre que el mismo fichero está en ambos equipos.
+
 
