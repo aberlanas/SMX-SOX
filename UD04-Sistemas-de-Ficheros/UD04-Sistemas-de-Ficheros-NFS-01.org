@@ -27,6 +27,10 @@
   la seguridad mediante /tickets de Kerberos/, esto se verá más adelante en el módulo. Por ahora que sepáis que 
   la versión implementada es la 3 en ambos puntos de montaje (los que aparecen en la Práctica).
 
+  _*AVISO NAVEGANTES*_
+  Esta es la segunda versión de la práctica, ya que durante la realización de la misma
+  nos hemos dado cuenta de que había algunos puntos que no acababan de funcionar.
+
 * Práctica 
 
 ** Paso 01
@@ -42,13 +46,25 @@
   Sin embargo cuando las exportemos deberán comportarse de manera diferente:
 
   * ~/srv/nfs/exportado-todos~ $\rightarrow$  : Exportado para todos los equipos en solo lectura.
-  * ~/srv/nfs/exportado-lan~   $\rightarrow$  : Exportado para todos los equipos de la red interna vuestra en lectura/escritura.
+  * ~/srv/nfs/exportado-lan~   $\rightarrow$  : Exportado para todos los equipos de la red interna vuestra en *solo lectura*.
 
   En la guia Oficial de *Ubuntu* está muy bien explicado cómo se debe realizar esta configuración (en *Inglés*).
 
   [[https://ubuntu.com/server/docs][Help.Ubuntu.com]]
 
   Tened en cuenta que como siempre deberéis de *adaptar* la información disponible a las necesidades del ejercicio.
+
+  Respecto a la configuración de *NFS* para tan sólo una red, en algunos manuales aparece que se puede configurar de la siguiente manera:
+
+  #+BEGIN_SRC shell
+
+  /srv/mount-point/     192.168.1.0-255.255.255.0(ro,sync,no_subtree_check)
+
+  #+END_SRC
+
+  Pero esta, s más seguro configurarlo
+
+  
 
 ** Paso 02
 
