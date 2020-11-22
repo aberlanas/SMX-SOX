@@ -19,6 +19,10 @@ clean:
 	rm -f UD03-Usuarios-Grupos-Permisos/*.pdf
 	rm -f UD03-Usuarios-Grupos-Permisos/*.tex
 
+	@echo " -- UD 04 "
+	rm -f UD04-Sistemas-de-Ficheros/*.pdf
+	rm -f UD04-Sistemas-de-Ficheros/*.tex
+
 
 files:
 	@echo " [ Step : files ]"
