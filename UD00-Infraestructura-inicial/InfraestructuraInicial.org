@@ -8,8 +8,7 @@
 #+LATEX_HEADER: \pagestyle{fancy}
 #+LATEX_HEADER: \fancyhead[R]{2-SMX: SOX}
 #+LATEX_HEADER: \fancyhead[L]{Infraestructura]}
-
-#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \usepackage{wallpaper}
 #+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
 
@@ -37,12 +36,14 @@ diferentes, en estructuras diferentes, etc.
 Adjunto tabla resumen de las caracterísiticas de las máquinas.
 
 #+ATTR_LaTeX: :align |r|c|c|c|c|
-| Máquina        | S.O                 | Tarjetas de red | Disco Duro | Usuario Admin |
-|----------------+---------------------+-----------------+------------+---------------|
-| Win10-Client   | Windows 10          |               1 | 50GB       | Win4dm1n      |
-| Windows-Server | Windows 2019        |               2 | 50GB       | Win4dm1n      |
-| Xubuntu-Client | Xubuntu 20.04       |               1 | 10GB       | Lin4dm1n      |
-| Ubuntu-Server  | Ubuntu-Server 20.04 |               2 | 14GB       | Lin4dm1n      |
+#+ATTR_LaTeX: :environment longtable 
+| Máquina        | eths | Disco Duro | Usuario Admin | Password |
+|----------------+------+------------+---------------+----------|
+| Win10-Client   |    1 | 50GB       | winadmin      | Win4dmin |
+| Windows-Server |    2 | 50GB       | winadmin      | Win4dmin |
+| Xubuntu-Client |    1 | 10GB       | linadmin      | Lin4dmin |
+| Ubuntu-Server  |    2 | 15GB       | linadmin      | Lin4dmin |
+
 
 Todas las máquinas configurar con el parámetro de : =Usar Caché de E/S del Anfitrión=.
 
