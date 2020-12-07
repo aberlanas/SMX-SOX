@@ -1,0 +1,30 @@
+#+Title: Unidad X - Practica
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD05 - Gestores de Paquetes}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+
+* Gestores de paquetes - Reto
+
+  Solo para las personas más valientes de la clase.
+
+  En esta práctica vamos a Instalar como se hacía antes y cómo en realidad se hacen las cosas por debajo.
+
+* Instalación de Scite
+
+  Descarga las fuentes de SciTe desde su página oficial [[https://www.scintilla.org/SciTEDownload.html][Fuentes de SciTe para GNU/LinuX]]. Y sigue los pasos indicados en el fichero ~Scintilla/README~. 
+  Faltarán dependencias de construcción, pero nada que no podáis sortear para conseguir *hasta 1* puntos más en la nota del trimestre.

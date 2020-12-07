@@ -1,14 +1,17 @@
-#+Title: Unidad xx - Titulo Practica
+#+Title: Unidad X - Practica
 #+Author: Angel Berlanas Vicente
 
+#+LATEX_COMPILER: xelatex
 #+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
-
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \fancyhead{} % clear all header fields
 #+LATEX_HEADER: \pagestyle{fancy}
 #+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
-#+LATEX_HEADER: \fancyhead[L]{Unidad XX: Practica]}
-
-#+LATEX_HEADER:\usepackage{wallpaper}
+#+LATEX_HEADER: \fancyhead[L]{}
+#+LATEX_HEADER: \usepackage{wallpaper}
 #+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
 #+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}

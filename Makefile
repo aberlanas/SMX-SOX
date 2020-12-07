@@ -28,6 +28,10 @@ clean:
 	rm -f UD04-Sistemas-de-Ficheros/*.pdf
 	rm -f UD04-Sistemas-de-Ficheros/*.tex
 
+	@echo " -- UD 05 "
+	rm -f UD05-Software-y-actualizaciones/*.pdf
+	rm -f UD05-Software-y-actualizaciones/*.tex
+
 
 files:
 	@echo " [ Step : files ]"

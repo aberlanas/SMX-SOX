@@ -1,0 +1,74 @@
+#+Title: Unidad X - Practica
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD05 - Gestores de Paquetes}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+
+* Gestores de paquetes - Parte I
+
+  Contesta a las siguientes preguntas en un documento de LibreOffice (.odt) y luego exportalo a ~PDF~ y súbelo a Aules.
+
+** Pregunta 01
+   
+   ¿Qué es el fichero ~/etc/apt/sources.list~? 
+
+** Pregunta 02
+
+   ¿Qué función realiza la orden ~apt update~?
+
+** Pregunta 03
+
+   ¿Qué diferencia hay entre ~apt full-upgrade~ y ~apt upgrade~?
+
+** Pregunta 04
+
+   ¿Qué gestor de paquetes usa ~apt~ por debajo?
+
+** Pregunta 05
+
+   Indica las ordenes que ejecutarías para:
+
+   - Obtener el estado de instalación del paquete ~tree~.
+   - Listar los ficheros que pertenecen al paquete ~tree~.
+   - Obtener la versión instalada del paquete ~tree~.
+
+** Pregunta 06
+
+   ¿Qué función realiza ~dpkg --configure -a~?¿Porqué es interesante conocer este comando?
+
+** Pregunta 07 
+
+   ¿Qué es la variable ~PATH~ en los Sistemas Operativos? ¿Qué directorios contiene en vuestro usuario (contesta a esto en los sistemas Windows también)?
+
+
+** Pregunta 08 
+
+   ¿Qué es una dependencia si estamos hablando de la instalación de Software?
+
+** Pregunta 09
+
+   ¿Qué significa que un paquete tiene un ~Pre-Depends~ de otro paquete en los sistemas basados 
+   en Debian?.
+
+** Pregunta 10
+
+   ¿Qué repositorio deberíamos activar para poder instalar ~unrar~ (no ~unrar-free~): /main, universe, multiverse o restricted/?
+   
+
+   
+
+   
