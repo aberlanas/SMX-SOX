@@ -1,0 +1,121 @@
+#+Title: Unidad 05 - Practica MSI - SciTe y vim
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD05 - Gestores de Paquetes}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+
+* Gestores de paquetes - MSI
+  
+  En esta práctica vamos a ver cómo se instala de manera /desatendida/ un Software en Windows utilizando un Instalador de 
+  Microsoft. Además veremos que se puede realizar un /log/ de todas las operaciones que se van realizando a medida que 
+  van ocurriendo, de tal manera que nos puede servir para más adelante recoger esta información en caso de diagnóstico.
+
+* Instalación de SciTe
+
+  Ya hemos visto en clase que existen diferentes formas de instalar Software en los Sistemas Operativos. En este caso vamos a utilizar
+  un gestor de paquetes de Microsoft que ya tiene algún tiempo y que seguramente sea el que más veces habéis utilizado: el ~msi~.
+  
+  ~MSI~ (o /Microsoft Software Installer/) es un /framework/ de instalación que nos permite programar las operaciones que se deben 
+  realizara para instalar dentro de un Sistema Operativo de Microsoft un determinado Software. Las opciones que ofrece varía entre 
+  las diferentes versiones, pero hay muchas comunes.
+
+  Para esta práctica hemos elegido el *SciTe*, un pequeño editor de Texto del que soy bastante fan.
+
+** Paso 01 : Descarga del Instalador  
+
+   Lo primero será ir a la página oficial del equipo de desarrollo del SciTe.
+
+   [[./imgs/scite-msi-01.png]]
+
+   Una vez allí buscamos un /Instalador/ ya que no queremos un /autoejecutable/.
+
+   [[./imgs/scite-msi-02.png]]
+   
+   Nos enlaza a la Web de un colaborador que ha preparado un ~msi~ para poder realizar la instalación. Allí buscamos 
+   nuestra /arquitectura/ y lo descargamos. Si lo estamos descargando desde un navegador de Microsoft tendremos que aceptar
+   una serie de mensajes hasta llegar a tenerlo en  nuestra carpeta ~Descargas~.
+   
+   [[./imgs/scite-msi-03.png]]
+
+   Ahora que ya lo tenemos en nuestra carpeta descargas y una vez nos hemos asegurado de que hemos descargado 
+   el fichero adecuado (/mostrando las extensiones para tipos de fichero conocidos/). Y vamos a trabajar ahora 
+   con ~PowerShell~.
+
+\newpage
+** Paso 02 : PowerShell
+
+   Una vez en la carpeta ~Descargas~ vamos a ejecutar el instalador, pero añadiéndole el parámetro ~/h~ .
+
+   [[./imgs/scite-msi-04.png]]
+
+   Que nos mostrará la siguiente ayuda:
+
+   [[./imgs/scite-msi-05.png]]
+
+  
+   Utilizando la *técnica ancestral* de la *Lectura Comprensiva* buscad los parámetros necesarios para que:
+   
+   #+ATTR_LATEX: :width 3cm
+   [[./imgs/sumerian.png]]
+
+   - Se instale sin pedir asistencia al usuario, pero indicándole que se va a instalar.
+   - Que guarde /la información detallada de la instalación/ en un fichero que se llame: ~scite-log.txt~ que se guarde
+     en la carpeta ~Descargas~.
+   - Avisa al profesor cuando lo tengas.
+
+\newpage
+** Paso 03 : PATH 
+
+   Ya hemos visto en clase en qué consiste la variable ~PATH~ tanto en Sistemas Windows como en ~GNU/LinuX~, vamos ahora 
+   a añadir el nuevo directorio que contiene el /binario ejecutable/ del SciTe a nuestro ~PATH~ en Windows para que podamos
+   invocar a SciTe desde cualquier directorio utilizando ~PowerShell~.
+
+   Para realizar esto iremos al ~Panel de Control~ y tras seleccionar la opción de ~Iconos pequeños~:
+   
+   [[./imgs/scite-msi-12.png]]
+
+   En ~Sistema~ iremos a ~Configuración avanzada del sistema~ y buscaremos la opción de ~Variables de Entorno~. Añadiremos
+   a la variable ~PATH~ la ruta del directorio donde se encuetra ~SciTe.exe~ de tal manera que quede de la siguiente manera:
+
+   [[./imgs/scite-msi-11.png]]
+
+   Ahora, si cerramos la Terminal de ~PowerShell~ y la volvemos a abrir podemos comprobar que en nuestra variable de entorno
+   ~$env:PATH~ también aparece el directorio de ~SciTe~.
+
+   [[./imgs/scite-msi-14.png]]
+
+   Y como se muestra en la imagen podemos invocar al Scite.exe desde cualquier directorio, tal y como si se tratara de uno
+   de los comandos que tenemos disponible en el equipo (porque ahora es exactamente eso).
+
+   [[./imgs/scite-msi-13.png]]
+
+  
+   Realizad estos pasos y avisad al profesor.
+
+* Instalación de VIM 
+
+   Vamos a instalar VIM usando los mismos pasos y avisando al profesor en los mismos que en el caso del SciTe.
+
+   + [[https://github.com/petrkle/vim-msi/releases][GitHub - MSI for VIM]]
+
+   Debéis buscar el ~.msi~ más actual. 
+
+   [[./imgs/vim.jpg]]
+
+
+   
+  
