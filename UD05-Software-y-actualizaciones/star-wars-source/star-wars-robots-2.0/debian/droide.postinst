@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+case $1 in 
+
+	configure)
+		echo "Configuracion de Droide"
+		echo "Que tipo de droide soy"
+	;;
+	*)
+		echo "Unknown parameter given...nothing to do"
+	;;	
+
+esac

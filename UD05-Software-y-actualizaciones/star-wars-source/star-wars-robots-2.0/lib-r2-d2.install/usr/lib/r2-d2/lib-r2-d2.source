@@ -1,0 +1,7 @@
+# This script is licensed under GPL V3 or higher
+
+ROBOT_NAME="R2-D2"
+
+say_hello(){
+	echo " * Hello my name is ${ROBOT_NAME}"
+}

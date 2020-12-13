@@ -1,0 +1,48 @@
+#!/bin/bash
+
+echo " "
+echo " [ INFO ] : Este programa comprueba que todo lo estamos haciendo bien"
+echo " "
+echo " "
+
+if [ -x /usr/bin/r2-d2 ] ; then
+	echo " [ INFO ] : R2-D2 parece instalado, vamos a ejecutarlo"
+	r2-d2
+	echo ""
+fi
+
+if [ -x /usr/bin/c3po ] ; then
+	echo " [ INFO ] : C3PO parece instalado, vamos a ejecutarlo"
+	c3po
+	echo ""
+fi
+
+sleep 1
+
+
+echo " "
+echo " = = = = = = = = NEXT = = = = = = =  "
+echo " Ahora comprobamos las versiones "
+echo " "
+sleep 1
+
+echo " "
+echo " "
+echo " = = = = = = = = NEXT = = = = = = =  "
+echo " Version de r2-d2 " 
+echo " "
+dpkg -l r2-d2 | grep ^ii
+
+echo " "
+echo " "
+echo " = = = = = = = = NEXT = = = = = = =  "
+echo " Version de las librerias de r2-d2"
+echo " "
+dpkg -l lib-antigua-r2-d2 | grep ^ii
+
+echo " "
+echo " "
+echo " = = = = = = = = NEXT = = = = = = =  "
+echo " Version de c3po"
+echo " "
+dpkg -l c3po | grep ^ii

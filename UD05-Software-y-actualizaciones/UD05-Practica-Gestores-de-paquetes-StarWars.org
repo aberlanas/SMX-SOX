@@ -1,0 +1,278 @@
+#+Title: Unidad 05 - Rebelion en el Software
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD05 - Gestores de Paquetes}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+
+  [[./imgs/sw-todos.png]]
+
+  \newpage
+* Tarea: Episodio 23
+
+  #+ATTR_LATEX: :width 4cm
+  [[./imgs/sw-yoda.png]]
+  
+  Bienvenidos jóvenes Padawans a la academia de SMX2 de la fuerza y el
+  orden. Estamos aquí para mantener la paz en la galaxia y conseguir que
+  todo el software de la Alianza Rebelde funcione como tiene que
+  funcionar.
+  
+  Ya hemos visto en clase los conceptos de :
+  
+  - Software
+  - Librería
+  - Dependencias
+  - Gestor de paquetes
+  - Gestor de descargas de paquetes
+
+  En esta práctica, aprenderemos a usar las herramientas de la fuerza para
+  la instalación y mantenimiento del Software en la Alianza. También
+  veremos algunos ejemplos de como el lado oscuro es poderoso y nos tienta
+  a usar las herramientas mediante el reverso tenebroso.
+
+  Antes de continuar con la práctica, es importante que os descarguéis el
+  fichero comprimido que tenéis en el Aules cuyo nombre es:
+  
+  #+BEGIN_EXAMPLE
+    star-wars-robots-1.0.zip
+  #+END_EXAMPLE
+
+  Lo descomprimimos y nos situamos mediante el terminal en la carpeta que
+  acabamos de descomprimir:
+
+  #+BEGIN_EXAMPLE
+    cd \~/Descargas/star-wars-robots-1.0/
+    ls -1 \*.deb**
+  #+END_EXAMPLE
+
+  La segunda orden nos deberia de mostrar algo parecido a esto:
+
+  #+BEGIN_EXAMPLE
+    c3po_1.0_all.deb
+    lib-antigua-r2-d2_1.0_all.deb
+    lib-r2-d2_1.0_all.deb
+    r2-d2_1.0_all.deb
+    star-wars-robots_1.0_all.deb
+    star-wars-robots-doc_1.0_all.deb
+  #+END_EXAMPLE
+
+  #+ATTR_LATEX: :width 3cm
+  [[./imgs/sw-bot.png]]
+
+  Una vez tenemos todo vamos a proceder a extraer información mediante el
+  uso de los midiclorianos para poder instalar el software necesario para
+  la configuración de nuestros robots favoritos. ¿He dicho midiclorianos?
+  Quería decir /COMANDOS/.
+  
+  La fuerza es poderosa, y nos ofrece un gestor de paquetes que nos
+  permite la instalación/desinstalación/obtención de información y un
+  sinfín de posibilidades más:
+
+  | Comando                      | Descripción                                |
+  |------------------------------+--------------------------------------------|
+  | $ ~dpkg -I c3po_1.0_all.deb~ | Nos muestra información del paquete c3po   |
+  | # ~dpkg -i c3po_1.0_all.deb~ | Instala el paquete c3po                    |
+  | # ~dpkg -r c3po~             | Desinstala el paquete c3po                 |
+
+  *dpkg* tiene normalmente una opción "larga" por cada una de las cortas,
+  si os es más fácil podéis recordar las largas:
+
+  | Comando                             | Descripción                              |
+  |-------------------------------------+------------------------------------------|
+  | $ ~dpkg --info c3po_1.0_all.deb~    | Nos muestra información del paquete c3po |
+  | # ~dpkg --install c3po_1.0_all.deb~ | Instala el paquete c3po                  |
+  | # ~dpkg --remove c3po~              | Desinstala el paquete c3po               |
+
+  Vamos a ver un ejemplo de estos comandos:
+
+  #+BEGIN_EXAMPLE
+    dpkg -I c3po_1.0_all.deb
+  #+END_EXAMPLE
+
+  Nos devuelve algo parecido a esto:
+
+  #+BEGIN_EXAMPLE
+    paquete debian nuevo, versión 2.0.
+    tamaño 2036 bytes: archivo de control= 532 bytes.
+    361 bytes, 11 líneas control
+    176 bytes, 3 líneas md5sums
+
+
+    Package: c3po
+    Source: star-wars-robots
+    Version: 1.0
+    Architecture: all
+    Maintainer: El Caballero Jedi Angel \<angel.berlanas\@ieslasenia.org\>
+    Installed-Size: 30
+    Section: utils
+    Priority: optional
+    Homepage: https://github.com/aberlanas
+    Description: C3PO es un androide de protocolo (standalone)
+      Este paquete no tiene ninguna libreria
+  #+END_EXAMPLE
+
+  #+ATTR_LATEX: :width 3cm
+  [[./imgs/laslo.png]]
+
+  Si nos damos cuenta, este paquete NO TIENE dependencias, y podemos
+  instalarlo sin problemas, para ello:
+  
+  #+BEGIN_EXAMPLE
+    sudo dpkg -i c3po_1.0_all.deb
+  #+END_EXAMPLE
+
+  El sistema nos dirá algo parecido a esto
+
+  #+BEGIN_EXAMPLE
+    (Leyendo la base de datos ... 387865 ficheros o directorios instalados
+    actualmente.)
+    Preparing to unpack c3po_1.0_all.deb ...
+    Unpacking c3po (1.0) ...
+    Configurando c3po (1.0) ...
+  #+END_EXAMPLE
+
+  Todo parece haber ido bien, para ver si tenemos el paquete instalado
+  podemos pedir ayuda (de nuevo) al gestor de paquetes:
+  
+  #+BEGIN_EXAMPLE
+    dpkg -l c3po
+  #+END_EXAMPLE
+
+  Y nos mostrará el estado del paquete en el sistema:
+
+  [[./imgs/sw-estado.png]]
+
+  Además, si ejecutamos la orden:
+
+  #+BEGIN_EXAMPLE
+    dpkg -L c3po
+  #+END_EXAMPLE
+
+  Nos mostrará el listado de los ficheros que PERTENECEN a c3po.
+  #+ATTR_LATEX: :width 3cm
+  [[./imgs/sw-listado.png]]
+
+  #+BEGIN_QUOTE
+    Nota para curiosos : Si nos damos cuenta, aparecen básicamente dos
+    rutas: /usr/bin/ y /usr/share/doc/c3po ¿Os acordais Padawans de qué
+    había en /usr/bin?
+  #+END_QUOTE
+
+  #+ATTR_LATEX: :width 3cm
+  [[./imgs/c3p0.png]]
+
+Bueno, pues ya tenemos el ejemplo resuelto..¡ahora os voy a contar la
+misión que tenéis!
+
+#+ATTR_LATEX: :width 3cm
+[[./imgs/boba.png]]
+
+\newpage
+** Misión 1 : Instalar la versión 1.0 de nuestros robots.
+   :PROPERTIES:
+   :CUSTOM_ID: misión-1-instalar-la-versión-1.0-de-nuestros-robots.
+   :END:
+
+#+ATTR_LATEX: :width 3cm
+[[./imgs/sw-chew.png]]
+
+Para ello, deberemos:
+
+1. Obtener información del paquete star-wars-robots
+2. Instalar las dependencias (en orden)
+3. Comprobar que star-wars-robots está correctamente instalado
+
+#+BEGIN_QUOTE
+  *Entrega*: AVISAD al profesor cuando lo hayáis logrado para comprobar
+  el resultado
+#+END_QUOTE
+
+** Misión 2 : Actualización y Resolución de conflictos
+
+  Los sistemas de paquetería (=dpkg= en /Debian/ y derivados) nos ayudan a
+  lidiar con los problemas que puedan surgir en las actualizaciones de
+  paquetes, y en las instalaciones, cuando las dependencias de los
+  paquetes no se pueden instalar o tienen conflicto con otros paquetes.
+  
+  Para la realización de esta parte de la práctica, le pediremos al profesor
+  que nos pase los ~debs~ de la nueva versión de los robots (la 2.0).
+  
+  Realizad la actualización de los paquetes de ~star-wars-robots~ a la 
+  versión que te ha suministrador el profesor, para ello tendrás que utilizar
+  los comandos que hemos visto antes a lo largo de la práctica y además
+  deberás resolver un pequeño /puzzle/.
+  
+  Vas a encontrar problemas...¿Cuáles son?¿Cómo lo arreglarías?
+  
+  ¿Qué soluciones se te ocurren? Redáctalas y avisa al profesor para que
+  lo evalúe.
+
+  Una vez el profesor te dé el visto bueno a la solución, instala la
+  versión 2.0 de nuestros robots y de todas sus dependencias.
+   
+* Ficheros de Configuración
+
+  Los programas (software) no siempre se comportan igual, normalmente
+  tienen algún mecanismo de configuración. En windows esto suele estar en
+  el registro de Windows o en archivos de configuración. En GNU/LinuX es
+  mucho más habitual que la configuración esté en archivos de
+  configuración que en "dconf" (que sería un equivalente del registro de
+  Windows).
+  
+  En cursos posteriores (si nos vamos a *ASIR*) se verán todos estos conceptos más en profundidad,
+  pero por ahora lo que haremos será configurar el paquete /droide/, para
+  que se adapte a nuestras necesidades.
+  
+  Y veremos también como funcionan los ficheros de configuración.
+  
+  Tabla de Comandos:
+  
+  | Comando                       | Descripción                         |
+  |-------------------------------+-------------------------------------|
+  | =dpkg-reconfigure  <paquete>= | Vuelve a configurar y a preguntar   |
+  |                               | (si se precisa) los campos/opciones |
+  |                               | al usuario que lo está instalando.  |
+
+  
+** Misión 3 : Configurar el paquete droide
+
+   Ahora que ya tenemos claro todo esto, vamos a seguir estos pequeños pasos 
+
+   Pasos a seguir:
+
+   1. Instalar el paquete droide.
+   2. Comprobar que todo funciona.
+   3. Configurarlo para que muestre el mensaje: 
+      
+      #+BEGIN_SRC shell
+
+      Soy un droide de generico
+      Mis acciones son : estudiar SMX 2 y aprobar SOX, soy "NOMBRE ALUMN@"
+
+      #+END_SRC 
+
+   4. Reconfigurar el paquete via gestor de paquetes. Comprobad que vuelve 
+      al estado original.
+
+   #+ATTR_LATEX: :width 3cm
+   [[./imgs/sw-bot.png]]
+   
+   #+BEGIN_QUOTE
+    *Entrega*: AVISAD al profesor cuando lo hayáis logrado para comprobar
+    el resultado
+   #+END_QUOTE
+
+

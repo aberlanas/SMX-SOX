@@ -1,0 +1,9 @@
+# This script is licensed under GPL V3 or higher
+
+ROBOT_NAME="R2-D2 antiguo"
+
+say_hello(){
+	echo " WARNING : Esta libreria esta deprecada! Tal vez deberia usar otra ... "
+	echo " * Hello my name is ${ROBOT_NAME}"
+	
+}

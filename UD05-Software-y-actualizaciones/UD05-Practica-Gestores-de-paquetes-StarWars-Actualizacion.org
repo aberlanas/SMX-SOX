@@ -1,0 +1,43 @@
+** Misión: Instalación y actualización de los mismos programas mediante
+repositorios.
+   :PROPERTIES:
+   :CUSTOM_ID: misión-instalación-y-actualización-de-los-mismos-programas-mediante-repositorios.
+   :END:
+
+
+
+
+
+
+#+BEGIN_EXAMPLE
+    deb http://172.29.0.254/iso/pool bionic main
+#+END_EXAMPLE
+
+Una vez añadido el repositorio, actualizar el catálogo de software
+disponible e instalar el paquete star-wars-robots mediante apt.
+
+¿Qué diferencias observas respecto a la instalación mediante dpkg?
+Escribe al menos 5 líneas.
+
+Entrega el documento en la tarea que se llama:
+
+- /Star-Wars-Robots : Instalacion desde repositorios/
+
+--------------
+
+#+BEGIN_QUOTE
+  *NOTA*: Hacer esta última parte cuando lo diga el profesor:
+#+END_QUOTE
+
+Ahora lo que haremos será comprobar como se actualiza desde
+repositorios.
+
+- ¿Qué ordenes debes utilizar?
+- ¿Qué diferencias encuentras respecto a la actualización manual?
+
+Escribe al menos 10 líneas contando tanto las órdenes como las
+diferencias.
+
+Contestalo en la tarea que se llama:
+
+- /Star-Wars-Robots : Actualización desde los repositorios/

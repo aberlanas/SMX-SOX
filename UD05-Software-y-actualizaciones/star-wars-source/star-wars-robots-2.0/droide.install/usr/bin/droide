@@ -1,0 +1,22 @@
+#!/bin/bash
+
+tipo_droide="generico"
+
+if [ -r /etc/droide/droide-name.conf ] ; then
+	source /etc/droide/droide-name.conf	
+fi
+
+echo " Soy un droide de ${tipo_droide} "
+
+if [ ${tipo_droide} = "imperial" ]; then
+	echo " * ¡Gobernaremos la Galaxia! "	
+elif [ ${tipo_droide} = "rebelde" ]; then
+	echo " * ¡Libertad para Alderaan! "
+elif [ ${tipo_droide} = "generico" ]; then
+	echo " * Soy un Droide Generico "
+else
+	echo " [ ERROR ] Droide contiene valores incorrectos "
+	exit 1
+fi
+
+echo " Mis acciones son : ${acciones_droide}"

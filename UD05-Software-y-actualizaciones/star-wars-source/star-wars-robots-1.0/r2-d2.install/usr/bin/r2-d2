@@ -1,0 +1,11 @@
+#!/bin/bash
+
+ROBOT_NAME="default"
+
+say_hello(){
+	echo " * DEBUG : Algo falta.....¿librerias?"
+}
+
+[ ! -f /usr/lib/r2-d2/lib-r2-d2.source ] || source /usr/lib/r2-d2/lib-r2-d2.source
+
+

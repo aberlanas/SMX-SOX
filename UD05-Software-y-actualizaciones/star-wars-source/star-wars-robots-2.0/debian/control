@@ -1,0 +1,53 @@
+Source: star-wars-robots
+Section: utils
+Priority: optional
+Maintainer: El Caballero Jedi Angel <aberlanas@iesfuentesanluis.org>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.4
+Homepage: https://github.com/aberlanas/ImplantacionSistemasOperativos
+#Vcs-Git: git://git.debian.org/collab-maint/star-wars-robots.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/star-wars-robots.git;a=summary
+
+Package: star-wars-robots
+Architecture: all
+Depends: r2-d2, c3po, star-wars-robots-doc 
+Description: star-wars-robots es un paquete de ejemplo
+ Este paquete es un ejemplo de paquete con dependencias, que 
+ contiene el software 1.0 de nuestros robots.
+
+Package: star-wars-robots-doc
+Architecture: all
+Description: documentation for star-wars-robots
+ El paquete de documentacion asociado a Star Wars
+
+Package: r2-d2
+Architecture: all
+Depends: lib-antigua-r2-d2
+Description: arturito es el robot más chulo de la galaxia
+ Este paquete contiene los binarios que hacen que r2-d2 funcione
+
+Package: lib-r2-d2
+Architecture: all
+Depends: ${misc:Depends} 
+Conflicts: lib-antigua-r2-d2
+Description: arturito es el robot más chulo de la galaxia (librerias nuevas)
+ Este paquete contiene las librerias que hacen que r2-d2 mole de verdad
+
+Package: lib-antigua-r2-d2
+Architecture: all
+Depends: ${misc:Depends} 
+Description: arturito es el robot más chulo de la galaxia (librerias antiguas)
+ Este paquete contiene las librerias que hacen que r2-d2 mole un poco
+
+Package: c3po
+Architecture: all
+Depends: ${misc:Depends} 
+Description: C3PO es un androide de protocolo (standalone)
+ Este paquete no tiene ninguna libreria
+
+Package: droide
+Architecture: all
+Depends: ${misc:Depends} 
+Description: Droide es un androide de generico 
+ Este paquete no tiene ninguna libreria
+
