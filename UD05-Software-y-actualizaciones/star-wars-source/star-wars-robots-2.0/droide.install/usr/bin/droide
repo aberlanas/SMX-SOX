@@ -6,8 +6,6 @@ if [ -r /etc/droide/droide-name.conf ] ; then
 	source /etc/droide/droide-name.conf	
 fi
 
-echo " Soy un droide de ${tipo_droide} "
-
 if [ ${tipo_droide} = "imperial" ]; then
 	echo " * ¡Gobernaremos la Galaxia! "	
 elif [ ${tipo_droide} = "rebelde" ]; then

@@ -1,5 +1,11 @@
-star-wars-robots (1.0) unstable; urgency=low
+star-wars-robots (2.0) focal; urgency=medium
+
+  * New version
+
+ -- tic La Senia <tic@ieslasenia.org>  Sun, 13 Dec 2020 11:54:44 +0100
+
+star-wars-robots (1.0) focal; urgency=low
 
   * Initial Release.
 
- -- Angel Berlanas Vicente <aberlanas@iesfuentesanluis.org>  Wed, 13 Jan 2016 08:03:54 +0100
+ -- tic La Senia <tic@ieslasenia.org>  Wed, 13 Jan 2016 08:03:54 +0100

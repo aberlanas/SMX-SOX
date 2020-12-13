@@ -1,14 +1,21 @@
 #!/bin/bash
 
+set -e
 
 case $1 in 
 
 	configure)
 		echo "Configuracion de Droide"
-		echo "Que tipo de droide soy"
+		logger -s -t "droide" " Configuration of the package droide"
+		logger -s -t "droide" " if you want to modify edit config file under /etc/"
+		mkdir -p /etc/droide/
+		cp -f /usr/share/droide/config/default.config /etc/droide/droide-name.conf
+
 	;;
 	*)
 		echo "Unknown parameter given...nothing to do"
 	;;	
 
 esac
+
+#DEBHELPER#
