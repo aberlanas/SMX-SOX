@@ -1,0 +1,63 @@
+#+Title: Unidad 05 - Practica : Gestores de Paquetes
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD05 - Gestores de Paquetes}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+
+* Gestores de paquetes - MSI
+  
+  Vamos a realizar ahora una serie de Scripts y de configuraciones sin guia, todas
+  relacionadas con la instalación de Software y conceptos de actualizaciones 
+  en Windows.
+
+* Ejercicio 01 - 7 puntos.
+
+  Instala en Windows el editor ~emacs~ en su versióin 27.1 para sistemas de 64 bits. Añadelo al PATH  para poder
+  ser ejecutado desde cualquier punto del Sistema Operativo.
+
+  Cread y configurar un Script en PowerShell que compruebe para todos los usuarios del Sistema ~C:\Users\~, que 
+  si no tienen un /Acceso directo a ~emacs~/ en su /Escritorio/, que lo cree. 
+
+  A continuación, utilizando [[https://nssm.cc/download][NSSM]] configurad un servicio para que se ejecute dicho Script en todos los arranques.
+
+  Llamad al profesor cuando lo tengais.
+
+* Ejercicio 02 - 3 punto.
+
+  Utilizando PowerShell, lista todo el Sofware Instalado en Windows en la Terminal. Deben mostrarse solamente los campos (en este orden).
+
+  - Nombre del Software.
+  - Versión.
+  - Nombre del paquete.
+  - Fabricante.
+
+  Entregad el Script por /Aules/.
+
+* Ejercicio 03 - Opcional.
+
+  Realizad este mismo Script pero que liste el Software de una máquina remota. Preguntad al profesor
+  si tenéis duda.
+
+
+
+
+  
+  
+  
+
+
+
