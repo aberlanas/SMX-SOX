@@ -32,6 +32,9 @@ clean:
 	rm -f UD05-Software-y-actualizaciones/*.pdf
 	rm -f UD05-Software-y-actualizaciones/*.tex
 
+	@echo " -- UD 06 "
+	rm -f UD06-Usuarios-en-red/*.pdf
+	rm -f UD06-Usuarios-en-red/*.tex
 
 files:
 	@echo " [ Step : files ]"

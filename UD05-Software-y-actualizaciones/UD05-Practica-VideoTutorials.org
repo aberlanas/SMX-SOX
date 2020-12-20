@@ -1,0 +1,168 @@
+#+Title: Unidades 1-5 - Practica - Unificadora - CLIL
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{UD05 - Gestores de Paquetes}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+\newpage
+
+* Introducción
+
+  A lo largo de estos meses hemos ido viendo conceptos y además se han ido 
+  practicando muchos de los que se han tratado en clase. Sin embargo queda 
+  mucho por hacer todavía, así que vamos a plantear dos actividades integradoras
+  cercanas al mundo laboral que pongan en juego todo lo aprendido + alguna cosa más.
+
+  La presentación de estas prácticas es voluntaria (no son requisito para aprobar). Pero
+  contarán con un *20%* de la nota de la segunda evaluación. Es decir, aquellas personas
+  que obtengan un 10 en esta actividad contarán con 2 puntos más en la nota del 
+  segundo trimestre.
+
+  Además, lo que se aprenda/repase durante la realización de estas prácticas
+  le servirán de repaso para la recta final, que aseguro que no será fácil.
+
+  Se pide la creación de dos videotutoriales en los que se explicará en /INGLÉS/ todos
+  los pasos que se indican, las motivaciones que nos llevan ha realizar las acciones, etc.
+  Además de los videotutoriales, se adjuntarán los diferentes Scripts que aparecen 
+  en las diferentes situaciones.
+
+  Se valorarán aspectos cómo:
+
+  - Vocabulario.
+  - Profesionalidad.
+  - Atención al detalle.
+  - Resultado.
+    
+  Cada uno de los dos videotutoriales me los podéis enviar por correo, compartiéndolo
+  por Google Drive o de otros modos.
+
+  Se trata de que pongamos en juego todo lo aprendido. No será fácil, pero si se tienen 
+  dudas, podéis contactar conmigo via Correo/Discord/WebEx.  
+  
+  \newpage
+* Videotutorial 1 - GNU/LinuX
+
+  Crea un videotutorial en el cual a partir de un Sistema Xubuntu/Ubuntu instalado, se
+  vea como se realizan los siguientes pasos a la vez que los explicamos.
+
+** Usuarios
+   
+   Crearemos un usuario que no tenga permisos de administración.
+   
+   | Usuario | Pass     |
+   |---------+----------|
+   | john    | smith123 |
+   
+   Comprobaremos que puede iniciar sesión gráfica.
+   
+** Software
+
+  Adicionalmente descargaremos el siguiente Software:
+
+  Desde [[https://appimage.github.io/][AppImage.github.io]] descargaremos el ~VLC~ y esta versión la dejaremos en la carpeta:
+
+  - ~/usr/local/AppImages/~
+
+  Que crearemos para la ocasión.
+
+  Utilizando ~apt~ también instalaremos el ~VLC~, con lo que tendremos 2 versiones diferentes 
+  del mismo Software, una la de AppImage y otra la de los repositorios.
+
+  En el video tutorial debemos explicar cómo hemos instalado tanto desde la Web, como desde 
+  la línea de comandos las aplicaciones, así como podemos ejecutar una y la otra.
+
+** Script de Comprobación
+
+   Crearemos un Script que compruebe que en la carpeta ~Escritorio~ del usuario ~john~ existen 
+   dos accesos directos a las dos diferentes versiones del ~VLC~ a los que llamaremos:
+   
+   - ~vlc-appimage~
+   - ~vlc-apt~
+  
+   De tal manera que el usuario al hacer click sobre ellos ejecute uno u otro.
+   
+   En caso de que no existan los enlaces debe crearlos.
+
+** Script de Inicio
+   
+   Siguiendo los pasos de [[https://www.howtogeek.com/687970/how-to-run-a-linux-program-at-startup-with-systemd/][Esta guia]] cread una unidad de servicio en ~Systemd~ para 
+   que el script que acabáis de crear en el apartado anterior se ejecute en cada arranque.
+
+   En el videotutorial debéis explicar qué hace cada parte del script así como todos
+   los pasos que vais realizando (cómo si estuviérais explicándolo a un compañer@ vuestr@).
+
+
+   \newpage
+* Videotutorial 2 - MS Windows
+
+  Sobre una máquina virtual de Windows 10 o sobre vuestro propio Sistema Windows si lo estáis 
+  realizando en casa:
+
+** Usuarios
+
+   Cread una usuaria llamada ~Ada Byron~ que tenga permisos de Administración
+   
+   | Usuario | Pass     |
+   |---------+----------|
+   | ada     | lovelace |
+
+** Software
+
+   Instalaremos el ~SciTe~ desde la página Oficial del proyecto y lo añadiremos 
+   al ~PATH~ para poder ejecutarlo desde cualquier mediante la terminal.
+
+\newpage
+** Script y configuraciones
+
+   Adicionalmente a este documento se adjunta un fichero de propiedades para el SciTe 
+   que deben ser copiados al directorio:
+
+   - ~C:\Scite\Configs\~
+
+   Este fichero de configuración se aplica al usuario, debéis aplicarlo al usuario ~Ada~, 
+   lo podéis hacer de manera gráfica, iniciando sesión con ~Ada~, abriendo el Scite y editando
+   el fichero de configuración del Usuario:
+
+   /SciTe -> Options -> Open User Options File/
+
+   #+ATTR_LATEX: :width 10cm
+   [[./imgs/sciteUser.png]]
+
+   Y pegando el contenido del fichero de ~C:\Scite\Configs\~ que os he suministrado. 
+
+   Averiguad donde se guarda para el usuario ese fichero de Configuración (/investigación/) y cread un 
+   Script que en el arranque copie el fichero del Usuario a ~C:\Scite\Configs\Backups\~ y cree una copia de respaldo
+   con la fecha del dia (formato YYYYMMDD-HHmm) de ese fichero de configuración del Scite de ~Ada~, de tal manera 
+   que podamos ir viendo si el fichero se modifica y podamos tener un /histórico/ de los posibles 
+   cambios que pudiera haber.
+
+   Podéis usar ~nssm~ como en la práctica de clase.
+  
+   [[https://nssm.cc/download][NSSM WebPage]]
+
+   
+   En el videotutorial debéis explicar qué hace cada parte del script así como todos
+   los pasos que vais realizando (cómo si estuviérais explicándolo a un compañer@ vuestr@).
+
+   #+ATTR_LATEX: :width 8cm
+   [[./imgs/Ada.png]]
+
+
+
+   
+
+  
+
+  
