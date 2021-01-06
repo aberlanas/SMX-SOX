@@ -1,4 +1,4 @@
-#+Title: Unidad X - Practica
+#+Title: Unidad 05 - Practica OpenLDAP
 #+Author: Angel Berlanas Vicente
 
 #+LATEX_COMPILER: xelatex
@@ -36,7 +36,7 @@
 En la máquina Xubuntu que tenemos, instalaremos el paquete =slapd= que
 contiene el /demonio/ o servidor de ldap.
 
-[[file:OpenLDAP/Slapd01.png]]\\
+[[./imgs/slapd-01.png]]\\
 
 La orden que ejecutaremos es :
 
@@ -44,14 +44,10 @@ La orden que ejecutaremos es :
     sudo apt install slapd
 #+END_EXAMPLE
 
-[[file:OpenLDAP/Slapd02.png]]\\
-
 Durante la instalación nos preguntará por la contraseña del
 administrador del LDAP (no tiene por qué ser la misma que la del
 administrador /local/ de la máquina, pero en esta práctica /sí/ que
 usaremos el mismo: *Lin4dm1n*)
-
-[[file:OpenLDAP/Slapd03.png]]\\
 
 OpenLDAP no tiene una configuración especialmente amigable para el
 usuario, así que lo que haremos será instalar un pequeño gestor Web que
@@ -64,24 +60,30 @@ servicio, utilizando herramientas gráficas, sin necesidad de instalar un
 servidor de X en las máquinas que contienen dichos servicios.
 
 Buscaremos en los repositorios una herramienta que nos permita
-administrar el LDAP.
+administrar el ~LDAP~.
 
 #+BEGIN_EXAMPLE
     sudo apt search ldapadmin
 #+END_EXAMPLE
 
+Vemos que aparece el ~phpldapadmin~ pero esto requiere de un servidor
+de bases de datos para gestionarlo, así que antes de que nos pongamos
+a instalar y configurar el Slapd, vale la pena instalar el MySQL Server.
+
 ** Instalación de MySQL Server
 
-Aquí hay que instalar el servicio de Mysql.
+   Aquí hay que instalar el servicio de Mysql.
 
-[[file:OpenLDAP/Slapd04.png]]\\
+   [[./imgs/slapd-02.png]]
 
-Entre los resultados seleccionaremos el paquete =phpldapadmin= que entre
-sus dependencias cuenta con un servidor web (el /apache/) con el que
-podremos conectarnos a nuestro LDAP /local/ desde cualquier máquina de
-la red que esté accesible y administrar el servicio.
+   Una vez instalado , continuamos con el ~phpldapadmin~.
 
-[[file:OpenLDAP/Slapd05.png]]\\
+** Instalación de phpldapadmin
+
+   Entre los resultados seleccionaremos el paquete =phpldapadmin= que entre
+   sus dependencias cuenta con un servidor web (el /apache/) con el que
+   podremos conectarnos a nuestro LDAP /local/ desde cualquier máquina de
+   la red que esté accesible y administrar el servicio.
 
 ** Accediendo a phpLDAPadmin
    :PROPERTIES:
@@ -94,11 +96,13 @@ en la barra de direcciones la /ip/ o nombre del servidor de LDAP +
 
 Tal y como se vé en el ejemplo:
 
-=http://192.168.1./phpldapadmin/=
+=http://HERE-MY-IP/phpldapadmin/=
 
 Aparecen una serie de errores (más bien avisos) que nos indican que
 algunas de las funciones que está utilizando el programa está
 *obsoletas* (/deprecated/).
+
+[[./imgs/slapd-03.png]]
 
 Son avisos que no afectan a la funcionalidad del programa, sin embargo
 si queremos solucionarlos, podemos seguir los pasos que se adjuntan en
