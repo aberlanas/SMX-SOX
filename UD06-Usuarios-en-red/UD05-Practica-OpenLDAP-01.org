@@ -1,4 +1,4 @@
-#+Title: Unidad 05 - Practica OpenLDAP
+#+Title: Unidad 05 - Practica Instalación OpenLDAP
 #+Author: Angel Berlanas Vicente
 
 #+LATEX_COMPILER: xelatex
@@ -104,16 +104,14 @@ algunas de las funciones que está utilizando el programa está
 
 [[./imgs/slapd-03.png]]
 
-Son avisos que no afectan a la funcionalidad del programa, sin embargo
-si queremos solucionarlos, podemos seguir los pasos que se adjuntan en
-la otra práctica de la unidad :
+Son avisos que no afectan a la funcionalidad del programa. Sin embargo
+os animo a arreglarlo (lo valoraré positivamente).
 
-*Parcheando phpLDAPadmin*
+** Tarea: Parcheando phpLDAPadmin
 
-En las siguientes capturas, no aparecerán los errores, asumiendo que se
-ha /arreglado/ el servicio siguiendo los pasos descritos.
-
-[[file:OpenLDAP/Slapd06.png]]\\
+Realizar los pasos necesarios (editando el código fuente) para que funcione
+cómo toca. Buscad una solución y antes de aplicarla de manera irreversible
+consultarme.
 
 Ahora deberemos reconfigurar el servidor de ldap (=slapd=) para
 introducir los valores que necesitamos para adecuarlo a nuestra
@@ -131,37 +129,28 @@ terminalel comando:
     sudo dpkg-reconfigure slapd
 #+END_EXAMPLE
 
-[[file:OpenLDAP/Slapd07.png]]\\
+[[./imgs/slapd-04.png]]
 
 Marcaremos la opción de /No omitir/ la configuración del servidor, de
 esta manera podremos responder a todas las preguntas que necesitamos.
 
-[[file:OpenLDAP/Slapd08.png]]\\
+[[./imgs/slapd-05.png]]
 
 En este punto nos preguntará por el nombre del dominio que usaremos para
 crear el DN base del directorio (/Distinguisehd Name/), en nuestro caso
-seleccionaremos la sede de /Valencia/ de nuestra empresa:
+seleccionaremos vuestro servidor Ubuntu: ubuntusrvXX.smx2020.net
 
-=valencia.iso.com=
+=ubuntusrvXX.smx2020.net=
 
-que equivaldría a un DN base de: <dc=valencia,dc=iso,dc=com>.
+que equivaldría a un DN base de: <dc=ubuntusrvXX,dc=smx2020,dc=net>.
 
-[[file:OpenLDAP/Slapd09.png]]\\
+[[./imgs/slapd-06.png]]
 
 Estableceremos también el nombre de la organización:
 
-=iso=
-
-[[file:OpenLDAP/Slapd10.png]]\\
+=smx2020=
 
 así como la contraseña del administrador (/puede ser la misma/).
-
-[[file:OpenLDAP/Slapd11.png]]\\
-
-En el apartado del motor de base de datos, seleccionaremos el motor
-=HDB=.
-
-[[file:OpenLDAP/Slapd12.png]]\\
 
 En esta pregunta nos indica qué debe hacer el gestor de software si
 decidimos borrar el paquete, lo que marcaremos será *NO Borrar* la base
@@ -172,13 +161,9 @@ Esto nos marca también que si queremos borrar la base de datos tendremos
 que realizar esta operación manualmente, y no nos servirá el proceso de
 /desinstalación/ del servidor de LDAP.
 
-[[file:OpenLDAP/Slapd13.png]]\\
-
 Por último, nos pregunta si deseamos mover la base de datos antigua (que
 está vacia en este momento) durante este proceso. Optaremos por la
 opción: *Sí*
-
-[[file:OpenLDAP/Slapd14.png]]\\
 
 ** Configurando phpLDAPadmin
    :PROPERTIES:
@@ -189,9 +174,9 @@ Una vez realizado todo el proceso anterior, si volvemos a la pantalla de
 phpLDAPadmin, veremos que utilizando un *dn* de administrador nos
 permite entrar en el servidor.
 
-=cn=admin,dc=valencia,dc=iso,dc=com=
+=cn=admin,dc=ubuntusrvXX,dc=smx2020,dc=net=
 
-[[file:OpenLDAP/Slapd15.png]]\\
+[[./imgs/slapd-07.png]]
 
 Sin embargo, aunque la autenticación ha tenido éxito, no podemos
 administrar nuestro dominio, ya que nos aparece en la parte derecha para
@@ -205,8 +190,6 @@ Esto es debido a que /por defecto/ el phpLDAPadmin administra ese
 dominio. Deberemos ir al fichero de configuración y cambiar la /base/ de
 la búsqueda.
 
-[[file:OpenLDAP/Slapd16.png]]\\
-
 El fichero de configuración se encuentra en :
 
 =/etc/phpldapadmin/config.php=
@@ -214,16 +197,15 @@ El fichero de configuración se encuentra en :
 Debemos buscar la línea siguiente, y cambiar los servers a los que
 queremos administrar.
 
-[[file:OpenLDAP/Slapd17.png]]\\
+[[./imgs/slapd-10.png]]
 
 Ejemplo:
 
-[[file:OpenLDAP/Slapd18.png]]\\
 
 Ahora al conectarnos de nuevo en el phpLDAPadmin veremos una estructura
 como esta:
 
-[[file:OpenLDAP/Slapd19.png]]\\
+[[./imgs/slapd-11.png]]
 
 ** Creando nuestros objetos en LDAP
    :PROPERTIES:
@@ -240,10 +222,10 @@ de ese grupo crearemos los diferentes usuarios más adelante.
 La estructura quedará de esta manera:
 
 #+BEGIN_EXAMPLE
-    dc=valencia,dc=iso,dc=com
-        ou=esbirros
-            cn=esbirrosldap
-                uid=esbirroldap01
+    dc=ubuntusrvXX,dc=smx2020,dc=net
+        ou=tropas
+            cn=goblins
+                uid=goblin01
 #+END_EXAMPLE
 
 Crearemos primero la *OU* (Organizational Unit).
