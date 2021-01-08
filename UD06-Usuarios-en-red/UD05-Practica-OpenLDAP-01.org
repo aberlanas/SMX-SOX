@@ -230,21 +230,13 @@ La estructura quedará de esta manera:
 
 Crearemos primero la *OU* (Organizational Unit).
 
-[[file:OpenLDAP/Slapd20.png]]\\
-
 Introduciremos los datos correspondientes y crearemos la entrada en el
 árbol.
 
-[[file:OpenLDAP/Slapd26.png]]\\
-
 Ahora crearemos el grupo dentro de la *OU*
 
-[[file:OpenLDAP/Slapd27.png]]\\
-
-[[file:OpenLDAP/Slapd28.png]]\\
-
-Y por último crearemos el usuario =esbirroldap01=, con los valores que
-se muestran en la imágen.
+Y por último crearemos el usuario =goblin01=, con los valores que
+se muestran.
 
 La estructura quedará así:
 
@@ -266,17 +258,7 @@ consultas y modificaciones.
 Una vez realizada la instalación, podemos comprobar que somos capaces de
 contactar con el =ldap= utilizando la línea de comandos:
 
-=ldapsearch -x -h localhost -p 389 -b "dc=valencia,dc=iso,dc=com"=
+=ldapsearch -x -h localhost -p 389 -b "dc=ubuntusrvXX,dc=smx2020,dc=net"=
 
-que nos debería devolver una salida similar a esta:
+Avisad al profesor cuando esto os funcione.
 
-[[file:OpenLDAP/Slapd31.png]]\\
-
-** Ejercicio 1
-   :PROPERTIES:
-   :CUSTOM_ID: ejercicio-1
-   :END:
-
-Realiza los pasos descritos en la práctica, documentando /brevemente/
-cada uno de ellos y adjunta una captura de la ejecución del comando
-=ldapsearch -x -h localhost -p 389 -b "dc=valencia,dc=iso,dc=com"=
