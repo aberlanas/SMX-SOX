@@ -65,9 +65,35 @@
      [[./imgs/lin-join-ldap-03.png]]
 
      [[./imgs/lin-join-ldap-04.png]]
-   
+ 
 
-* Configuración nsswitch y PAM
+* Disclaimer
+
+  A partir de este punto, el tutorial continúa en la lengua del Imperio Británico.
+
+  https://kifarunix.com/configure-sssd-for-ldap-authentication-on-ubuntu-20-04/
+
+  Good Luck!
+
+* SSSD Installation
+
+  *SSSD* is the /System Security Services Daemon/ a system service to access remote
+  directories and authentication mechanisms such as an LDAP directory (as we prepared previously),
+  Active Directory, Active Directory Domains, and so on.
+  
+
+  In the next steps I will assume that we have a running OpenLDAP server at our machine 
+  named :
+
+  ~ubuntusrv.smx2020.net~ and we have connectivity with it.
+
+  Go to the client (Xubuntu Machine) and install the next packages:
+
+  ~sssd libpam-sss libnss-sss~
+
+* SSSD Configuration  
+
+** Create 
 
   Añadimos al fichero ~/etc/nsswitch.conf~ que busque los usuarios en LDAP.
 
