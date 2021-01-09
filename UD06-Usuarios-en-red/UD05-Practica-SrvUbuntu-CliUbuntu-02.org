@@ -1,0 +1,76 @@
+#+Title: Unidad 05 - Practica Union al Dominio - Ubuntu Srv + Ubuntu Client
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+* Tarea: Unión al dominio
+  
+  En esta tarea vamos a unir al dominio una máquina Ubuntu, de tal 
+  manera que los usuarios que creemos en el LDAP en el Servidor puedan iniciar sesión
+  en nuestra máquina cliente Ubuntu.
+
+** Requisitos:  
+
+   - Servidor LDAP instalado en la máquina Ubuntu.
+   - Ambas máquinas actualizadas.
+   - Ambas máquinas encendidas.
+   - Conectividad entre ellas.
+   - Resolución de nombres habilitada.
+
+   Una de las cosas que debéis comprobar es esto:
+
+   [[./imgs/lin-join-ldap-01.png]]
+
+   Si no va el ~ping~ con resolución de nombres...arreglarlo, no sigáis con la práctica.
+
+** Instalación de LDAP - Cliente
+
+   Instalamos los paquetes siguientes:
+
+   | Paquetes    |
+   |-------------|
+   | libnss-ldap |
+   | libpam-ldap |
+   | ldap-utils  |
+
+   En la configuración deberemos rellenar algunos parámetros:
+
+   | Parámetros:         | Valor                                   |
+   |---------------------+-----------------------------------------|
+   | ldapi               | ldapi:\\ubuntusrv.smx2020.net           |
+   | distinguished-name  | dc=ubuntusrv,dc=smx2020,dc=net          |
+   | ldap-version        | 3                                       |
+   | Root Database Admin | Yes                                     |
+   | LDAP Database Login | No                                      |
+   | LDAP Account Root   | cn=admin,dc=ubuntusrv,dc=smx2020,dc=net |
+   | LDAP Pass           | Lin4dm1n                                |
+
+   Algunas imágenes son:
+
+     [[./imgs/lin-join-ldap-02.png]]
+   
+     [[./imgs/lin-join-ldap-03.png]]
+
+     [[./imgs/lin-join-ldap-04.png]]
+   
+
+* Configuración nsswitch y PAM
+
+  Añadimos al fichero ~/etc/nsswitch.conf~ que busque los usuarios en LDAP.
+
+    [[./imgs/lin-join-ldap-05.png]]
+   
+

@@ -33,7 +33,7 @@
    :CUSTOM_ID: instalación-del-servicio
    :END:
 
-En la máquina Xubuntu que tenemos, instalaremos el paquete =slapd= que
+En la máquina Ubuntu Server que tenemos, instalaremos el paquete =slapd= que
 contiene el /demonio/ o servidor de ldap.
 
 [[./imgs/slapd-01.png]]\\
@@ -90,122 +90,124 @@ a instalar y configurar el Slapd, vale la pena instalar el MySQL Server.
    :CUSTOM_ID: accediendo-a-phpldapadmin
    :END:
 
-Una vez lo tengamos instalado, abriremos el navegador e introduciremos
-en la barra de direcciones la /ip/ o nombre del servidor de LDAP +
-=phpldapadmin=.
+   Una vez lo tengamos *instalado*, abriremos el navegador e introduciremos
+   en la barra de direcciones la /ip/ o nombre del servidor de LDAP +
+   =phpldapadmin=.
 
-Tal y como se vé en el ejemplo:
+   Tal y como se vé en el ejemplo:
 
-=http://HERE-MY-IP/phpldapadmin/=
+   =http://HERE-MY-IP/phpldapadmin/=
 
-Aparecen una serie de errores (más bien avisos) que nos indican que
-algunas de las funciones que está utilizando el programa está
-*obsoletas* (/deprecated/).
+   Aparecen una serie de errores (más bien avisos) que nos indican que
+   algunas de las funciones que está utilizando el programa está
+   *obsoletas* (/deprecated/).
+   
+   [[./imgs/slapd-03.png]]
 
-[[./imgs/slapd-03.png]]
-
-Son avisos que no afectan a la funcionalidad del programa. Sin embargo
-os animo a arreglarlo (lo valoraré positivamente).
+   Son avisos que no afectan a la funcionalidad del programa. Sin embargo
+   os animo a arreglarlo (lo valoraré positivamente).
 
 ** Tarea: Parcheando phpLDAPadmin
 
-Realizar los pasos necesarios (editando el código fuente) para que funcione
-cómo toca. Buscad una solución y antes de aplicarla de manera irreversible
-consultarme.
-
-Ahora deberemos reconfigurar el servidor de ldap (=slapd=) para
-introducir los valores que necesitamos para adecuarlo a nuestra
-infraestructura.
+   Realizar los pasos necesarios (editando el código fuente) para que funcione
+   cómo toca. Buscad una solución y antes de aplicarla de manera irreversible
+   consultarme.
+   
+   Ahora deberemos reconfigurar el servidor de ldap (=slapd=) para
+   introducir los valores que necesitamos para adecuarlo a nuestra
+   infraestructura.
 
 ** Reconfigurando slapd
    :PROPERTIES:
    :CUSTOM_ID: reconfigurando-slapd
    :END:
 
-Para realizar la re-configuración de slapd, ejecutaremos desde el
-terminalel comando:
+   Para realizar la re-configuración de slapd, ejecutaremos desde el
+   terminal el comando:
 
-#+BEGIN_EXAMPLE
-    sudo dpkg-reconfigure slapd
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+   sudo dpkg-reconfigure slapd
+   #+END_EXAMPLE
 
-[[./imgs/slapd-04.png]]
+   [[./imgs/slapd-04.png]]
 
-Marcaremos la opción de /No omitir/ la configuración del servidor, de
-esta manera podremos responder a todas las preguntas que necesitamos.
+   Marcaremos la opción de /No omitir/ la configuración del servidor, de
+   esta manera podremos responder a todas las preguntas que necesitamos.
+   
+   [[./imgs/slapd-05.png]]
 
-[[./imgs/slapd-05.png]]
+   En este punto nos preguntará por el nombre del dominio que usaremos para
+   crear el DN base del directorio (/Distinguisehd Name/), en nuestro caso
+   seleccionaremos vuestro servidor Ubuntu: ubuntusrvXX.smx2020.net
 
-En este punto nos preguntará por el nombre del dominio que usaremos para
-crear el DN base del directorio (/Distinguisehd Name/), en nuestro caso
-seleccionaremos vuestro servidor Ubuntu: ubuntusrvXX.smx2020.net
+   =ubuntusrvXX.smx2020.net=
 
-=ubuntusrvXX.smx2020.net=
+   que equivaldría a un DN base de: <dc=ubuntusrvXX,dc=smx2020,dc=net>.
 
-que equivaldría a un DN base de: <dc=ubuntusrvXX,dc=smx2020,dc=net>.
+   [[./imgs/slapd-conf-01.png]]
 
-[[./imgs/slapd-06.png]]
+   Estableceremos también el nombre de la organización:
 
-Estableceremos también el nombre de la organización:
+   [[./imgs/slapd-conf-02.png]]
 
-=smx2020=
+   =smx2020=
 
-así como la contraseña del administrador (/puede ser la misma/).
+   así como la contraseña del administrador (/puede ser la misma/).
 
-En esta pregunta nos indica qué debe hacer el gestor de software si
-decidimos borrar el paquete, lo que marcaremos será *NO Borrar* la base
-de datos en caso de desinstalación del servicio =slapd= para posibles
-recuperaciones frente a desastres.
+   En esta pregunta nos indica qué debe hacer el gestor de software si
+   decidimos borrar el paquete, lo que marcaremos será *NO Borrar* la base
+   de datos en caso de desinstalación del servicio =slapd= para posibles
+   recuperaciones frente a desastres.
 
-Esto nos marca también que si queremos borrar la base de datos tendremos
-que realizar esta operación manualmente, y no nos servirá el proceso de
-/desinstalación/ del servidor de LDAP.
+   Esto nos marca también que si queremos borrar la base de datos tendremos
+   que realizar esta operación manualmente, y no nos servirá el proceso de
+   /desinstalación/ del servidor de LDAP.
 
-Por último, nos pregunta si deseamos mover la base de datos antigua (que
-está vacia en este momento) durante este proceso. Optaremos por la
-opción: *Sí*
+   Por último, nos pregunta si deseamos mover la base de datos antigua (que
+   está vacia en este momento) durante este proceso. Optaremos por la
+   opción: *Sí*
 
 ** Configurando phpLDAPadmin
    :PROPERTIES:
    :CUSTOM_ID: configurando-phpldapadmin
    :END:
 
-Una vez realizado todo el proceso anterior, si volvemos a la pantalla de
-phpLDAPadmin, veremos que utilizando un *dn* de administrador nos
-permite entrar en el servidor.
+   Una vez realizado todo el proceso anterior, si volvemos a la pantalla de
+   phpLDAPadmin, veremos que utilizando un *dn* de administrador nos
+   permite entrar en el servidor.
+   
+   =cn=admin,dc=ubuntusrvXX,dc=smx2020,dc=net=
 
-=cn=admin,dc=ubuntusrvXX,dc=smx2020,dc=net=
+   [[./imgs/slapd-07.png]]
 
-[[./imgs/slapd-07.png]]
+   Sin embargo, aunque la autenticación ha tenido éxito, no podemos
+   administrar nuestro dominio, ya que nos aparece en la parte derecha para
+   administrar el dominio:
 
-Sin embargo, aunque la autenticación ha tenido éxito, no podemos
-administrar nuestro dominio, ya que nos aparece en la parte derecha para
-administrar el dominio:
+   =example.com=
 
-=example.com=
+   que /No funciona/.
 
-que /No funciona/.
+   Esto es debido a que /por defecto/ el phpLDAPadmin administra ese
+   dominio. Deberemos ir al fichero de configuración y cambiar la /base/ de
+   la búsqueda.
 
-Esto es debido a que /por defecto/ el phpLDAPadmin administra ese
-dominio. Deberemos ir al fichero de configuración y cambiar la /base/ de
-la búsqueda.
+   El fichero de configuración se encuentra en :
 
-El fichero de configuración se encuentra en :
+   =/etc/phpldapadmin/config.php=
 
-=/etc/phpldapadmin/config.php=
+   Debemos buscar la línea siguiente, y cambiar los servers a los que
+   queremos administrar.
+   
+   [[./imgs/slapd-10.png]]
 
-Debemos buscar la línea siguiente, y cambiar los servers a los que
-queremos administrar.
-
-[[./imgs/slapd-10.png]]
-
-Ejemplo:
+   Ejemplo:
 
 
-Ahora al conectarnos de nuevo en el phpLDAPadmin veremos una estructura
-como esta:
+   Ahora al conectarnos de nuevo en el phpLDAPadmin veremos una estructura
+   como esta:
 
-[[./imgs/slapd-11.png]]
+   [[./imgs/slapd-11.png]]
 
 ** Creando nuestros objetos en LDAP
    :PROPERTIES:
@@ -223,42 +225,42 @@ La estructura quedará de esta manera:
 
 #+BEGIN_EXAMPLE
     dc=ubuntusrvXX,dc=smx2020,dc=net
-        ou=tropas
-            cn=goblins
-                uid=goblin01
+        cn=admin
+        cn=goblins
+           cn=goblin01
+	ou=tropas
 #+END_EXAMPLE
 
-Crearemos primero la *OU* (Organizational Unit).
+   [[./imgs/phpldapadmin-task.png]]
 
-Introduciremos los datos correspondientes y crearemos la entrada en el
-árbol.
+   Crearemos primero la el /Grupo/ y luego el usuario dentro del grupo. 
+   Por último la *ou*
 
-Ahora crearemos el grupo dentro de la *OU*
+   Introduciremos los datos correspondientes y crearemos la entrada en el
+   árbol.
 
-Y por último crearemos el usuario =goblin01=, con los valores que
-se muestran.
 
-La estructura quedará así:
-
-[[file:OpenLDAP/Slapd29.png]]\\
+   La estructura quedará así:
 
 ** Instalación de las ldap-utils
    :PROPERTIES:
    :CUSTOM_ID: instalación-de-las-ldap-utils
    :END:
 
-Para poder acceder a los datos contenidos en el LDAP desde la terminal,
-podemos instalar una serie de utilidades nos permitirán realizar
-consultas y modificaciones.
+   Para poder acceder a los datos contenidos en el LDAP desde la terminal,
+   podemos instalar una serie de utilidades nos permitirán realizar
+   consultas y modificaciones.
 
-=sudo apt install ldap-utils=
+   /AVISO NAVEGANTES/: 
 
-[[file:OpenLDAP/Slapd30.png]]\\
+   Las ~ldap-utils~ pueden ser instaladas en cualquier máquina para realizar consultas.
 
-Una vez realizada la instalación, podemos comprobar que somos capaces de
-contactar con el =ldap= utilizando la línea de comandos:
+   =sudo apt install ldap-utils=
 
-=ldapsearch -x -h localhost -p 389 -b "dc=ubuntusrvXX,dc=smx2020,dc=net"=
+   Una vez realizada la instalación, podemos comprobar que somos capaces de
+   contactar con el =ldap server= utilizando la línea de comandos:
+   
+   =ldapsearch -x -h localhost -p 389 -b "dc=ubuntusrvXX,dc=smx2020,dc=net"=
 
-Avisad al profesor cuando esto os funcione.
+   Avisad al profesor cuando esto os funcione.
 
