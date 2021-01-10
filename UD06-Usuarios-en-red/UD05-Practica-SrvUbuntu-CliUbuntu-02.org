@@ -69,34 +69,191 @@
 
 * Disclaimer
 
-  A partir de este punto, el tutorial continúa en la lengua del Imperio Británico.
+  A partir de este punto, el tutorial contiene apartados de /obligado cumplimiento/ en la lengua del Imperio Británico.
 
   https://kifarunix.com/configure-sssd-for-ldap-authentication-on-ubuntu-20-04/
 
   Good Luck!
 
-* SSSD Installation
+* LDAP & TLS
 
-  *SSSD* is the /System Security Services Daemon/ a system service to access remote
-  directories and authentication mechanisms such as an LDAP directory (as we prepared previously),
-  Active Directory, Active Directory Domains, and so on.
+  Seguid los pasos de esta guia y conseguid que LDAP use TLS para crear el canal de
+  comunicación seguro:
+
+  [[https://ubuntu.com/server/docs/service-ldap-with-tls][https://ubuntu.com/server/docs/service-ldap-with-tls]]
   
+  Una vez lo tengáis...continuad con la práctica.
 
-  In the next steps I will assume that we have a running OpenLDAP server at our machine 
-  named :
+* SSSD - Instalación
 
-  ~ubuntusrv.smx2020.net~ and we have connectivity with it.
+  *SSSD* es el Demonio de Servicios de Seguridad del  Sistema (/System Security Services Daemon/).
+  
+  Nos permitirá configurar en el Sistema diferentes mecanismos de seguridad que nos proporcionarán
+  acceso a Usuarios/Grupos/Contraseñas....
+  
+  El primero que vamos a configurar es el LDAP que hemos configurado en la práctica anterior.
+  
+  La práctica asume que se puede /resolver por nombre/ el servidor del tipo:
 
-  Go to the client (Xubuntu Machine) and install the next packages:
+  ~ubuntusrv.smx2020.net~
+  
+  Y que tenemos /conectividad/ con él.
+
+  Comenzaremos instalando en la máquina Cliente de GNU/LinuX los siguientes paquetes:
 
   ~sssd libpam-sss libnss-sss~
 
-* SSSD Configuration  
+* SSSD - Configuración
 
-** Create 
+  Una vez instalado el servicio de SSSD no provee ningún fichero por defecto, así que lo crearemos
+  donde nos indican:
 
-  Añadimos al fichero ~/etc/nsswitch.conf~ que busque los usuarios en LDAP.
+  + ~/etc/sssd/sssd.conf~
 
-    [[./imgs/lin-join-ldap-05.png]]
-   
+  Se trata de un fichero ~inifile~ como los que vimos en Samba.
 
+  Habrá que configurar las siguientes secciones:
+
+  \newpage
+  #+BEGIN_SRC inifile
+[sssd]
+services = nss, pam, ifp
+config_file_version = 2
+domains = smx2020.net
+
+[nss]
+filter_groups = root
+filter_users = root
+reconnection_retries = 3
+
+[domain/smx2020.net]
+ldap_id_use_start_tls = True
+cache_credentials = True
+ldap_search_base = dc=ubuntusrv, dc=smx2020,dc=net
+id_provider = ldap
+debug_level = 3
+auth_provider = ldap
+chpass_provider = ldap
+access_provider = ldap
+ldap_schema = rfc2307
+ldap_uri = ldap://ubuntusrv.smx2020.net
+ldap_default_bind_dn = cn=admin,dc=ubuntusrv,dc=smx2020,dc=net
+ldap_id_use_start_tls = true
+ldap_default_authtok = Lin4dm1n
+ldap_tls_reqcert = demand
+ldap_tls_cacert = /etc/ssl/certs/ldapcacert.crt
+ldap_tls_cacertdir = /etc/ssl/certs
+ldap_search_timeout = 50
+ldap_network_timeout = 60
+ldap_access_order = filter
+ldap_access_filter = (objectClass=posixAccount)
+ldap_user_search_base = cn=goblins,dc=ubuntusrv,dc=smx2020,dc=net
+ldap_user_object_class = inetOrgPerson
+ldap_user_gecos = cn
+enumerate = True
+debug_level = 0x3ff0
+  #+END_SRC
+  
+ 
+** Customización
+
+   Debéis adaptar todos los valores necesarios para que se adapte a la 
+   configuración que cada un@ tiene en sus máquinas virtuales.
+
+   Podéis encontrar más información en:
+
+   * ~man sssd.conf~
+   * ~man sssd-ldap~
+
+* OpenLDAP Server CA en el Cliente   
+
+  SSSD solo funciona si estamos utilizando un canal seguro de comunicación (TLS).
+  
+  Así que debemos tener en configurado nuestro LDAP Server ya lo tenemos con (Guia anterior).
+
+  Los pasos que se describen ahora deben ser adaptados para que ajusten a vuestro escenario.
+
+** Descarga el Certificado de la CA desde el servidor  
+
+  Se puede utilizar este comando (es una única línea).
+
+  #+BEGIN_SRC shell
+  openssl s_client -connect ubuntusrv.smx2020.net:636 -showcerts < /dev/null 
+          | openssl x509 -text | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
+  #+END_SRC
+
+
+  En caso de que tengáis el servidor escuchando ~STARTTLS~ en el puerto 389 (ya sea por tcp o por udp), 
+  utilizad el comando siguiente:
+
+  #+BEGIN_SRC shell
+  openssl s_client -connect ubuntusrv.smx2020.net:389 -starttls ldap -showcerts < /dev/null 
+          | openssl x509 -text | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
+  #+END_SRC  
+
+  Copiad la parte del certificado y guardadla en la ruta que habéis indicado en 
+  el fichero que habéis indicado al sssd.conf.
+
+  Validad el certificado:
+
+  #+BEGIN_SRC shell
+  openssl s_client -connect ubuntusrv.smx2020.net:389 -CAfile /etc/ssl/certs/ldapcacert.crt
+  #+END_SRC
+
+  Debéis obtener un resultado similar a una de las siguientes líneas:
+
+  * ~Verification: OK~  
+  * ~Verify return code: 0 (ok)~
+
+  Ahora en el fichero ~/etc/ldap/ldap.conf~ estableced el valor de ~TLS_CACERT~ a la ruta del
+  certificado de la CA que hemos creado antes.
+
+* Permisos en SSSD
+
+  Estableced permisos de rw solo al usuario ~root~ a todas las carpetas y ficheros
+  del directorio (y subdirectorios):
+
+  ~/etc/sssd/~
+
+  Reiniciad el servicio  sssd.
+
+  ~systemctl restart sssd~
+
+  Aseguraos de que todo está funcionando:
+
+  ~systemctl status sssd~
+
+  Si todo funciona, habilitadlo en el arranque:
+
+  ~systemctl enable sssd~
+
+* pam-mkhomedir
+
+  Ya casi estamos (si está todo funcionando ^_^).
+
+  Ahora vamos a habilitar el módulo de PAM que autogenere
+  el ~HOME Directory~ de los usuarios al logarse (si no existe).
+
+  Editad el fichero:
+
+  ~/etc/pam.d/common-session~
+
+  Y debajo de la línea:
+
+  #+BEGIN_SRC shell
+  session optional pam_sss.so
+  #+END_SRC
+
+  Escribid:
+
+  #+BEGIN_SRC shell
+  session required        pam_mkhomedir.so skel=/etc/skel/ umask=0022
+  #+END_SRC
+  
+  Salvad y salid.
+
+* Comprobaciones
+
+  Comprobad que el usuario goblin01 aparece si ejecutamos el comando:
+
+  ~getent passwd goblin01~
