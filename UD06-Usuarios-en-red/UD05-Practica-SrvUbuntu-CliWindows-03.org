@@ -1,0 +1,82 @@
+#+Title: Unidad 05 - Practica Union al Dominio - Ubuntu Srv + Cliente Windows
+#+Author: Angel Berlanas Vicente
+
+#+LATEX_COMPILER: xelatex
+#+LATEX_HEADER: \hypersetup{colorlinks=true,urlcolor=blue}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \fancyhead{} % clear all header fields
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Practica}
+#+LATEX_HEADER: \fancyhead[L]{}
+#+LATEX_HEADER: \usepackage{wallpaper}
+#+LATEX_HEADER: \ULCornerWallPaper{0.9}{../rsrc/logos/header_europa.png}
+#+LATEX_HEADER: \CenterWallPaper{0.7}{../rsrc/logos/watermark_1.png}
+
+#+LATEX_HEADER: \usepackage{fontspec}
+#+LATEX_HEADER: \setmainfont{Ubuntu}
+#+LATEX_HEADER: \setmonofont{Ubuntu Mono}
+
+* Tarea: Unión al dominio - Windows Cliente
+
+  En esta tarea vamos a conseguir autenticarnos en la máquina Windows 
+  utilizando los usuarios que hemos creado en nuestro servidor LDAP (~goblin01~, ~goblin02~,...).
+
+** Requisitos  
+
+   * *Conectividad*: Necesitaremos que se resuelva por nombre el dominio de nuestro 
+   servidor.
+
+     ~ping ubuntusrv.smx2020.net~
+
+   * *OpenLDAP server* instalado y acceso al ~phpLDAPadmin~ desde el cliente Windows (por comodidad).
+   * *Usuarios Goblins* creados.
+
+** Instalación de pGina
+
+  Acceder a la Web oficial de pGina : [[http://pgina.org/][pGina Webpage]] y descargaros la versión adecuada. Instalarla en 
+  vuestro cliente Windows 10.
+
+  [[./imgs/pgina.png]]
+
+  Una vez esté instalada, reiniciar Windows.
+
+** Configuración de pGina
+
+   Configurar pGina tal y como se ve en la imágen (adaptándolo a vuestras necesidades).
+
+   [[./imgs/pgina-conf.png]]
+
+   Debéis comprobar en la pestaña de ~Simulation~ que habéis realizado la configuración de la manera adecuada.
+
+   [[./imgs/pgina-simulation.png]]
+
+   Una vez lo tengáis verde (operativo), salir de la sesión e iniciad sesión con los usuarios ~goblins~...
+
+   [[./imgs/pgina-logon.png]]
+
+   Se puede comprobar que todo ha ido bien abriendo una terminal con el Usuario ~goblin01~,etc.
+
+   [[./imgs/pgina-login.png]]
+
+   Avisad al profesor cuando estéis aquí.
+
+** Configuraciones adicionales
+
+   Investigad acerca del software [[https://chocolatey.org/][Chocolatey]] e instaladlo en el Windows Cliente (/Individual/) y probad a instalar *desde la línea de comandos* y usando
+   chocolatey:
+
+   - Opera GX
+   - Notepad++ 7.9.2
+
+   Comprobad que lo podéis hacer para todos los usuarios.
+
+   Avisad al profesor cuando lo tengáis.
+   
+
+
+
+   
+
+
+
+  
