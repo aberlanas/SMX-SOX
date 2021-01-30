@@ -6,7 +6,7 @@
 #+LATEX_HEADER: \usepackage{fancyhdr}
 #+LATEX_HEADER: \fancyhead{} % clear all header fields
 #+LATEX_HEADER: \pagestyle{fancy}
-#+LATEX_HEADER: \fancyhead[R]{2-SMX:SOX - Teoria}
+#+LATEX_HEADER: \fancyhead[R]{1-SMX:SOM - Teoria}
 #+LATEX_HEADER: \fancyhead[L]{Unidad XX: Titulo]}
 
 #+LATEX_HEADER:\usepackage{wallpaper}

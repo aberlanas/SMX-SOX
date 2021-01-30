@@ -19,7 +19,7 @@ $endif$
 \usepackage{wallpaper}
 %%\URCornerWallPaper{0.3}{../rsrc/logos/banner_ISO_ASIR1_pdf.png}
 \ULCornerWallPaper{0.9}{./rsrc/logos/header_europa.png}
-\CenterWallPaper{0.7}{./rsrc/logos/watermark_1.png}
+\CenterWallPaper{0.7}{./rsrc/logos/cthulhu.png}
 
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
