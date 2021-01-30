@@ -2,6 +2,13 @@
 
 Recursos para el Módulo de Sistsemas Operativos en Red del Ciclo de Grado Medio de Sistemas Microinformáticos y Redes
 
+## Comandos 
+
+	```shell
+	pandoc fichero.md -o fichero.pdf --from markdown --template ../rsrc/templates/eisvogel.tex --listings
+	```
+
+
 ## Makefile
 
 	Debido a la gran cantidad de unidades y utilidades que se presentan en este repositorio, se ha creado un pequeño Makefile para la ayuda a la generación de los diferentes recursos en PDF, HTML, etc desde Markdown y OrgMode.
