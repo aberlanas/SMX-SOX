@@ -1,10 +1,10 @@
 ---
-title: UD09 - Administración del dominio
+title: UD06 - Usuarios en Red
 subtitle: "Configuración del Controlador del Dominio y Unión al mismo"
 author: Angel Berlanas Vicente
 header-includes: |
 lang: es-ES
-keywords: [ASIR, ISO, Dominios]
+keywords: [SMX, SOX, Dominios]
 titlepage: true,
 page-background: "../rsrc/backgrounds/background-senia.pdf"
 page-background-opacity: 1
@@ -117,6 +117,7 @@ Seguid los pasos que se muestran en la imagen:
 
 De contraseña estableced: *Piramide123*.
 
+Añadid los diferentes Orcos al grupo `Orcos`.
 
 # Unión al Dominio de Windows 10.
 
