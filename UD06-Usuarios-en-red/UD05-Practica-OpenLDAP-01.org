@@ -33,7 +33,7 @@
    :CUSTOM_ID: instalación-del-servicio
    :END:
 
-En la máquina Xubuntu que tenemos, instalaremos el paquete =slapd= que
+En la máquina Ubuntu server que tenemos, instalaremos el paquete =slapd= que
 contiene el /demonio/ o servidor de ldap.
 
 [[./imgs/slapd-01.png]]\\

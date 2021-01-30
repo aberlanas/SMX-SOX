@@ -47,15 +47,18 @@
   fichero comprimido que tenéis en el Aules cuyo nombre es:
   
   #+BEGIN_EXAMPLE
-    star-wars-robots-1.0.zip
+    star-wars-robots-1.0.tar.gz
   #+END_EXAMPLE
+
+  Para descomprimirlo podemos utilizar el entorno gráfico, o usar la línea de comandos
+  como las personas de bien.
 
   Lo descomprimimos y nos situamos mediante el terminal en la carpeta que
   acabamos de descomprimir:
 
   #+BEGIN_EXAMPLE
-    cd \~/Descargas/star-wars-robots-1.0/
-    ls -1 \*.deb**
+    cd ~/Descargas/star-wars-robots-1.0/
+    ls -1 *.deb**
   #+END_EXAMPLE
 
   La segunda orden nos deberia de mostrar algo parecido a esto:
