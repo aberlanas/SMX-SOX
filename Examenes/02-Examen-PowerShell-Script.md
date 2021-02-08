@@ -1,5 +1,5 @@
 ---
-title: Simulacro de Examen - SOX - NFS
+title: Simulacro de Examen - SOX - Scripts
 subtitle: "Pure Scripting Carbono"
 author: Angel Berlanas Vicente
 header-includes: |
