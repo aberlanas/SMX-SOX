@@ -1,6 +1,6 @@
 ---
-title: Simulacro de Examen - SOX - Scripts
-subtitle: "Firewalls y puertos."
+title: Simulacro de Examen - SOX
+subtitle: "PowerShell y CSV"
 author: Angel Berlanas Vicente
 header-includes: |
 lang: es-ES
@@ -11,25 +11,33 @@ page-background-opacity: 1
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-title.pdf"
+titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 ---
 
 # Script
 
-Vamos a crear 2 scripts diferentes, uno para GNU/LinuX y otro para Windows,utilizandp BASH y PowerShell respectivamente.
+Vamos a utilizar un fichero `.csv` para leer datos y utilizarlos para automatizar tareas.
+En este caso para PowerShell
 
-Separar cada una de las acciones mediante `#########` para que quede claro.
+## CSV
 
-## Script GNU/LinuX
+Un fichero `.csv` es un fichero con valores separados por comas: "`,`" (o puntos y comas "`;`"). Cada una de las líneas representa una entidad a procesar. Debéis leer el fichero `.csv` en el scrip y hacer las operaciones pertinentes.
 
-- Listado de los usuarios Locales cuyo ID sea mayor que 1000, de esos usuarios ha de mostrar el `login` y el `home-directory`.
-- Listado de los grupos en los que haya al menos un usuario local de los listados anteriormente.
-- Listado del tamaño de los diferentes `home-directories` y en caso de que superen los 10MBs mostrar un aviso. 
+Primeras líneas del csv:
 
-## Script Windows
+```csv
+id,username,first_name,modification_time
+1,bstennine0,Brady,2020/07/21
+2,awaleran1,Atlante,2018/12/14
+3,cbroadey2,Carmelia,2019/05/09
+4,lbiddleston3,Leonidas,2019/02/21
+5,mbrodway4,Merola,2018/10/24
+...
+```
 
-En PowerShell
+## Operaciones
 
-- Mostrar las excepciones que haya en el FireWall de Windows a nivel de Sistema.
-- Mostrar el contenido del Fichero `~\etc\hosts`. (No está en `C:\`, debéis encontrarlo).
-- Mostrar todos los ficheros que han sido modificados en las últimas 24h.
+Cada una de las lineas del CSV contiene un id, un *username* , un nombre y una fecha de modificación.
+
+Para cada una de las líneas del CSV, cread una *carpeta* en `C:\srv\csv` cuyo nombre sea el `username`, y dentro de esa carpeta haya un fichero llamado: "token.tkn" cuyo contenido sea el *first_name* del usuario y la fecha de modificación del fichero `token.tkn` ha de ser la que aparece en el último campo.
+

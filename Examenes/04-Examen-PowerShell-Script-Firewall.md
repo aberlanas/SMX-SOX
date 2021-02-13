@@ -11,7 +11,7 @@ page-background-opacity: 1
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-title.pdf"
+titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 ---
 
 # Script

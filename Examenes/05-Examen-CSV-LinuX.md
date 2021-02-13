@@ -1,5 +1,5 @@
 ---
-title: Script táctico de CSV para Opositores
+title: Simulacro de Examen - SOX - CSV y Shell
 subtitle: "Gestión de CSV en GNU/LinuX"
 author: Angel Berlanas Vicente
 header-includes: |
@@ -11,7 +11,7 @@ page-background-opacity: 0.4
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-tactico.pdf"
+titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 ---
 
 # Script
