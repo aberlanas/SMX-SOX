@@ -108,7 +108,7 @@
 
      Seguiremos el asistente para crear un nuevo recurso.
 
-     En esta práctica esstableceremos la opción /NFS-Rápido/.
+     En esta práctica estableceremos la opción /NFS-Rápido/.
 
      [[./imgs/smb-nfs-11-18-28.png]]
 

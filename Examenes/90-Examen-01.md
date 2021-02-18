@@ -28,10 +28,12 @@ Cread un usuario **local** en cada una de las máquinas que esté en los grupos 
 
 Leed todo el examen antes de comenzar. Cada una de las tareas tiene un entregable, ir añadiendolo al examen, podéis comprimirlo todo en un `.zip` o `.tar.gz` con nombre: "`ALUMN@-SOX-FINAL.zip`" o "`ALUMN@-SOX-FINAL.zip`" donde ALUMN@ ha de sustituirse por vuestro nombre.
 
+El examen tiene **13 puntos disponibles**, vuestra nota será como máximo un 10, pero tenéis más ejercicios para poder elegir.
+
 ¡Mucha suerte!
 
 \newpage
-# Tarea 1 (5 puntos)
+# Tarea 1 (6 puntos)
 
 Máquinas involucradas:
 

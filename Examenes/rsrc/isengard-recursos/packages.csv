@@ -1,0 +1,6 @@
+Paquetes, Version, Funcion
+ii,zenity,3.32.0-5,amd64,Display graphical dialog boxes from shell scripts
+ii,dia,0.97.3+git20160930-9,amd64,Diagram editor
+ii,firefox,85.0.1+build1-0ubuntu0.20.04.1,amd64,Safe and easy web browser from Mozilla
+ii,mousepad,0.4.2-1,amd64,simple Xfce oriented text editor
+ii,vim,2:8.1.2269-1ubuntu5,amd64,Vi IMproved - enhanced vi editor
