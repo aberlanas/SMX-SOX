@@ -1,13 +1,13 @@
 ---
-title: UD06 - Usuarios en Red
+title: Ejercicios Active Directory
 subtitle: "Configuración del Controlador del Dominio y Unión al mismo"
 author: Angel Berlanas Vicente
 header-includes: |
 lang: es-ES
 keywords: [SMX, SOX, Dominios]
 titlepage: true,
-page-background: "../rsrc/backgrounds/background-senia.pdf"
-page-background-opacity: 1
+page-background: "../rsrc/backgrounds/background5.pdf"
+page-background-opacity: 0.5
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
@@ -33,7 +33,7 @@ Si es necesario cambiar el nombre del equipo a uno que sea fácil de recordar po
 
 ## Configuración de la red
 
-Para las capturas que veréis a lo largo de esta práctica, debéis tener en cuena que en mi caso la
+Para las capturas que veréis a lo largo de esta práctica, debéis tener en cuenta que en mi caso la
 configuración de la red es:
 
 | Campo | Valor |
@@ -119,7 +119,8 @@ De contraseña estableced: *Piramide123*.
 
 Añadid los diferentes Orcos al grupo `Orcos`.
 
-# Unión al Dominio de Windows 10.
+\newpage
+## Tarea 01 :  Unión al Dominio de Windows 10.
 
 Siguiendo los pasos descritos en este artículo:
 
@@ -129,4 +130,77 @@ Unid la máquina Windows 10 al Dominio recién creado y comprobad que los usuari
 
 Avisad al profesor cuando lo tengáis.
 
-#  
+# Políticas de Grupo
+
+Las Políticas de Grupo se aplican a los diferentes elementos de un dominio. Existen muchísimas Políticas y muchas vienen ya con un asistente preparado.
+
+Sobre el Directory Activo de Windows 2019 que tenéis montado de la práctica anterior
+aplicad a los usuarios Orcos la GPO que se describe en este tutorial respecto 
+a que no puedan apagar el equipo.
+
+[ Gestionar GPO en Windows Server 2019](https://www.solvetic.com/tutoriales/article/5403-como-crear-gestionar-gpo-windows-server-2019/)
+
+\newpage
+## Tarea 02 : PowerShell
+
+Cread un Script de PowerShell que muestre todas las Políticas de Grupo que se están aplicando en un Dominio. Podéis consultar esta web:
+
+[ Dr.Scripto ](https://devblogs.microsoft.com/scripting/powertip-use-powershell-to-get-a-listing-of-all-gpos-in-a-domain/)
+
+Cuando lo tengáis configurado y funcionando, avisad al profesor para que lo compruebe.
+
+\newpage
+## Tarea 03 : GPO + PowerShell
+
+En esta página resumen una serie de comandos muy útiles para trabajar con GPOs desde *PowerShell*.
+
+[ GPO + PowerShell ](https://blog.netwrix.com/2019/04/11/top-10-group-policy-powershell-commands/)
+
+Vamos a comprobar que tal funcionan en nuestro dominio, generad Scripts en PowerShell para resolver cada uno de las siguientes situaciones:
+
+### Script 02
+
+Que pregunte por una máquina del dominio y que genere un informe en *HTML* en 
+la carpeta `C:\Reports\Report-$NAMEMACHINE.html` y que lo habra con el navegador de Internet predeterminado.
+
+### Script 03
+
+Que muestre los diferentes `Nombres` y `Logins` de los usuarios que pertenecen al Grupo `Orcos`, creado en la práctica anterior.
+
+
+### Script 04
+
+Que genere una Política que se llame "Pantallas para Orcos" y que establezca
+el tiempo de espera del Salvapantallas a 42 segundos.
+
+![Orco](imgs/goblin-wizard.png)\
+
+\newpage
+## Tarea 04 : OU en el Active Directory
+
+Cread una OU (Organizational Unit) en vuestro Active Directory que se llame:
+
+- trasgos-de-ALUMNO
+
+donde ALUMNO ha de ser vuestro nombre.
+
+*Realizad una captura de pantalla de la OU Creada* para entregarla en el ejercicio.
+
+\newpage
+## Tarea 05 : Script de Creación de Usuarios
+
+Usando el fichero `usuarios-trasgoides.csv` que se adjunta en el ejercicio, preparad un Script en `PowerShell` que lea los diferentes usuarios y los cree en la *OU* que acabáis de crear.
+
+Pistas:
+
+- New-ADUser
+
+El Script ha de llamarse: `reclutador-trasgos.ps1`.
+
+\newpage
+
+## Tarea 06 : Configuración horas de inicio de sesión
+
+Estableced para el usuario: `trasgo13` que solo pueda iniciar sesión desde las 8:00 hasta las 20:00 de Lunes a Jueves.
+
+**Realizad una captura de pantalla donde se muestre la configuración de restricciones**.
