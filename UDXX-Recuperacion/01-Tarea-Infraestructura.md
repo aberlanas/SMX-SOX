@@ -14,8 +14,6 @@ titlepage-rule-height: 0
 titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 ---
 
-\newpage
-
 # Tarea 01 : Infraestructura Inicial
 
 Con el objetivo de ir creando herramientas útiles para la Administración de Sistemas vamos a crear unos shell scripts en el lenguaje de Scripting del anfitrión para gestionar las máquinas virtuales.
