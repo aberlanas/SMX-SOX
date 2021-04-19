@@ -54,7 +54,7 @@ makeUDXZ(){
 
 #makeUD06
 #makeExams
-#makeUDXX
-makeUDXZ
+makeUDXX
+#makeUDXZ
 
 exit 0
