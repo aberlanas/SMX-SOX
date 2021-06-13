@@ -2,6 +2,14 @@
 
 mkdir -p PDFS
 
+clean(){
+    echo " * Cleanin Environment"
+    cd PDFS/
+    rm -f *.pdf
+    cd ..
+}
+
+
 makeUD06(){
 
     cd UD06-Usuarios-en-red
@@ -52,6 +60,7 @@ makeUDXZ(){
     cd ..
 }
 
+clean
 #makeUD06
 #makeExams
 makeUDXX
