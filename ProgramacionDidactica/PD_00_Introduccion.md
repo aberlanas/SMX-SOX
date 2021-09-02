@@ -7,7 +7,7 @@ keywords: [SMX, SOX, Programacion Didáctica]
 abstract: |
           Programación didáctica para el segundo curso del Grado Medio de Sistemas Microinformáticos y Redes. 
           Impartida en el IES La Sénia.
-          Curso 2020-2021.
+          Curso 2021-2022.
 ---
 
 \newpage

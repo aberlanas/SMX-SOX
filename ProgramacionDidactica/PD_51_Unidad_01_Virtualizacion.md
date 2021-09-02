@@ -4,12 +4,13 @@
 
 ## Temporalización
 
-7 Sesiones
+21 Sesiones
 
 ## Contenidos
 
 * Sistemas de Virtualización.
 * Instalación de VirtualBox.
+* Instalación de Docker.
 * Configuración de la red en entornos virtuales.
 * Recursos Compartidos
 * Exportación de servicios virtualizados.

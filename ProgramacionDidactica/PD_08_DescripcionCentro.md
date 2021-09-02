@@ -5,7 +5,7 @@ La ciudad es de nivel socio-económico medio, y existen empresas en las
 que los alumnos pueden realizar prácticas y buscar trabajo al final del ciclo.
 En este centro se imparte, además de los cursos de ESO y Bachiller, el
 ciclo de grado medio de Sistemas Microinformáticos y Redes, Desarrollo de
-Aplicaciones Web y, así como el grado medio y superior de la familia de Administración. Las
+Aplicaciones Web, Desarrollo de Aplicaciones Multiplataforma y, así como el grado medio y superior de la familia de Administración. Las
 instalaciones del centro nos permitirán realizar actividades en salas con
 escenario, acceder a la biblioteca, etc.
 
