@@ -1,7 +1,9 @@
 #!/usr/bin/make -f
 
-TEMPLATE_TEX_PD="rsrc/templates/pd-nologo-tpl.latex"
+#TEMPLATE_TEX_PD="rsrc/templates/pd-nologo-tpl.latex"
+TEMPLATE_TEX_PD="rsrc/templates/eisvogel.tex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
+TEMPLATE_TEX_PRACTICA="rsrc/templates/eisvogel.tex"
 
 PDF_PATH:=$(shell readlink -f PDFS)
 
