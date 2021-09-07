@@ -1,6 +1,6 @@
 \newpage 
 
-# Unidad 02 : PowerShell y BASH
+# Unidad 03 : PowerShell y BASH
 
 ## Temporalización
 

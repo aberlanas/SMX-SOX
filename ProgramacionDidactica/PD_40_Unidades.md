@@ -22,6 +22,5 @@ fomentando de esta manera su aprendizaje.
 * Unidad 06 : Administración del Dominio.
 * Unidad 07 : Acceso al Dominio.
 * Unidad 08 : Recursos Compartidos.
-* Unidad 09 : Rendimiento y Auditorias.
 
 

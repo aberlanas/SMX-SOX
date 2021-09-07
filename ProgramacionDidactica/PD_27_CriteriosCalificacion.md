@@ -44,6 +44,7 @@ Se considerará que un alumno habrá superado un trimestre si obtiene
 una calificación igual o superior a 5 teniendo en cuenta los trabajos, los
 exámenes y la participación activa en clase.
 
+\newpage
 ## Calificación de la Evaluación
 
 | Participación Activa |  Trabajos |  Exámenes| 
@@ -73,3 +74,33 @@ actividad de evaluación coincidirá con la del calendario oficial del centro.
 Todos estos exámenes deben quedar registrados, bien en papel o bien
 en formato digital.
 
+\newpage
+
+Con el objetivo de hacer más sencilla la superación de la materia el alumnado que haya
+suspendido en la convocatoria ordinaria puede realizar un plan de recuperación del módulo
+a lo largo del periodo del tercer trimestre.
+Si la nota de una de las evaluaciones sea igual o superior a 5 puede optar a solo recuperar
+la evaluación suspendida.
+En caso de que ninguna de ellas sea superior a 5, deberá realizar las dos partes del
+examen extraordinario (Contenidos de la 1 Evaluación+ Contenidos de la2 Evaluación).
+Con el propósito de que el alumnado no se enfrente a una única prueba para recuperar la
+materia: a lo largo del periodo de recuperación se irán publicando semanalmente una serie
+de tareas que servirán para preparar el examen así como para repasar los contenidos.
+Si algún alumno tiene alguna de las evaluaciones aprobadas sólo deberá realizar las tareas
+correspondientes a la evaluación no superada.
+Si el alumnado presenta algunas (o todas) de estas tareas el cálculo de la nota de la
+evaluación extraordinaria se hará aplicando las siguientes fórmulas:
+
+![Tabla](ProgramacionDidactica/imgs/extraordinaria-tabla.png)\
+
+Dependiendo del porcentaje de tareas presentadas se aplicarán los diferentes porcentajes
+para el cálculo de la nota final.
+Ejemplo: Si el alumno obtiene un 8 en el examen y ha presentado el 95% de las tareas
+propuestas (habiendo obtenido un 7 de media) se calculará la nota de la siguiente manera:
+
+8 x 0,60 + 7 x 0,4= 4,8+2,8= 7,6
+8 x 1= 8
+
+El alumno obtendrá un 8 en la evaluación extraordinaria
+
+![Arbol de decisiones](ProgramacionDidactica/imgs/extraordinaria-flujo.png)\

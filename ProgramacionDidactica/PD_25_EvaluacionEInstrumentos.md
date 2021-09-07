@@ -48,6 +48,9 @@ nos apoyaremos en el uso de tablas de observación, donde señalaremos la presen
 - *Entrevistas personales* con los alumnos para conocer sus intereses y expectativas. Debemos crear un clima de relajación que favorezca la
 comunicación, ayudando al alumnado a reflexionar y evitando informaciones o juicios de valor que puedan dificultar la buena comunicación.
 - Los *Cuestionarios* son de utilidad por ambas partes (profesor y alumnado), ya que sirven para obtener información de los conocimientos y opiniones del alumnado por parte del docente y además, si se utilizan como **autoevaluación**, permiten al alumno ser consciente de su propio progreso.
+- Creación de *Videotutoriales* en Inglés por parte del alumnado.
+- Actividades relacionadas con la atención al cliente y resolución de incidencias, dentro de un entorno empresarial simulado.
+
 
 
 

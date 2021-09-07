@@ -1,6 +1,6 @@
 \newpage 
 
-# Unidad 05 : Software y Actualizaciones
+# Unidad 02 : Software y Actualizaciones
 
 ## Temporalización
 
@@ -20,4 +20,3 @@
 * Instalación de paquetes específicos.
 * Configuración de paqueteria.
 * Ficheros de configuración (*globales y locales*).
-
