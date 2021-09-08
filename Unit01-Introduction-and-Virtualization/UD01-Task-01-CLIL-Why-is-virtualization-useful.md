@@ -92,6 +92,8 @@ useful in the following scenarios:
 
 See the following image and put examples of mechanisms (at least 2) of each sphere in the operating systems you know:
 
+*Could be GUI or CLI*.
+
 ![OS Structure](imgs/topic-3.jpg)\
 
 
