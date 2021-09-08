@@ -3,40 +3,19 @@
 #TEMPLATE_TEX_PD="rsrc/templates/pd-nologo-tpl.latex"
 TEMPLATE_TEX_PD="rsrc/templates/eisvogel.tex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
-TEMPLATE_TEX_PRACTICA="rsrc/templates/eisvogel.tex"
+TEMPLATE_TEX_TASK="../rsrc/templates/eisvogel.tex"
 
 PDF_PATH:=$(shell readlink -f PDFS)
 
+UNIT01_DIR:=$(shell readlink -f Unit01-Introduction-and-Virtualization/)
+UD01_FILES := $(wildcard $(UNIT01_DIR)/*.md)
+
 clean:
 	@echo " * Clean workspace "
+	@echo " -- PDFS "
+	rm -f PDFS/*.pdf
+	rm -f PDFS/*.odt
 
-	@echo " -- UD 00 "
-	rm -f UD00-Infraestructura-inicial/*.pdf
-	rm -f UD01-Intraestructura-inicial/*.tex
-
-	@echo " -- UD 01 "
-	rm -f UD01-Introduccion-y-virtualizacion/*.pdf
-	rm -f UD01-Introduccion-y-virtualizacion/*.tex
-
-	@echo " -- UD 02 "
-	rm -f UD02-PowerShell-y-Bash/*.pdf
-	rm -f UD02-PowerShell-y-Bash/*.tex
-
-	@echo " -- UD 03 "
-	rm -f UD03-Usuarios-Grupos-Permisos/*.pdf
-	rm -f UD03-Usuarios-Grupos-Permisos/*.tex
-
-	@echo " -- UD 04 "
-	rm -f UD04-Sistemas-de-Ficheros/*.pdf
-	rm -f UD04-Sistemas-de-Ficheros/*.tex
-
-	@echo " -- UD 05 "
-	rm -f UD05-Software-y-actualizaciones/*.pdf
-	rm -f UD05-Software-y-actualizaciones/*.tex
-
-	@echo " -- UD 06 "
-	rm -f UD06-Usuarios-en-red/*.pdf
-	rm -f UD06-Usuarios-en-red/*.tex
 
 files:
 	@echo " [ Step : files ]"
@@ -50,3 +29,14 @@ prog-didactica: files
 	@pandoc -o $(PDF_PATH)/ProgramacionDidactica_SOX.odt ProgramacionDidactica/PD_*.md 
 	@echo " * [ PDF Result ] : $(PDF_PATH)/ProgramacionDidactica_SOX.pdf"
 	atril $(PDF_PATH)/ProgramacionDidactica_SOX.pdf
+
+unit-01: files
+
+	@echo " [ UD 01 - Introduction and Virtualization ] "
+
+	@for f in $(UD01_FILES); do \
+		#echo $$f ;\
+    	echo " --> Working with:  `basename $$f`";\
+		cd $(UNIT01_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
+    done
+	
