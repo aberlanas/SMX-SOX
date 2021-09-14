@@ -30,7 +30,7 @@ prog-didactica: files
 	@echo " * [ PDF Result ] : $(PDF_PATH)/ProgramacionDidactica_SOX.pdf"
 	atril $(PDF_PATH)/ProgramacionDidactica_SOX.pdf
 
-unit-01: files
+unit-01: clean files
 
 	@echo " [ UD 01 - Introduction and Virtualization ] "
 
