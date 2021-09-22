@@ -9,7 +9,7 @@ LIGHTYELLOW= \e[93m
 
 RESET= \e[0m
 
-TEMPLATE_TEX_PD="rsrc/templates/eisvogel.tex"
+TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.tex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
 TEMPLATE_TEX_TASK="../rsrc/templates/eisvogel.tex"
 
@@ -33,8 +33,12 @@ files:
 prog-didactica: files
 	@echo " [ Step : prog-didactica ]"
 	@echo " * [ PDF ] : Programacion Didactica ..."
-	@pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ProgramacionDidactica_SOX.pdf ProgramacionDidactica/PD_*.md
-	@pandoc -o $(PDF_PATH)/ProgramacionDidactica_SOX.odt ProgramacionDidactica/PD_*.md 
+	
+	@cd ProgramacionDidactica/ && pandoc --template $(TEMPLATE_TEX_PD) $(PANDOC_OPTIONS) -o $(PDF_PATH)/ProgramacionDidactica_SOX.pdf ./PD_*.md
+
+	@echo " * [ ODT ] : Programacion Didactica ..."
+	@cd ProgramacionDidactica/ && pandoc -o $(PDF_PATH)/ProgramacionDidactica_SOX.odt ./PD_*.md 
+	
 	@echo " * [ PDF Result ] : $(PDF_PATH)/ProgramacionDidactica_SOX.pdf"
 	atril $(PDF_PATH)/ProgramacionDidactica_SOX.pdf
 

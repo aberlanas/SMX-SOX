@@ -15,10 +15,10 @@ fomentando de esta manera su aprendizaje.
 ## Listado de Unidades
 
 * Unidad 01 : Introducción y Virtualización.
-* Unidad 02 : PowerShell y Bash.
-* Unidad 03 : Usuarios, Grupos y Permisos.
+* Unidad 02 : Software y Actualizaciones.
+* Unidad 03 : PowerShell y BASH.
 * Unidad 04 : Sistemas de Ficheros.
-* Unidad 05 : Software y Actualizaciones.
+* Unidad 05 : Usuarios, Grupos y Permisos.
 * Unidad 06 : Administración del Dominio.
 * Unidad 07 : Acceso al Dominio.
 * Unidad 08 : Recursos Compartidos.

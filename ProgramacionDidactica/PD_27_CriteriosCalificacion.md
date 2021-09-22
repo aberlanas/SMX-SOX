@@ -45,6 +45,14 @@ una calificación igual o superior a 5 teniendo en cuenta los trabajos, los
 exámenes y la participación activa en clase.
 
 \newpage
+## Calificación de las actividades en Inglés
+
+Dentro del marco del PEPLI, para la calificación de las actividades de producción oral y escrita
+se seguirán los items que se detallan en el anexo acordado por el Claustro del Centro.
+
+
+
+\newpage
 ## Calificación de la Evaluación
 
 | Participación Activa |  Trabajos |  Exámenes| 
@@ -91,7 +99,7 @@ correspondientes a la evaluación no superada.
 Si el alumnado presenta algunas (o todas) de estas tareas el cálculo de la nota de la
 evaluación extraordinaria se hará aplicando las siguientes fórmulas:
 
-![Tabla](ProgramacionDidactica/imgs/extraordinaria-tabla.png)\
+![Tabla](./imgs/extraordinaria-tabla.png)\
 
 Dependiendo del porcentaje de tareas presentadas se aplicarán los diferentes porcentajes
 para el cálculo de la nota final.
@@ -103,4 +111,4 @@ propuestas (habiendo obtenido un 7 de media) se calculará la nota de la siguien
 
 El alumno obtendrá un 8 en la evaluación extraordinaria
 
-![Arbol de decisiones](ProgramacionDidactica/imgs/extraordinaria-flujo.png)\
+![Arbol de decisiones](./imgs/extraordinaria-flujo.png)\
