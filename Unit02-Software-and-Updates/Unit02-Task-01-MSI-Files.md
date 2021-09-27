@@ -75,7 +75,7 @@ adding the `/ h` parameter to the execution prompt.
 Using the **ancestral technique** of **Comprehensive Reading** seek
 the necessary parameters in order to:
 
-![](./imgs/sumerian.png)
+![](./imgs/sumerian.png)\
 
 - It is installed without asking the user for assistance, but indicating that it is
     going to install.
@@ -88,18 +88,30 @@ the necessary parameters in order to:
 
 # Step 03 : Configuration for Scite
 
+## Previous step
+
+* Install FiraCode font in Windows.
+* Install OpenSans font in Windows.
+* Install Roboto font in Windows.
+* Install Mozilla Firefox.
+
+## The task
+
 Using the Scite User Properties File, configure the Scite for:
 
-* Use a Monospaced font in code.
+* Use a Monospaced FiraCode font in `code` of the same size.
+* Use a OpenSans or Roboto font in *Comments* of the same size.
 * Show always the line numbers.
 * Show always the spaces and tabs.
+* Show always the toolbar.
 * Open the Open-File dialog with the filter "All files" by default.
+* Configure for open the firefox when you *compile* an `.html` file.
 * Let the teacher know when you have it.
 
 # What I need to upload to Aules?
 
-In a tar.gz or zipfile, you must upload:
+In a `tar.gz` or zipfile, you must upload:
 
-- the file `scite-log.txt` created.
-- the Scite User Properties file.
+- The file `scite-log.txt` created.
+- The Scite User Properties file.
 
