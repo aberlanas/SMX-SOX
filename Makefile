@@ -9,17 +9,22 @@ LIGHTYELLOW= \e[93m
 
 RESET= \e[0m
 
+# Templates 
 TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.tex"
 PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
 TEMPLATE_TEX_TASK="../rsrc/templates/eisvogel.tex"
 
+# PDFS
 PDF_PATH:=$(shell readlink -f PDFS)
 
+# Units 
 UNIT01_DIR:=$(shell readlink -f Unit01-Introduction-and-Virtualization/)
 UD01_FILES := $(wildcard $(UNIT01_DIR)/*.md)
 
 UNIT02_DIR:=$(shell readlink -f Unit02-Software-and-Updates)
 UD02_FILES:=$(wildcard $(UNIT02_DIR)/*.md)
+
+# RULES
 
 clean:
 	@echo " [${BLUE} * Step : Clean ${RESET}] "
