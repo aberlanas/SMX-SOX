@@ -66,7 +66,7 @@ Using the info in this webpage:
 
 https://stackoverflow.com/questions/32354861/how-to-find-the-default-browser-via-the-registry-on-windows-10
 
-Code a PowerShell Script that performos the next checks:
+Code a PowerShell Script that performs the next checks:
 
 - if Firefox is not the default browser displays a message.
 ```PowerShell
