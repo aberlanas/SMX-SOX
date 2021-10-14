@@ -26,6 +26,15 @@ At our enterprise: *Mr.Yellow Software and Systems*, we need several tools and i
 `PATHS`, `URLS` and common stuff for scripts could be placed as the first lines of the scripts, in order to stablish at the beginning the 
 values and be ready to be changed if the **sysadmin** needs.
 
+Some of the useful commands that you could need are:
+
+| Command | Description |
+|---------|-------------|
+| wget    | Download files from the Internet|
+| dpkg    | Several actions about debs |
+
+
+
 # Task 01
 
 Write a Shell Script that accepts only this arguments:
@@ -36,7 +45,7 @@ Write a Shell Script that accepts only this arguments:
 - `reinstall $PACKAGE`
 
 
-The behaviour must be the next:
+The behaviour of the script must be the next:
 
 ## list
 
@@ -47,7 +56,7 @@ If the argument is `list` the script must show the diferente packages that could
 - mc-data
 - w3m
 
-The URLS to these packages are at the end of the document.
+The `URLS` to these packages are at the end of the document. 
 
 Example:
 ```shell
@@ -62,7 +71,7 @@ The packages available are:
 
 ## install 
 
-If the argument is `install $PACKAGE` where `$PACKAGE` must be one of the previous packages described, the script must download to the `/tmp/` folder using `wget` the deb and then, install it.
+If the argument is `install $PACKAGE` where `$PACKAGE` must be one of the previous packages described, then the script must download to the `/tmp/` folder using `wget` the deb file and then, install it using the correct command.
 
 ## remove 
 
