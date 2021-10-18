@@ -24,6 +24,9 @@ UD01_FILES := $(wildcard $(UNIT01_DIR)/*.md)
 UNIT02_DIR:=$(shell readlink -f Unit02-Software-and-Updates)
 UD02_FILES:=$(wildcard $(UNIT02_DIR)/*.md)
 
+UNIT03_DIR:=$(shell readlink -f Unit03-FileSystems)
+UD03_FILES:=$(wildcard $(UNIT03_DIR)/*.md)
+
 # RULES
 
 clean:
@@ -70,4 +73,15 @@ unit-02: clean files
 		#echo $$f ;\
     	echo " - ${LIGHTYELLOW} Working${RESET} with: `basename $$f`";\
 		cd $(UNIT02_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
+    done	
+
+unit-03: clean files
+
+	@echo " [${BLUE} * Step : Compiling PDF ${RESET}] "
+	@echo " [${LIGHTGREEN} Unit 03 - Software and Updates ${RESET}] "
+
+	@for f in $(UD03_FILES); do \
+		#echo $$f ;\
+    	echo " - ${LIGHTYELLOW} Working${RESET} with: `basename $$f`";\
+		cd $(UNIT03_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
     done	
