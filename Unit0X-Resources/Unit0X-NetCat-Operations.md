@@ -1,5 +1,5 @@
 ---
-title: "[ Unexpected Examen ] The NetCat Situation"
+title: "[Unexpected Exam] The NetCat Situation"
 authors: [Patxi Sanchis Luis y Angel Berlanas Vicente]
 date: "2021-10-21"
 subject: "Markdown"
@@ -43,7 +43,7 @@ PPA de los Magos (a.k.a Repositorio):
 https://launchpad.net/~ticsenia/+archive/ubuntu/ppa
 ```
 
-El paquete se llama : `senia-netcat-server`. Debéis instalarlo y configurarlo. (Buscad el fichero de configuración y modificadlo).
+El paquete se llama : `senia-netcat`. Debéis instalarlo y configurarlo. (Buscad el fichero de configuración y modificadlo).
 Para ello podéis usar todo lo aprendido durante los dias pasados en clase.
 
 Debéis instalar el paquete tanto en el Xubuntu como en el Ubuntu Server.
@@ -98,7 +98,6 @@ Dependiendo de si está en el server o en Xubuntu.
 Una vez configurado, lo ejecutáis. Este pequeño programa se pone a escuchar en la IP y el puerto indicado en el parámetro de configuración y va guardando en el fichero que le habéis dicho aquello que recibe por ese puerto.
 
 Ejemplo de ejecución:
-
 Una vez instalado, por defecto si lo ejecutáis en una terminal se ve esto:
 ```shell
 aberlanas@moria:~$ senia-netcat-server 
