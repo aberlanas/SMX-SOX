@@ -106,23 +106,17 @@ aberlanas@moria:~$ senia-netcat-server
 ``` 
 y se quedará esperando.
 
-Si desde otra terminal ejecutamos un `netcat` con los siguientes parámetros se va mostrando **a la vez** que se guarda en el fichero que va almacenando los diferentes mensajes:
+Si desde otra terminal ejecutamos un `senia-netcat-client` con los siguientes parámetros se va mostrando **a la vez** que se guarda en el fichero que va almacenando los diferentes mensajes:
 
 ```shell
-echo "Test" | nc -q 1 
+senia-netcat-client 127.0.0.1 10000 Some messages
 ```
 
 En la siguiente imágen espero que se aprecie:
 
-![Senia-netcat](imgs/senia-netcat-server.png)\
+![senia-netcat](imgs/senia-netcat-server.png)\
 
 Además se están escribiendo en el fichero `/tmp/default-senia-nmap.txt` los diferentes mensajes.
-
-\newpage
-# TUNELES SSH
-
-**PATXI**
-
 
 \newpage
 # Script SOX
@@ -131,10 +125,20 @@ Realiza un Shell Script que mediante bucles, realice la siguientes operaciones c
 
 * Muestre un mensaje con la hh:mm:ss del momento de la ejecución.
 * Compruebe la última línea del fichero de log del `senia-netcat-server` correspondiente (que acepte argumentos este script es una buena idea), si no siempre se puede definir como una variable al comienzo del Script.
-* Si la última línea es la palabra: "`Festung`" debe buscar y matar todos los procesos de netcat que hayan abiertos entre el puerto 10000 y el 10200 y salir.
-* Si la última línea es la palabra: "`Angel`" debe copiar el fichero de log al $HOME del usuario que está ejecutando **este** script, añadiendole al nombre del fichero la fecha de copiado, ejemplo de ruta al final:
+* Si el último mensaje es la palabra: "`Festung`" debe buscar y matar todos los procesos de netcat que hayan abiertos entre el puerto 10000 y el 10200 y salir.
+* Si el último mensaje es la palabra: "`Angel`" debe copiar el fichero de log al $HOME del usuario que está ejecutando **el script del servidor**, añadiendole al nombre del fichero la fecha de copiado, ejemplo de ruta al final:
   * `/home/aberlanas/20211020-175115-angel-senia-nmap-server.txt`
   * `/home/aberlanas/20211020-175120-angel-senia-nmap-server.txt`
-* Si la última línea es la palabra: "`Patxi`" debe copiar el fichero de configuración del servicio senia-netstat-server al $HOME del usuario que está ejecutando **este** script, con la misma tecnología de añadir fechas al comienzo del nombre:
+* Si el último mensaje es la palabra: "`Patxi`" debe copiar el fichero de configuración del servicio senia-netstat-server al $HOME del usuario que está ejecutando **el script del servidor**, con la misma tecnología de añadir fechas al comienzo del nombre:
   * `/home/aberlanas/20211020-175115-exam.conf`
   * `/home/aberlanas/20211020-175120-exam.conf`
+
+\newpage
+# TUNELES SSH
+
+
+```
+ssh -L 10001:192.168.1.51:20000 usuario@192.168.1.51 -N -v -v
+```
+
+
