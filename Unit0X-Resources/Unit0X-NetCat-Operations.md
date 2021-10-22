@@ -1,5 +1,5 @@
 ---
-title: "[ Unexpected Examen ] The NetCat Situation"
+title: "[Unexpected Exam] The NetCat Situation"
 authors: [Patxi Sanchis Luis y Angel Berlanas Vicente]
 date: "2021-10-21"
 subject: "Markdown"
@@ -30,7 +30,7 @@ Para la realización de esta práctica utilizaremos :
 
 En todas ellas deberá estar instalado tanto el `netcat` cómo el `ssh`. 
 
-## senia-netcat-server
+## senia-netcat
 
 Para la realización de esta práctica tendréis que instalar y configurar para adaptarlo a vuestras necesidades 
 un pequeño servidor que usando `netcat` es capaz de aceptar peticiones a través de un puerto (tendréis que averiguar cuál).
@@ -43,10 +43,15 @@ PPA de los Magos (a.k.a Repositorio):
 https://launchpad.net/~ticsenia/+archive/ubuntu/ppa
 ```
 
-El paquete se llama : `senia-netcat-server`. Debéis instalarlo y configurarlo. (Buscad el fichero de configuración y modificadlo).
+El paquete se llama : `senia-netcat`. Debéis instalarlo y configurarlo. (Buscad el fichero de configuración y modificadlo).
 Para ello podéis usar todo lo aprendido durante los dias pasados en clase.
 
-Debéis instalar el paquete tanto en el Xubuntu como en el Ubuntu Server.
+Este paquete contiene 2 binarios además del fichero de configuración para el server.
+
+* `senia-netcat-client`
+* `senia-netcat-server`
+
+Debéis instalar el paquete tanto en la máquina Xubuntu como en el Ubuntu Server.
 
 ### Entrega 
 
@@ -75,12 +80,18 @@ SNFILE
 
 Debéis encontrar en qué fichero se configuran esos valores y cambiarlos para se adapten a la siguiente situación:
 
+Para ello seguiremos estos pasos:
+
+1. Averiguad el nombre de vuestro equipo (para los que vengáis con portátil, pues calculadlo en función de vuestra posición en el aula)
+2. Configurad el servicio de `senia-netcat-server` para que se adapte a vuestros usuarios y máquinas.
+
 ## SNPORT
 
-* Averiguad el nombre de vuestro equipo (para los que vengáis con portátil, pues calculadlo en función de vuestra posición en el aula)
+
 * SNPORT : Empezando desde el puerto 101XX, cambiad los dos últimos para que se adapte a vuestro equipo, ejemplos:
   * ISAAC (aulainf05-pc02): 10102
   * RONAL (aulainf05-pc14): 10114
+  * ....
 
 ## SNIP
 
@@ -109,7 +120,7 @@ y se quedará esperando.
 Si desde otra terminal ejecutamos un `netcat` con los siguientes parámetros se va mostrando **a la vez** que se guarda en el fichero que va almacenando los diferentes mensajes:
 
 ```shell
-echo "Test" | nc -q 1 
+senia-netcat-client localhost 10000 Mensaje enviado 
 ```
 
 En la siguiente imágen espero que se aprecie:
@@ -118,11 +129,6 @@ En la siguiente imágen espero que se aprecie:
 
 Además se están escribiendo en el fichero `/tmp/default-senia-nmap.txt` los diferentes mensajes.
 
-\newpage
-# TUNELES SSH
-
-**PATXI**
-
 
 \newpage
 # Script SOX
@@ -130,11 +136,56 @@ Además se están escribiendo en el fichero `/tmp/default-senia-nmap.txt` los di
 Realiza un Shell Script que mediante bucles, realice la siguientes operaciones cada 5 segundos:
 
 * Muestre un mensaje con la hh:mm:ss del momento de la ejecución.
-* Compruebe la última línea del fichero de log del `senia-netcat-server` correspondiente (que acepte argumentos este script es una buena idea), si no siempre se puede definir como una variable al comienzo del Script.
-* Si la última línea es la palabra: "`Festung`" debe buscar y matar todos los procesos de netcat que hayan abiertos entre el puerto 10000 y el 10200 y salir.
-* Si la última línea es la palabra: "`Angel`" debe copiar el fichero de log al $HOME del usuario que está ejecutando **este** script, añadiendole al nombre del fichero la fecha de copiado, ejemplo de ruta al final:
+* Compruebe que el último mensaje en el fichero de log del `senia-netcat-server` correspondiente (que acepte argumentos este script es una buena idea), si no siempre se puede definir como una variable al comienzo del Script.
+* Si el último mensaje es la palabra: "`Festung`" debe buscar y matar todos los procesos de netcat que hayan abiertos entre el puerto 10000 y el 10200 y salir.
+* Si el último mensaje es la palabra: "`Angel`" debe copiar el fichero de log al $HOME del usuario que está ejecutando **este** script, añadiendole al nombre del fichero la fecha de copiado, ejemplo de ruta al final:
   * `/home/aberlanas/20211020-175115-angel-senia-nmap-server.txt`
   * `/home/aberlanas/20211020-175120-angel-senia-nmap-server.txt`
-* Si la última línea es la palabra: "`Patxi`" debe copiar el fichero de configuración del servicio senia-netstat-server al $HOME del usuario que está ejecutando **este** script, con la misma tecnología de añadir fechas al comienzo del nombre:
+* Si el último mensaje es la palabra: "`Patxi`" debe copiar el fichero de configuración del servicio senia-netstat-server al $HOME del usuario que está ejecutando **este** servicio, con la misma tecnología de añadir fechas al comienzo del nombre:
   * `/home/aberlanas/20211020-175115-exam.conf`
   * `/home/aberlanas/20211020-175120-exam.conf`
+
+
+
+\newpage
+# TUNELES SSH
+
+El alumno realizará un tunel SSH sobre el puerto 200xx.
+
+Una vez creado el tunel correctamente la comunicación debería producirse usando la orden:
+
+```shell
+senia-netcat-client localhost 200xx "Esto es secreto"
+```
+
+El servidor detectará que está el tunel funcionando y cuando se envíe el mensaje mostrara la captura siguiente:
+
+![Tunel](imgs/senia-netcat-tunel.png)\
+
+## Scripteando
+
+Debéis hacer un script llamado `script-informe-tunel.sh` que se ejecute en la máquina que está ejecutando el senia-netcat-server, que acepte como únicos argumentos :
+
+- IP
+- Usuario Remoto
+
+El script debe extraer del fichero log (si existe), las líneas que aparezcan como `tunneled` y guardarlas en un fichero llamado:
+
+* `informe-tunneled-nombrealumno.log`
+
+y enviar ese fichero por scp al $HOME del Usuario Remoto en la IP indicada.
+
+## Entrega
+
+* Adjuntad el script, capturas y el fichero enviado en Aules.
+* Adicionalmente, se debe ejecutar este último script con los siguientes argumentos:
+
+```shell
+./script-informe-tunel.sh 192.168.5.100 unexpected
+```
+
+La contraseña de ese usuario es : **exam**
+
+
+
+
