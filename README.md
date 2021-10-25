@@ -22,3 +22,11 @@ Debido a la gran cantidad opciones y parámetros que se van utilizando en los di
 * texlive-lang-spanish 
 * texlive-latex-extra
 
+# Tabla de Valoración
+
+
+
+| Valor en la escala | Dinosaurio | Imagen |
+| ------------------ | -----------| ------ |
+| 0 | Fósil | ![Fosil](rsrc/imgs/fosil.jpg)
+| 1 | Gallimimus | ![Gallimimus](rsrc/imgs/Gallimimus.jpg) |
