@@ -119,11 +119,7 @@ y se quedará esperando.
 Si desde otra terminal ejecutamos un `senia-netcat-client` con los siguientes parámetros se va mostrando **a la vez** que se guarda en el fichero que va almacenando los diferentes mensajes:
 
 ```shell
-<<<<<<< HEAD
 senia-netcat-client localhost 10000 Mensaje enviado 
-=======
-senia-netcat-client 127.0.0.1 10000 Some messages
->>>>>>> fbcb5fc62df813629bff16484d32e55913b72212
 ```
 
 En la siguiente imágen espero que se aprecie:
@@ -132,17 +128,11 @@ En la siguiente imágen espero que se aprecie:
 
 Además se están escribiendo en el fichero `/tmp/default-senia-nmap.txt` los diferentes mensajes.
 
-<<<<<<< HEAD
-
-=======
->>>>>>> fbcb5fc62df813629bff16484d32e55913b72212
-\newpage
 # Script SOX
 
 Realiza un Shell Script que mediante bucles, realice la siguientes operaciones cada 5 segundos:
 
 * Muestre un mensaje con la hh:mm:ss del momento de la ejecución.
-<<<<<<< HEAD
 * Compruebe que el último mensaje en el fichero de log del `senia-netcat-server` correspondiente (que acepte argumentos este script es una buena idea), si no siempre se puede definir como una variable al comienzo del Script.
 * Si el último mensaje es la palabra: "`Festung`" debe buscar y matar todos los procesos de netcat que hayan abiertos entre el puerto 10000 y el 10200 y salir.
 * Si el último mensaje es la palabra: "`Angel`" debe copiar el fichero de log al $HOME del usuario que está ejecutando **este** script, añadiendole al nombre del fichero la fecha de copiado, ejemplo de ruta al final:
@@ -192,26 +182,4 @@ y enviar ese fichero por scp al $HOME del Usuario Remoto en la IP indicada.
 ```
 
 La contraseña de ese usuario es : **exam**
-
-
-
-=======
-* Compruebe la última línea del fichero de log del `senia-netcat-server` correspondiente (que acepte argumentos este script es una buena idea), si no siempre se puede definir como una variable al comienzo del Script.
-* Si el último mensaje es la palabra: "`Festung`" debe buscar y matar todos los procesos de netcat que hayan abiertos entre el puerto 10000 y el 10200 y salir.
-* Si el último mensaje es la palabra: "`Angel`" debe copiar el fichero de log al $HOME del usuario que está ejecutando **el script del servidor**, añadiendole al nombre del fichero la fecha de copiado, ejemplo de ruta al final:
-  * `/home/aberlanas/20211020-175115-angel-senia-nmap-server.txt`
-  * `/home/aberlanas/20211020-175120-angel-senia-nmap-server.txt`
-* Si el último mensaje es la palabra: "`Patxi`" debe copiar el fichero de configuración del servicio senia-netstat-server al $HOME del usuario que está ejecutando **el script del servidor**, con la misma tecnología de añadir fechas al comienzo del nombre:
-  * `/home/aberlanas/20211020-175115-exam.conf`
-  * `/home/aberlanas/20211020-175120-exam.conf`
-
-\newpage
-# TUNELES SSH
-
-
-```
-ssh -L 10001:192.168.1.51:20000 usuario@192.168.1.51 -N -v -v
-```
-
->>>>>>> fbcb5fc62df813629bff16484d32e55913b72212
 
