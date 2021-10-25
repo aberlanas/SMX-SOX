@@ -30,3 +30,19 @@ Debido a la gran cantidad opciones y parámetros que se van utilizando en los di
 | ------------------ | -----------| ------ |
 | 0 | Fósil | ![Fosil](rsrc/imgs/fosil.jpg)
 | 1 | Gallimimus | ![Gallimimus](rsrc/imgs/Gallimimus.jpg) |
+| 2 | Estegosaurio | ![Estegosaurio](rsrc/imgs/estegosaurio.jpg) |
+| 3 | Diplodocus | ![Diplodocus](rsrc/imgs/diplodocus.jpg) |
+| 4 | Dilophosaurio | ![Dilophousario](rsrc/imgs/dilophosaurus.jpg) |
+| 5 | Triceratops | ![Triceratops](rsrc/imgs/triceratops.png) |
+| 6 | Ankylosaurio  | ![Ankylosaurio](rsrc/imgs/ankylosaurio.jpg) |
+| 7 | Pterosaurio | ![Pterosaurio](rsrc/imgs/pterodactyl.png)| 
+| 8 | Velociraptor | ![Velociraptor](rsrc/imgs/Velociraptor.png)|
+| 9 | Espinosaurio | ![Espinosaurio](rsrc/imgs/spino_large.png)|
+| 10 | T-Rex | ![T-Rex](rsrc/imgs/trex.jpg)|
+| 11 | Meteorito | ![Meteorito](rsrc/imgs/meteorito.png) |
+
+
+
+
+
+
