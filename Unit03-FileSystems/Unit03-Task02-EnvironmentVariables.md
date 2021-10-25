@@ -198,6 +198,24 @@ Make a PowerShell script that using arguments from 1 to 5 that list a custom inf
 - A briefly description of the stored value (In your own words).
 - Some examples of use.
 
+## Example of Use
+
+If the envirnoment variables chosen are:
+
+1. Windir
+2. Current User
+3. AppData
+4. Home
+5. Windows Version
+
+```PowerShell
+PS C:\Users\aberlanas\Desktop\Unit03\PSscripts > .\script01.ps1 1
+ * The Chosen variable is windir
+ * You can use to acces: $Env:windir
+ * Store the current Windows Installation Folder.
+ * - To find Drivers: $Env:windir\System32\Drivers
+```
+
 
 # Task 02
 
