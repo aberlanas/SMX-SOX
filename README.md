@@ -24,6 +24,7 @@ Debido a la gran cantidad opciones y parámetros que se van utilizando en los di
 
 # Tabla de Valoración
 
+Esta tabla se utilizará para medir la dificultad o la dureza de las tareas y exámenes presentados a largo del temario.
 
 
 | Valor en la escala | Dinosaurio | Imagen |
