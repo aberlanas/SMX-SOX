@@ -196,14 +196,14 @@ In this second act the director needs some details, above the following is added
 2. That each group of instruments can *read* those of its group, but not *write*
 3. The conductor can *read and write* all the scores (because is the conductor).
 4. The Wind on Saturn groups need to be able to make annotations (*write*) in your group. This prevails over the above.
-5. In the Unfinished all the scores of the instruments that begin with the letter \ "**v** \" must be able to be executed by*Others*.
+5. In the Unfinished all the scores of the instruments that begin with the letter **v** must be able to be executed by *Others*.
 6. In all the scores of the cavalcade of the Valkyries must be the phrase will appear:
 
     `The swift Indian bat happily ate cardillo and kiwi, while the stork played the saxophone behind the straw hut .... 0123456789`
 
     and in addition the director must be able to *read, write and execute*.
 
-7. The symphonietta must contain an additional score, which will be will named: `TheSilencio.txt` and it should belong to anyone.
+7. The Sinfonietta must contain an additional score, which will be will named: `TheSilencio.txt` and it should belong to anyone.
 
 ## Task 03
 
@@ -212,9 +212,9 @@ Code a Shell Script named "act02.sh" with the orders needed. Using a variable to
 # ACT III: Adagio
 
 
-![Estonian composer * Arvo Part *](imgs/ArvoPart.jpg)
+![Estonian composer *Arvo Part*](imgs/ArvoPart.jpg)
 
-It seems that the orchestra is beginning to working with the lecterns, the
+Seems that the orchestra is beginning to working with the lecterns, the
 administrator, and with the permissions.
 
 We are about to do the best show that the Orchestra has never seen. We have presented two
