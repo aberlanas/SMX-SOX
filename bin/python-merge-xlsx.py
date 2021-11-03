@@ -7,7 +7,8 @@
 # Import section
 import sys
 
-
+def patata(self):
+    print(" Hola Yago")
 
 
 

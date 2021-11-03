@@ -1,5 +1,5 @@
 ---
-title: \[Pterosaurio\] - A Night At The Opera.
+title: \[Stegosaurio\] - A Night At The Opera.
 subtitle: "Unit 03"
 author: Angel Berlanas Vicente
 header-includes: |
@@ -11,7 +11,7 @@ page-background-opacity: 1
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
+titlepage-background: "../rsrc/backgrounds/background-title-senia-stegosaurio.pdf"
 ---
 
 
@@ -44,8 +44,7 @@ I would like to emphasize that the completion of this task will be
 demanding with the following aspects:
 
 - That you are able to read a * long * sentence and know how to extract *what it demands to be done*.
-- That you handle the routes (absolute and relative) with accuracy and taking seriously what you are doing. If you create the wrong routes,
-     it will not work (a **0** in that section).
+- That you handle the routes (absolute and relative) with accuracy and taking seriously what you are doing. If you create the wrong routes, it will not work (a **0** in that section).
 - What do you check what is being asked of you, changing user and seeing that the problem raised is resolved (access permissions, writing, etc).
 - Each work will be evaluated in an *isolated* way.
 - I am aware that I pose challenges that you do not know *a priori* but you can count with me in class if you have any questions.
@@ -209,3 +208,85 @@ In this second act the director needs some details, above the following is added
 ## Task 03
 
 Code a Shell Script named "act02.sh" with the orders needed. Using a variable to store the PATHS and using loops could be a good idea.
+
+# ACT III: Adagio
+
+
+![Estonian composer * Arvo Part *](imgs/ArvoPart.jpg)
+
+It seems that the orchestra is beginning to working with the lecterns, the
+administrator, and with the permissions.
+
+We are about to do the best show that the Orchestra has never seen. We have presented two
+quite moved acts, with works of great intensity, but now,
+reflecting on what we have learned and present to listeners pieces that invite to reflection and inner calm.
+
+The program for Act Three is:
+
+- The Nocturns of *Chopin* (`Nocturns`)
+- Fratres from *Arvo Part* (`Fratres`)
+- The Adagio of *Albinoni* (`Adagio`)
+- De Profundis by *Arvo Part* (`DeProfundis`)
+
+The conductor is increasingly convinced that it was a good decision
+hire you ... but he wants to make sure. He demands for the following:
+
+
+1. That each instrument can read and write *only* on its score.
+2. That each group of instruments can *read* those of its group, but not *write*
+3. The conductor can *read and write* all the scores (because is the conductor).
+4. In the **Nocturns** he wants to change the last modified date up to date `01/01/1977` in ** all ** the scores.
+5. In **Fratres** all users must be able to create new files, but all of them (the new ones) must belong to the group *orchestra*, these files will be created on live !, so it is not worth changing permissions *"a posteriori "*. The mechanism set must change those permissions when creating the files **in a automatic** way.
+6. After the Fratres difficulty, ... the **Adagio** must contains a folder where only the conductor could creates files and these belong to the group *orchestra*.
+7. In the **De Profundis** by *Arvo Part* you want that each one of the scores, in addition to its original content contain:
+
+    - The numerical identifier of the owner. (id)
+    - The main group identifier of the owner. (gid)
+
+    Example, in the file `fiddle.txt` it should appear:
+
+```shell
+fiddle
+1007
+1007
+```
+
+    In the case that `1007` is the UID of the fiddle user.
+
+## Task 04
+
+Code a Shell Script named "act03.sh" with the orders needed. Using a variable to store the PATHS and using loops could be a good idea.
+
+
+![The great composer Albinoni](imgs/albinoni.jpg)\
+
+\newpage
+
+# ACT IV: Solemn Finale
+
+We are already at the end of the tour, and the director is much more than
+happy with us. We have a few days left before they hire us definitely or they fire us with boxes out of temper.
+
+The conducto prepares the last concert with the following works:
+
+- The Gallop of Guillermo Tell de *Rossini* (`Gallop`)
+- Oh Fortuna by Carmina Burana by *Carl Orff* (`Carmina`)
+- The 1812 Solemn Overture of *Tchaikovsky* (`1812`)
+
+What do you need?
+
+1. That each instrument can read and write *only* on its score.
+2. That each group of instruments can *read* those of its group, but not *write*
+3. The conductor can *read and write* all the scores (because is the conductor).
+4. In the **Gallop** the files of the group *Strings* must contain instruments belonging to that group.
+5. In **Carmina** the conductor's file must be the
+    ** CONCATENATION ** of the rest of the files of the work (fiddle.txt,
+    viola.txt, ...).
+6. In the **Solemn Overture (1812)** we must make each of the
+    instrument scores will contain **in addition to** the text that
+    always contain, the *History* of the orders that the
+    user owner of the file. (Hint: **history**).
+
+## Task 05
+
+Code a Shell Script named "act04.sh" with the orders needed. Using a variable to store the PATHS and using loops could be a good idea. The members of groups must be extracted dynamically.
