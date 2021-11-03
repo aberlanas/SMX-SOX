@@ -279,13 +279,8 @@ What do you need?
 2. That each group of instruments can *read* those of its group, but not *write*
 3. The conductor can *read and write* all the scores (because is the conductor).
 4. In the **Gallop** the files of the group *Strings* must contain instruments belonging to that group.
-5. In **Carmina** the conductor's file must be the
-    ** CONCATENATION ** of the rest of the files of the work (fiddle.txt,
-    viola.txt, ...).
-6. In the **Solemn Overture (1812)** we must make each of the
-    instrument scores will contain **in addition to** the text that
-    always contain, the *History* of the orders that the
-    user owner of the file. (Hint: **history**).
+5. In **Carmina** the conductor's file must be the **CONCATENATION** of the rest of the files of the work (fiddle.txt, viola.txt, ...).
+6. In the **Solemn Overture (1812)** we must make each of the instrument scores will contain **in addition to** the text that always contain, the *History* of the commands that the user owner of the file. (Hint: **history**).
 
 ## Task 05
 
