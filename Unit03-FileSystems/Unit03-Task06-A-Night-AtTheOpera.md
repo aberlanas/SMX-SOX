@@ -51,6 +51,12 @@ demanding with the following aspects:
 - As you use commands, I advise you to write them down, now that will come out later.
 - If someone *makes witchcraft* or *plagiarice * I'll know.
 
+# Music Recomendations:
+
+[ Official Playlist ](https://www.youtube.com/playlist?list=PL4mZZVqrJKfOhRuzcDNHCnorB5x2Tm2Tn)
+
+- https://www.youtube.com/playlist?list=PL4mZZVqrJKfOhRuzcDNHCnorB5x2Tm2Tn
+
 
 
 \newpage
@@ -109,6 +115,8 @@ The instruments of the Orchestra are divided into several groups, as is displaye
 Code a Shell Script in GNU/LinuX that add the users and grous needed to configure the environment.
 Explain the lines of the script which set the password for the users in a *unattended* way.
 
+For each *user* and *group*, the script must check if they are already created, showing a custom message with the info about the user skipping.
+
 \newpage
 
 ACT I : Overture
@@ -143,6 +151,11 @@ What he demands is:
 ## Task 02
 
 Code a Shell Script named "act01.sh" with the orders needed. Using a variable to store the PATHS and using loops could be a good idea.
+
+## Music playlist
+
+
+
 
 ## Viewer User
 
