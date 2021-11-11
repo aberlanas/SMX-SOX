@@ -1,5 +1,5 @@
 ---
-title: \[Amusement\] - W1815-Wellington-Bot-Step01
+title: \[Napoleonic\] - W1815-Wellington-Bot-Step01
 subtitle: "Unit 03"
 author: Angel Berlanas Vicente
 header-includes: |
@@ -11,7 +11,7 @@ page-background-opacity: 1
 titlepage-text-color: "FFFFFF"
 titlepage-rule-color: "360049"
 titlepage-rule-height: 0
-titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
+titlepage-background: "../rsrc/backgrounds/background-title-senia-napoleon.pdf"
 ---
 
 # Introduction
@@ -83,8 +83,9 @@ Code a ShellScript, that asking the questions, offers the logic and say the acti
 
 # Some Values
 FC=0
-WELLINGTON=true
+WELLINGTON_ACTIVATED=false
 RESERVES=4
+GRANDBATTERY=3
 action="none"
 
 echo " * Welcome to W1815 - a SMX Bot "
