@@ -94,14 +94,14 @@ como posibles puntos de montaje por parte de los equipos de la red.
 
 Por ahora configuraremos para que una determinada carpeta:
 
-`C:\Compartido-Win-NFS`
+* `C:\Compartido-Win-NFS`
 
 quede accesible para todos los equipos de la red. En este primer momento
 no vamos a prestar demasiada atención a la autenticación de usuarios (al
 igual que hicimos con Ubuntu). Más adelante iremos *afinando* más las
 carpetas compartidas.
 
-**Objetivo** : Exportar C:\Compartido-Win-NFS en **Solo léctura** para
+**Objetivo** : Exportar `C:\Compartido-Win-NFS` en **Solo léctura** para
 todos los equipos de la red.
 
 Para ello seguiremos los pasos siguientes:

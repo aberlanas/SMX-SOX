@@ -46,7 +46,7 @@ intelligence and decisions like a *human*. The idea is let the human player spen
 The idea is develop a Bot that will play as **Wellington**.
 
 
-![W1815 Napoleon](imgs/w1815-wellington.png)\
+![W1815 Napoleon](imgs/w1815-napoleon.png)\
 
 
 \newpage
