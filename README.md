@@ -1,4 +1,17 @@
+
 # SMX-SOX
+
+---
+
+![Vim](https://img.shields.io/badge/VIM-%2311AB00.svg?style=for-the-badge&logo=vim&logoColor=white)
+![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+[![made-with-Markdown](https://img.shields.io/badge/Made%20with-Markdown-1f425f.svg)](http://commonmark.org)
+[![made-with-bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
+[![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/Naereen/badges/)
+
+---
+
 
 Recursos para el Módulo de Sistsemas Operativos en Red del Ciclo de Grado Medio de Sistemas Microinformáticos y Redes
 
@@ -11,7 +24,7 @@ Recursos para el Módulo de Sistsemas Operativos en Red del Ciclo de Grado Medio
 
 ## Makefile
 
-	Debido a la gran cantidad de unidades y utilidades que se presentan en este repositorio, se ha creado un pequeño Makefile para la ayuda a la generación de los diferentes recursos en PDF, HTML, etc desde Markdown y OrgMode.
+Debido a la gran cantidad de unidades y utilidades que se presentan en este repositorio, se ha creado un pequeño Makefile para la ayuda a la generación de los diferentes recursos en PDF, HTML, etc. desde Markdown.
 
 ## Construyendo con Pandoc
 
@@ -21,6 +34,15 @@ Debido a la gran cantidad opciones y parámetros que se van utilizando en los di
 * texlive-extra-utils
 * texlive-lang-spanish 
 * texlive-latex-extra
+
+```shell
+sudo apt install pandoc \
+	         texlive-extra-utils \
+		 texlive-lang-spanish \
+		 texlive-lang-spanish \
+```
+
+
 
 # Tabla de Valoración
 
