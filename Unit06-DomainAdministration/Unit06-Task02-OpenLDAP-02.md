@@ -18,77 +18,65 @@ titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 
 In this task, we are going to join the domain the Ubuntu System to the Domain. 
 
-   
+In this configuration, the users that we will create at our OpenLDAP Server, will be able to login as a *local* users 
+in the machines that we would configure as OpenLDAP Clients.  
 
-En esta tarea vamos a unir al dominio una máquina Ubuntu, de tal manera
-que los usuarios que creemos en el LDAP en el Servidor puedan iniciar
-sesión en nuestra máquina cliente Ubuntu.
+## Requeriments:
 
-Requisitos:
------------
+- OpenLDAP Server Installed and configured on the Ubuntu Server Machine (**ubuntusrv.smx2021.net**)
+- Systems Updated 
+- DNS Resolution between machines (using *bind9*).
 
--   Servidor LDAP instalado en la máquina Ubuntu.
--   Ambas máquinas actualizadas.
--   Ambas máquinas encendidas.
--   Conectividad entre ellas.
--   Resolución de nombres habilitada.
 
-Una de las cosas que debéis comprobar es esto:
+## Some files and logs
 
-![](./imgs/lin-join-ldap-01.png)
+In our sysadmin works exists a lot of *commonplaces*, files and situations that 
+if not are exactly the same, seems a *deja-vu*. 
 
-Si no va el `ping` con resolución de nombres...arreglarlo, no sigáis con
-la práctica.
+We can use several files in order to test if the services are up and running.
 
-Ficheros y comandos útiles
-==========================
+Some examples:
 
-A lo largo de la práctica necesitaremos ver si vamos por el buen camino
-en multitud de lugares, para ver errores y demás recordad que el sistema
-va apuntando en ficheros las diferentes acciones que se van realizando,
-de tal manera que podamos ver qué está pasando.
+- `/var/log/syslog`
+- `/var/log/sssd/sssd.log`
+- `/var/log/auth.log`
 
-Ficheros interesantes para comprobar fallos en esta práctica:
 
--   `/var/log/syslog`
--   `/var/log/sssd/sssd.log`
--   `/var/log/auth.log`
+Useful Commands:
 
-Comandos que nos pueden ayudar:
-
--   `tail -f /var/log/syslog`
--   `ping`
--   `getent passwd`
+- `tail -f /var/log/syslog`
+- `ping`
+- `getent passwd`
+- `systemctl [restart|start|stop] service`
 
 ![](./imgs/goblin-wizard.png)
 
-`\newpage`{=latex}
+\newpage
 
-Instalación de LDAP - Cliente
------------------------------
+## LDAP Client installation
 
-Instalamos los paquetes siguientes en la máquina que va a ser nuestro
-cliente (escritorio):
+Software that must be installed in the **Client** Machine:
 
-  Paquetes
+  Packages
   -------------
   libnss-ldap
   libpam-ldap
   ldap-utils
 
-En la configuración deberemos rellenar algunos parámetros:
+Some parameters
 
-  Parámetros:           Valor
+  Params:               Value
   --------------------- -------------------------------------------
-  ldapi                 `ldapi:\\ubuntusrv.smx2020.net`
-  distinguished-name    `dc=ubuntusrv,dc=smx2020,dc=net`
+  ldapi                 `ldapi:\\ubuntusrv.smx2021.net`
+  distinguished-name    `dc=ubuntusrv,dc=smx2021,dc=net`
   ldap-version          `3`
   Root Database Admin   `Yes`
   LDAP Database Login   `No`
-  LDAP Account Root     `cn=admin,dc=ubuntusrv,dc=smx2020,dc=net`
+  LDAP Account Root     `cn=admin,dc=ubuntusrv,dc=smx2021,dc=net`
   LDAP Pass             `Lin4dm1n`
 
-Algunas imágenes son:
+
+Some images:
 
 ![](./imgs/lin-join-ldap-02.png)
 
@@ -96,88 +84,73 @@ Algunas imágenes son:
 
 ![](./imgs/lin-join-ldap-04.png)
 
-Disclaimer
-==========
+\newpage
 
-A partir de este punto, el tutorial contiene apartados de *obligado
-cumplimiento* en la lengua del Imperio Británico. Good Luck!
+## LDAP & TLS
 
-`\newpage`{=latex}
-
-LDAP & TLS
-==========
-
-Seguid los pasos de esta guia y conseguid que LDAP use TLS para crear el
-canal de comunicación seguro:
+Follow the steps described in this guide and configure LDAP to use TLS:
 
 [<https://ubuntu.com/server/docs/service-ldap-with-tls>](https://ubuntu.com/server/docs/service-ldap-with-tls)
 
-Una vez lo tengáis...continuad con la práctica.
+When it works...please continue with the task!
 
 ![](./imgs/goblin-wizard.png)
 
-SSSD - Instalación
-==================
+## SSSD - Installation
 
-**SSSD** es el Demonio de Servicios de Seguridad del Sistema (*System
-Security Services Daemon*).
+**SSSD** is the *System Security Services Daemon*.
 
-Nos permitirá configurar en el Sistema diferentes mecanismos de
-seguridad que nos proporcionarán acceso a
-Usuarios/Grupos/Contraseñas....
+It will allow us to configure different mechanisms of
+security that will provide us with access to
+Users / Groups / Passwords ...
 
-El primero que vamos a configurar es el LDAP que hemos configurado en la
-práctica anterior.
+The first that we are going to configure is the LDAP that we have configured in the
+previous practice.
 
-La práctica asume que se puede *resolver por nombre* el servidor del
-tipo:
+Practice assumes that you can *resolve by name* the server.
 
-`ubuntusrv.smx2020.net`
+`ubuntusrv.smx2021.net`
 
-Y que tenemos *conectividad* con él.
-
-Comenzaremos instalando en la máquina Cliente de GNU/LinuX los
-siguientes paquetes:
+We need to start with the installation at the *client* the next packages:
 
 `sssd libpam-sss libnss-sss`
 
-SSSD - Configuración
-====================
+## SSSD - Configuration
 
-Una vez instalado el servicio de SSSD no provee ningún fichero por
-defecto, así que lo crearemos donde nos indican:
+Once the SSSD service is installed it does **not provide any files** for
+default, so we will create it where indicated:
 
--   `/etc/sssd/sssd.conf`
+- `/etc/sssd/sssd.conf`
 
-Se trata de un fichero `inifile` como los que vimos en Samba.
+It is an `inifile` file like the ones we saw in Samba.
 
-Habrá que configurar las siguientes secciones:
+The following sections must to be configured:
 
-`\newpage`{=latex}
+\newpage
 
 ``` {.inifile}
 [sssd]
 services = nss, pam, ifp
 config_file_version = 2
-domains = smx2020.net
+domains = smx2021.net
 
 [nss]
 filter_groups = root
 filter_users = root
 reconnection_retries = 3
 
-[domain/smx2020.net]
+[domain/smx2021.net]
 ldap_id_use_start_tls = True
 cache_credentials = True
-ldap_search_base = dc=ubuntusrv, dc=smx2020,dc=net
+ldap_search_base = dc=ubuntusrv, dc=smx2021,dc=net
 id_provider = ldap
 debug_level = 3
 auth_provider = ldap
 chpass_provider = ldap
 access_provider = ldap
 ldap_schema = rfc2307
-ldap_uri = ldap://ubuntusrv.smx2020.net
-ldap_default_bind_dn = cn=admin,dc=ubuntusrv,dc=smx2020,dc=net
+ldap_uri = ldap://ubuntusrv.smx2021.net
+ldap_default_bind_dn = cn=admin,dc=ubuntusrv,dc=smx2021,dc=net
 ldap_id_use_start_tls = true
 ldap_default_authtok = Lin4dm1n
 ldap_tls_reqcert = demand
@@ -187,121 +160,109 @@ ldap_search_timeout = 50
 ldap_network_timeout = 60
 ldap_access_order = filter
 ldap_access_filter = (objectClass=posixAccount)
-ldap_user_search_base = cn=goblins,dc=ubuntusrv,dc=smx2020,dc=net
+ldap_user_search_base = cn=goblins,dc=ubuntusrv,dc=smx2021,dc=net
 ldap_user_object_class = inetOrgPerson
 ldap_user_gecos = cn
 enumerate = True
 debug_level = 0x3ff0
 ```
 
-Customización
--------------
+## Customization
 
-Debéis adaptar todos los valores necesarios para que se adapte a la
-configuración que cada un@ tiene en sus máquinas virtuales.
-
-Podéis encontrar más información en:
+Adapt all the values that must be changed.
 
 -   `man sssd.conf`
 -   `man sssd-ldap`
 
-OpenLDAP Server CA en el Cliente
-================================
+# OpenLDAP Server as a CA in the Client
 
-SSSD solo funciona si estamos utilizando un canal seguro de comunicación
-(TLS).
 
-Así que debemos tener en configurado nuestro LDAP Server ya lo tenemos
-con (Guia anterior).
+SSSD only works if we are using a secure communication channel (TLS).
 
-Los pasos que se describen ahora deben ser adaptados para que ajusten a
-vuestro escenario.
+So we must have our LDAP Server configured, we already have it with (Previous guide).
 
-Descarga el Certificado de la CA desde el servidor
+The steps outlined now need to be adapted to fit your configuration.
+
+
+## Download the CA Certificate to from the Server
 --------------------------------------------------
 
-Se puede utilizar este comando (es una única línea).
+You can use the next command (is a *one-liner*).
 
 ``` {.shell}
-openssl s_client -connect ubuntusrv.smx2020.net:636 -showcerts < /dev/null 
+openssl s_client -connect ubuntusrv.smx2021.net:636 -showcerts < /dev/null 
         | openssl x509 -text | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
 ```
 
-En caso de que tengáis el servidor escuchando `STARTTLS` en el puerto
-389 (ya sea por tcp o por udp), utilizad el comando siguiente:
+If the Server is listening STARTTLS at the 389 port (via tcp or udp), the command must be this:
 
 ``` {.shell}
-openssl s_client -connect ubuntusrv.smx2020.net:389 -starttls ldap -showcerts < /dev/null 
+openssl s_client -connect ubuntusrv.smx2021.net:389 -starttls ldap -showcerts < /dev/null 
         | openssl x509 -text | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p'
 ```
 
-Copiad la parte del certificado y guardadla en la ruta que habéis
-indicado en el fichero que habéis indicado al sssd.conf.
+You must copy the Certificate fragment and store it at the PATH that you indicated in your own *sssd.conf*
 
-Validad el certificado:
+
+Validate the Certificate:
 
 ``` {.shell}
-openssl s_client -connect ubuntusrv.smx2020.net:389 -CAfile /etc/ssl/certs/ldapcacert.crt
+openssl s_client -connect ubuntusrv.smx2021.net:389 -CAfile /etc/ssl/certs/ldapcacert.crt
 ```
 
-Debéis obtener un resultado similar a una de las siguientes líneas:
+The result must be something similar at:
 
 -   `Verification: OK`
 -   `Verify return code: 0 (ok)`
 
-Ahora en el fichero `/etc/ldap/ldap.conf` estableced el valor de
-`TLS_CACERT` a la ruta del certificado de la CA que hemos creado antes.
+Now at the file `/etc/ldap/ldap.conf` set the `TLS_CACERT` to the PATH of the CA Certificate that we just created.
 
-Permisos en SSSD
-================
+## Permisos en SSSD
 
-Estableced permisos de `0600` solo al usuario `root` a todas las
-carpetas y ficheros del directorio (y subdirectorios) de :
+The permissions of the `/etc/sssd/` (files and subfolders) must be :
 
--   `/etc/sssd/`
+- Owner : root:root
+- Permissions: 0600
 
-Reiniciad el servicio sssd.
+
+And reboot the sssd service.
 
 -   `systemctl restart sssd`
 
-Aseguraos de que todo está funcionando:
+And the if the Service are OK and enable it at the Startup:
 
 -   `systemctl status sssd`
-
-Si todo funciona, habilitadlo en el arranque:
-
 -   `systemctl enable sssd`
 
-pam-mkhomedir
-=============
+## pam-mkhomedir
 
-Ya casi estamos acabando (si está todo funcionando \^\_\^).
 
-Ahora vamos a habilitar el módulo de PAM que autogenere el
-`HOME Directory` de los usuarios al logarse (si no existe).
+We are almost finished (if everything is working \^\_\^).
 
-Editad el fichero:
+Now we are going to enable the PAM module that auto-generates the
+`HOME Directory` of users upon login (if it does not exist).
+
+Edit the file:
 
 `/etc/pam.d/common-session`
 
-Y debajo de la línea:
+And under the line:
 
 ``` {.shell}
 session optional pam_sss.so
 ```
 
-Escribid:
+Write:
 
 ``` {.shell}
 session required        pam_mkhomedir.so skel=/etc/skel/ umask=0022
 ```
 
-Salvad y salid.
+Save and exit (:wq).
 
-Comprobaciones
-==============
+## Comprobaciones
 
-Comprobad que el usuario goblin01 aparece si ejecutamos el comando:
+Test if the user *goblin01* aparece si ejecutamos el comando:
 
 `getent passwd goblin01`
 
