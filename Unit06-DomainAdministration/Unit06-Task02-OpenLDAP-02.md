@@ -262,25 +262,19 @@ Save and exit (:wq).
 
 ## Comprobaciones
 
-Test if the user *goblin01* aparece si ejecutamos el comando:
+Test if the user *goblin01* in the output of the command:
 
 `getent passwd goblin01`
 
-Una vez aparezca, comprobad que podéis iniciar sesión con el usuario
-tanto por el entorno gráfico como via `ssh` y `tty`.
+When the user *appears*, the user will be able to login at our system. You can test it, with *ssh* or in another **tty**.
 
-Avisad al profesor cuando tengáis esto.
 
-`\newpage`{=latex}
+\newpage
 
-Tareas:
-=======
+## Tasks:
 
-Estas tareas son un ejemplo de lo que tendréis que resolver en el
-exámen.
 
-Tarea 01
---------
+### Task 01
 
 Cread 4 usuarios más (goblin02,goblin03,goblin04,goblin05).
 
