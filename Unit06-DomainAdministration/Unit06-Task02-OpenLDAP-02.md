@@ -276,42 +276,29 @@ When the user *appears*, the user will be able to login at our system. You can t
 
 ### Task 01
 
-Cread 4 usuarios más (goblin02,goblin03,goblin04,goblin05).
+You must add 4 goblins more to the crew: (goblin02,goblin03,goblin04,goblin05).
 
-Tarea 02
---------
+### Task 02
 
-Realizad un SCRIPT de inicio de Sesión que si el usuario pertenece a la
-`cn=goblins` monte un directorio NFS desde el servidor. Para ello
-tendréis que :
+Do you want to WIN? Script'em all!
 
--   Configurar el servicio NFS en el servidor para que exporte:
-    `/srv/tropas`. (Por Nombre y no por IP).
--   Crear el script en el cliente para que compruebe la pertenencia a
-    ese `cn`.
--   Hacer que el script se ejecute cuando el usuario inicie sesión.
+Make a Shell Script and set up **at the graphical login of the user**. (xdg-freedesktop), that makes
+the next checks and operations:
 
-A los 5 usuarios `goblin0*` debe aparecerles en su carpeta personal una
-carpeta compartida por NFS que esté en el servidor : (`/srv/tropas`). El
-punto de montaje en el cliente ha de ser:
+- Test if the user belongs to the `cn=goblins`.
+- If the users belongs to that cn, then:
+	- Mount a custom directory from the server (nfs).
+	- For this step, you must configure an alias for the 
+	  server at the bind9: **nas.smx2021.net** and this name 
+	  must be used at the client in the configuration file.
+	- The path (at the server) must be: `/srv/troops/.
+	- The path (at the client) must be: `$HOME/shared/smx2021.net/troops/.
+  
 
--   `$HOME/tropas/`
+The script must make log at the syslog for every step and result
 
-El Script debe (indicando en `syslog` si tiene éxito o no):
+### Task 03 
 
--   Comprobar que somos un usuario de LDAP.
--   Comprobar que estamos en el `cn=goblins`.
--   Comprobar que `$HOME/tropas` existe y es un directorio, si no existe
-    crearlo.
--   Montar la carpeta exportada desde el servidor.
-
-Tarea 03 (Opcional)
--------------------
-
-Haz que el servidor sea cliente de LDAP para la validación de usuarios a
-nivel local y establece permisos \"extendidos\" sobre las carpetas
-exportadas (`/srv/tropas/`) donde se pueda comprobar que efectivamente
-el usuario `local` y el `remoto` son el mismo objeto de seguridad y se
-les pueden aplicar las mismas reglas.
+Configure the server to be a client of himself. Apply extended permissions to the files and folders under `/srv/troops/` and check that everything is fine.
 
 ![](./imgs/goblin-sneaky.png)
