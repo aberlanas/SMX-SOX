@@ -15,8 +15,7 @@ titlepage-background: "../rsrc/backgrounds/background-title-senia.pdf"
 ---
 
 
-Tarea: Instalación de OpenLDAP
-==============================
+# Tarea: Instalación de OpenLDAP
 
 Vamos a realizar ahora la instalación y posterior configuración del
 servicio de OpenLDAP. El objetivo es preparar una máquina con GNU/LinuX
@@ -28,13 +27,13 @@ Existen muchos servidores OpenSource de LDAP, pero uno de los más
 famosos es OpenLDAP, que será el que instalaremos y configuraremos en
 esta práctica.
 
-Instalación del servicio
-------------------------
+A lo largo de la práctica debéis cambiar el dominio smx2020.net por smx2021.net que aparece 
+en las capturas.
 
-\<\<\<\<\<\<\< HEAD En la máquina Ubuntu server que tenemos,
-instalaremos el paquete `slapd` que `=====` En la máquina Ubuntu Server
-que tenemos, instalaremos el paquete `slapd` que \>\>\>\>\>\>\>
-9c441ef3ff022815cfc89b6236cf4e515e8eb3b9 contiene el *demonio* o
+## Instalación del servicio
+
+En la máquina Ubuntu server que tenemos,
+instalaremos el paquete `slapd` que contiene el *demonio* o
 servidor de ldap.
 
 ![](./imgs/slapd-01.png)\
@@ -70,8 +69,7 @@ Vemos que aparece el `phpldapadmin` pero esto requiere de un servidor de
 bases de datos para gestionarlo, así que antes de que nos pongamos a
 instalar y configurar el Slapd, vale la pena instalar el MySQL Server.
 
-Instalación de MySQL Server
----------------------------
+## Instalación de MySQL Server
 
 Aquí hay que instalar el servicio de Mysql.
 
@@ -79,16 +77,14 @@ Aquí hay que instalar el servicio de Mysql.
 
 Una vez instalado , continuamos con el `phpldapadmin`.
 
-Instalación de phpldapadmin
----------------------------
+## Instalación de phpldapadmin
 
 Entre los resultados seleccionaremos el paquete `phpldapadmin` que entre
 sus dependencias cuenta con un servidor web (el *apache*) con el que
 podremos conectarnos a nuestro LDAP *local* desde cualquier máquina de
 la red que esté accesible y administrar el servicio.
 
-Accediendo a phpLDAPadmin
--------------------------
+## Accediendo a phpLDAPadmin
 
 Una vez lo tengamos **instalado**, abriremos el navegador e
 introduciremos en la barra de direcciones la *ip* o nombre del servidor
@@ -107,8 +103,7 @@ algunas de las funciones que está utilizando el programa está
 Son avisos que no afectan a la funcionalidad del programa. Sin embargo
 os animo a arreglarlo (lo valoraré positivamente).
 
-Tarea: Parcheando phpLDAPadmin
-------------------------------
+## Tarea: Parcheando phpLDAPadmin
 
 Realizar los pasos necesarios (editando el código fuente) para que
 funcione cómo toca. Buscad una solución y antes de aplicarla de manera
@@ -118,8 +113,7 @@ Ahora deberemos reconfigurar el servidor de ldap (`slapd`) para
 introducir los valores que necesitamos para adecuarlo a nuestra
 infraestructura.
 
-Reconfigurando slapd
---------------------
+## Reconfigurando slapd
 
 Para realizar la re-configuración de slapd, ejecutaremos desde el
 terminal el comando:
@@ -137,11 +131,11 @@ esta manera podremos responder a todas las preguntas que necesitamos.
 
 En este punto nos preguntará por el nombre del dominio que usaremos para
 crear el DN base del directorio (*Distinguisehd Name*), en nuestro caso
-seleccionaremos vuestro servidor Ubuntu: ubuntusrvXX.smx2020.net
+seleccionaremos vuestro servidor Ubuntu: ubuntusrvXX.smx2021.net
 
-`ubuntusrvXX.smx2020.net`
+`ubuntusrvXX.smx2021.net`
 
-que equivaldría a un DN base de: \<dc=ubuntusrvXX,dc=smx2020,dc=net\>.
+que equivaldría a un DN base de: \<dc=ubuntusrvXX,dc=smx2021,dc=net\>.
 
 ![](./imgs/slapd-conf-01.png)
 
@@ -166,14 +160,13 @@ Por último, nos pregunta si deseamos mover la base de datos antigua (que
 está vacia en este momento) durante este proceso. Optaremos por la
 opción: **Sí**
 
-Configurando phpLDAPadmin
--------------------------
+## Configurando phpLDAPadmin
 
 Una vez realizado todo el proceso anterior, si volvemos a la pantalla de
 phpLDAPadmin, veremos que utilizando un **dn** de administrador nos
 permite entrar en el servidor.
 
-`cn=admin,dc=ubuntusrvXX,dc=smx2020,dc=net`
+`cn=admin,dc=ubuntusrvXX,dc=smx2021,dc=net`
 
 ![](./imgs/slapd-07.png)
 
@@ -211,21 +204,15 @@ Creando nuestros objetos en LDAP
 Ahora ya tenemos las herramientas preparadas para ser utilizadas para
 crear y administrar nuestro servidor LDAP.
 
-En esta práctica crearemos una **OU** que llamaremos `esbirros`, en su
-interior quedará un grupo *POSIX* que llamaremos `esbirrosldap`. Dentro
-de ese grupo crearemos los diferentes usuarios más adelante.
-
 La estructura quedará de esta manera:
 
 ``` {.example}
-dc=ubuntusrvXX,dc=smx2020,dc=net
+dc=ubuntusrvXX,dc=smx2021,dc=net
     cn=admin
     cn=goblins
        cn=goblin01
 ou=tropas
 ```
-
-![](./imgs/phpldapadmin-task.png)
 
 Crearemos primero la el *Grupo* y luego el usuario dentro del grupo. Por
 último la **ou**
@@ -235,8 +222,11 @@ Introduciremos los datos correspondientes y crearemos la entrada en el
 
 La estructura quedará así:
 
-Instalación de las ldap-utils
------------------------------
+
+![](./imgs/phpldapadmin-task.png)
+
+
+## Instalación de las ldap-utils
 
 Para poder acceder a los datos contenidos en el LDAP desde la terminal,
 podemos instalar una serie de utilidades nos permitirán realizar
@@ -252,6 +242,10 @@ realizar consultas.
 Una vez realizada la instalación, podemos comprobar que somos capaces de
 contactar con el `ldap server` utilizando la línea de comandos:
 
-`ldapsearch -x -h localhost -p 389 -b "dc=ubuntusrvXX,dc=smx2020,dc=net"`
+`ldapsearch -x -h ubuntusrv.smx2021.net -p 389 -b "dc=ubuntusrvXX,dc=smx2021,dc=net"`
 
 Avisad al profesor cuando esto os funcione.
+
+Debé funcionar con :
+
+*https://ldap.smx2021.net*
