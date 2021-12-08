@@ -231,6 +231,10 @@ And reboot the sssd service.
 
 And the if the Service are OK and enable it at the Startup:
 
+**WARNING**: If the service is not ok, you must install some packages (the name could be found in the sssd.log), or on the Internet. NOT REBOOT until the service is Ok.
+
+
+
 -   `systemctl status sssd`
 -   `systemctl enable sssd`
 
