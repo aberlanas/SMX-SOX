@@ -25,15 +25,16 @@ And create a new Virtual Machine with Windows 2019 Server - Core.
 Set the next values:
 
 | Parameters | Value |
+|------------|-------|
 | Hostname and FQDN | windowscore.smx2021.net | 
-| IP | Estática : 192.168.42.55 | 
-
+| IP | 192.168.42.55 | 
 
 ## Task 01 : Basic configuration
 
-Create a non-administrator user in the System:
+Create a local-administrator user in the System:
 
 | Username | Password |
+|----------|----------|
 | JamesWebb | +EstaEnL2+ | 
 
 Take an screenshot of the creation. 

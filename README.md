@@ -50,6 +50,11 @@ sudo apt install pandoc \
 		 texlive-lang-spanish \
 ```
 
+## Algunas Utilidades
+
+* vim
+* kitty
+* fonts-jetbrains-mono 
 
 
 # Tabla de Valoración
