@@ -1,6 +1,6 @@
 ---
 title: UD06 - Usuarios en Red
-subtitle: "Configuración del Controlador del Dominio y Unión al mismo"
+subtitle: "Active Directory Configuration"
 author: Angel Berlanas Vicente
 header-includes: |
 lang: es-ES
