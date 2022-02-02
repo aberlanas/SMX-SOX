@@ -38,14 +38,11 @@ configuración de la red es:
 
 | Campo | Valor |
 | ----- | ----- |
-| IP|  192.168.1.59 |
+| IP|  192.168.42.40 |
 | MASK | 255.255.255.0|
-| Gateway | 192.168.1.1|
-| DNS Server | 127.0.0.1 |
-| DNS Server 2 | 1.1.1.1 |
+| Gateway | 192.168.42.1|
 
 Vosotros debéis tener clara *vuestra* configuración de la red.
-
 
 ## Configuración del Servidor de Dominio
 
@@ -129,4 +126,3 @@ Unid la máquina Windows 10 al Dominio recién creado y comprobad que los usuari
 
 Avisad al profesor cuando lo tengáis.
 
-#  
