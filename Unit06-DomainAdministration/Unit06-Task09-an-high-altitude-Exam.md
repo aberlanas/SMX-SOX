@@ -87,11 +87,10 @@ Read from a file the data in a CVS format as is displayed at the picture (the ta
 ```shell
 user@machine:~$cat planes.csv | ./takeoff-runway-calculator.sh
 Model: 737-100 -> 2600 meters
-Model: 737-100 -> 2600 meters
-Model: 737-400 -> 2200 meters
-Model: 737-500 -> 2300 meters
-Model: 737-600 -> 2400 meters
-Model: 737-700 -> 2500 meters
+Model: 737-400 -> 2600 meters
+Model: 737-500 -> 2200 meters
+Model: 737-600 -> 2300 meters
+Model: 737-700 -> 2400 meters
 Model: 737-700ER -> 2500 meters
 Model: 737-800 -> 2500 meters
 Model: 737-900ER -> 2700 meters
