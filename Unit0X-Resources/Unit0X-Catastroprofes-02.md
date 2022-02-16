@@ -1,5 +1,5 @@
 ---
-title: "[ La Gran Guerra ] - Angel"
+title: "Angel"
 author: [Patxi Sanchis, Javi Daroqui, César Tomás, Diego Carrasco y Angel Berlanas]
 date: "2022-02-17"
 subject: "Markdown"

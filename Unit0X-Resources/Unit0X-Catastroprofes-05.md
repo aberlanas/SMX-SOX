@@ -1,10 +1,10 @@
 ---
-title: "[ La Gran Guerra ] - Angel"
+title: "César Tomás"
 author: [Patxi Sanchis, Javi Daroqui, César Tomás, Diego Carrasco y Angel Berlanas]
 date: "2022-02-17"
 subject: "Markdown"
 keywords: [Markdown, Ficheros, Rendimiento]
-subtitle: "Franz Ferdinandz está en peligro"
+subtitle: "ligro"
 lang: "es"
 page-background: "../rsrc/backgrounds/background-senia-catastroprofes.pdf"
 page-background-opacity: 1

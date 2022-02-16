@@ -1,5 +1,5 @@
 ---
-title: "[ Catastroprofes ] Chernobyl"
+title: "Patxi Sanchis"
 author: [Patxi Sanchis, Javi Daroqui, César Tomás, Diego Carrasco y Angel Berlanas]
 date: "2022-02-17"
 subject: "Markdown"
@@ -40,7 +40,7 @@ Os necesito.
 
 ```
 
-Lo primero es acceder al servidor de StalinOS, y para ello debéis conseguir el **código**.
+Lo primero es acceder al servidor de StalinOS, y para ello debéis conseguir el **código**. Este código fué separado en varias ubicaciones siguiendo las instrucciones del alto mando Soviético (tal vez sugeridas, por el famoso CronoTerrorista *SCP-S0V13T*). 
 
 Para poder entrar al servidor, debéis hacer un FTP a esta dirección:
 
@@ -48,16 +48,31 @@ Para poder entrar al servidor, debéis hacer un FTP a esta dirección:
 192.168.5.247
 ```
 
-el usuario será `sexyXX` donde `XX` será vuestra posición dentro del aula:
+A continuación se muestra La lista de usuarios permitidos por el servidor ha sido conseguida poniendo en peligro la vida del agente doble:
+
+El usuario será `sexyXX` donde `XX` será vuestra posición dentro del aula:
 
 * sexy01
 * sexy02
-* ...
-* sexy19
+* sexy03
+* sexy04
+* sexy05
+* sexy06
+* sexy07
+* sexy08
+* sexy09
+* sexy10
+* sexy11
+* sexy12
+* sexy13
+* sexy14
+* sexy15
+* sexy16
+* sexy17
 
 Y la contraseña, la misma.
 
-Con lo *encontrado*, deberéis acceder al `ftp` de :
+*Recordad*: Cada usuario tiene una pieza de la Clave.
 
 ```
 stalin@192.168.4.247

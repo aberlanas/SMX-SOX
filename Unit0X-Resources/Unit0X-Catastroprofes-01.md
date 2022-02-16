@@ -1,5 +1,5 @@
 ---
-title: " 8:00-8:50 - Diego Carrasco"
+title: " Diego Carrasco"
 author: [Patxi Sanchis, Javi Daroqui, César Tomás, Diego Carrasco y Angel Berlanas]
 date: "2022-02-17"
 subject: "Markdown"
@@ -88,13 +88,7 @@ Debéis desencriptar el mensaje, teniendo en cuenta que dependiendo del segundo 
 Ignorar los carácteres que no pertenezcan al alfabeto siguiente:
 A 	B 	C 	D 	E 	F 	G 	H 	I 	J 	K 	L 	M 	N 	O 	P 	Q 	R 	S 	T 	U 	V 	W 	X 	Y 	Z
 
-
-```
-SOLUCION:
-1944-02-03 08:31:41.0773701 Destino uno: Colonia
-1944-02-03 09:22:23.0156381 Destino dos: Hamburgo
-1944-02-03 11:31:11.0079281 Destino tres: Stuttgart
-```
+**BONUS**: Haced un script que lo haga en vez de hacerlo manualmente.
 
 \newpage
 ## Frente 02: Espiar
@@ -104,9 +98,9 @@ SOLUCION:
 Habéis conseguido el acceso al ordenador central de un alto mando alemán. Debéis sustraer los datos de las armas de que se van a enviar, y realizar una copia en un servidor seguro. Tenéis que usar una conexión segura mediante `SCP`, para enviar los siguientes ficheros, previamente comprimidos con la contraseña `ENIGMA`.
 
 ```shell
-/tmp/artilleria/Flak_88.txt
-/tmp/artilleria/Granatwerfer_80mm.txt
-/tmp/artilleria/Feldhaubitze_18.txt
+/tmp/artilleria/Flak_88.pdf
+/tmp/artilleria/Granatwerfer_42.pdf
+/tmp/artilleria/Feldhaubitze_10.pdf
 ```
 
 El fichero debe tener el siguiente formato `esp_mort_FECHA.tar.gz`, donde `FECHA` debe contener la fecha actual en formato "AAAAMMDD".
