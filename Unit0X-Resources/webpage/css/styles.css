@@ -1,0 +1,128 @@
+body {
+
+    background-color: #000000;
+    color: rgba(255, 255, 255, 0.673);
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+header {
+    text-align: center;
+}
+
+nav {
+    height: 50px;
+    margin: 0 2%;
+}
+
+p{
+    
+}
+
+#logo {
+    max-height: 100%;
+}
+
+#menu {
+    float: right;
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+#menu ul, #menu ul li {
+    display: inline;
+    list-style: none;
+    padding: 5;
+    margin: 15;
+}
+
+#menu ul li:hover {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.673);
+}
+
+
+h1 {
+    font-family: 'Avengeance Heroic Avenger', sans-serif;
+    font-size: 10em;
+    background: linear-gradient(yellow, red);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+
+main {
+
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+hr {
+    margin-top: 40px;
+}
+
+.izq, .der {
+    display: inline-block;
+    width: 48%
+}
+
+.izq {
+    padding-right: 1%;
+
+}
+
+.der {
+    margin-left: 1%;
+}
+
+.img {
+    width: 400px;
+    height: 400px;
+    float: right;
+    overflow: hidden;
+    transition: transform .3s ease-in-out; 
+}
+
+.img:hover{
+    transform: scale(1.1); 
+}
+
+.text {
+
+    height: 400px;
+    float: left;
+    overflow: hidden;
+    text-align: justify;
+}
+
+
+.profe {
+    margin:50px;
+}
+
+/* #slide {
+    position: relative;
+    left: -1000px;
+    background: blue;
+    transition: 1s;
+}
+
+.izq:hover #slide {
+    transition: 1s ease-in-out;
+    left: 0;
+} */
+
+
+
+footer p {
+    letter-spacing: .15em;
+    text-transform: none;
+    border: none;
+    font-size: 1.7ex;
+    margin: 30px
+}
