@@ -31,7 +31,7 @@ Una vez configurado y conectadas las máquinas siguientes (las que tengáis inst
 - Windows Server
 - Windows 10 
 
-Definir para los siguientes servicios cuáles serían vuestras "alertas". 
+Definir para los siguientes servicios cuáles serían vuestras "alertas", en GNU/LinuX: 
 
  - DHCP
  - SSH
@@ -40,9 +40,15 @@ Definir para los siguientes servicios cuáles serían vuestras "alertas".
  - Apache/NGnx
  - Postfix
 
-Configurad el *Nagios* para que os envíe correos a vuestro correo y configurad un `Bot` de Telegram para mayor interactividad.
+Si alguien se anima a configurar plugins de Nagios para algún servicio en Windows, será bienvenido.
+
+Recordad que debéis configurar el *Nagios* para que os envíe correos a vuestro correo y configurad un `Bot` de Telegram para mayor interactividad.
+
+![Bot Father](imgs/botfather.png)\
 
 Con todo el proceso realizado. Preparar una Pechakucha, que es una presentación de 20 diapositivas cada una de las cuales debe estar 20 segundos en pantalla mientras habláis, en la que nos expondréis a Patxi y a mi todas las alertas configuradas y cuáles han sido vuestras motivaciones.
+
+![Pecha Kucha](imgs/pechakucha.png)\
 
 **ENTREGA EL JUEVES 24 durante las 4 primeras horas**
 
