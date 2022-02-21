@@ -31,8 +31,13 @@ UD03_FILES:=$(wildcard $(UNIT03_DIR)/*.md)
 UNIT06_DIR:=$(shell readlink -f Unit06-DomainAdministration)
 UD06_FILES:=$(wildcard $(UNIT06_DIR)/*.md)
 
+UNIT07_DIR:=$(shell readlink -f Unit07-Nagios-and-Beyond)
+UD07_FILES:=$(wildcard $(UNIT07_DIR/*.md))
+
 UNIT0X_DIR:=$(shell readlink -f Unit0X-Resources)
 UD0X_FILES:=$(wildcard $(UNIT0X_DIR)/*.md)
+
+
 
 # RULES
 
@@ -104,6 +109,16 @@ unit-06: clean files
     	echo " - ${LIGHTYELLOW} Working${RESET} with: `basename $$f`";\
 		cd $(UNIT06_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
     done	
+
+unit-07: clean files
+
+	@echo " [${BLUE} * Step : Compiling PDF ${RESET}] "
+	@echo " [${LIGHTGREEN} Unit 07 - Nagios and Beyond ${RESET}] "
+
+	@for f in $(UD07_FILES); do \
+    	echo " - ${LIGHTYELLOW} Working${RESET} with: `basename $$f`";\
+		cd $(UNIT07_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
+        done	
 
 
 
