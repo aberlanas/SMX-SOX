@@ -1,7 +1,7 @@
 ---
 title: \[Nagios\] - Nagios Pechakucha
 subtitle: "Unit 07"
-author: Angel Berlanas Vicente
+author: Patxi Sanchis y Angel Berlanas
 header-includes: |
 lang: es-ES
 keywords: [SMX, SOX]
@@ -44,6 +44,14 @@ Configurad el *Nagios* para que os envíe correos a vuestro correo y configurad 
 
 Con todo el proceso realizado. Preparar una Pechakucha, que es una presentación de 20 diapositivas cada una de las cuales debe estar 20 segundos en pantalla mientras habláis, en la que nos expondréis a Patxi y a mi todas las alertas configuradas y cuáles han sido vuestras motivaciones.
 
+**ENTREGA EL JUEVES 24 durante las 4 primeras horas**
+
+El orden de presentación será decidido por *random.org*
+
+En la página siguiente contáis con los puntos que serán tenidos en cuenta.
+
+\newpage
+# Puntuación
 Se tendrá en cuenta tanto en SOX como en SEX.
 
 Puntos a valorar:
@@ -56,5 +64,7 @@ Puntos a valorar:
 | Hablar fluido | x | x |
 | En Inglés | x | - | 
 | Corrección | x | x | 
+| Estilo | x | x |
+| Profesionalidad | x | x |
 
 
