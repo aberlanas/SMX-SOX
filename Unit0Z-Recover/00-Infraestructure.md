@@ -1,11 +1,12 @@
 ---
 title: UD0Z Infraestructure
-subtitle: "Operating Systems Required"
+subtitle: "The Last Stand"
 author: Angel Berlanas Vicente
 header-includes: |
 lang: es-ES
 keywords: [SMX, SOX]
 titlepage: true,
+colorlinks: true,
 page-background: "../rsrc/backgrounds/background-senia.pdf"
 page-background-opacity: 1
 titlepage-text-color: "FFFFFF"
@@ -46,6 +47,7 @@ All of them must be created with the NAT Network present also in the other modul
 
 We must use this passwords for the local admin users.
 
+\newpage
 ## IP and DNS
 
 You must configure the DNSServer (BIND) make the next reserves for the machines on the NAT Network:

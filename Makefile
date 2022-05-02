@@ -11,7 +11,7 @@ RESET= \e[0m
 
 # Templates 
 TEMPLATE_TEX_PD="../rsrc/templates/eisvogel.tex"
-PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex"
+PANDOC_OPTIONS="-V fontsize=12pt -V mainfont="Ubuntu" --pdf-engine=xelatex "
 TEMPLATE_TEX_TASK="../rsrc/templates/eisvogel.tex"
 
 # PDFS
@@ -36,6 +36,8 @@ UD07_FILES:=$(wildcard $(UNIT07_DIR)/*.md)
 UNIT0X_DIR:=$(shell readlink -f Unit0X-Resources)
 UD0X_FILES:=$(wildcard $(UNIT0X_DIR)/*.md)
 
+UNIT0Z_DIR:=$(shell readlink -f Unit0Z-Recover)
+UD0Z_FILES:=$(wildcard $(UNIT0Z_DIR)/*.md)
 
 
 # RULES
@@ -117,6 +119,17 @@ unit-07: clean files
 		cd $(UNIT07_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
         done	
 
+
+unit-0z: clean files
+
+	@echo " [${BLUE} * Step : Compiling PDF ${RESET}] "
+	@echo " [${LIGHTGREEN} Unit 0Z - Recover 2022 ${RESET}] "
+
+	@for f in $(UD0Z_FILES); do \
+		#echo $$f ;\
+    	echo " - ${LIGHTYELLOW} Working${RESET} with: `basename $$f`";\
+		cd $(UNIT0Z_DIR) && pandoc $$f --template $(TEMPLATE_TEX_TASK) $(PANDOC_OPTIONS) --from markdown --listings -o $(PDF_PATH)/`basename $$f .md`.pdf ;\
+        done	
 
 
 
