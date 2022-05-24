@@ -34,7 +34,7 @@ UNIT07_DIR:=$(shell readlink -f Unit07-Nagios-and-Beyond)
 UD07_FILES:=$(wildcard $(UNIT07_DIR)/*.md)
 
 UNIT0X_DIR:=$(shell readlink -f Unit0X-Resources)
-UD0X_FILES:=$(wildcard $(UNIT0X_DIR)/*.md)
+UD0X_FILES:=$(wildcard $(UNIT0X_DIR)/Unit0X-Eu*.md)
 
 UNIT0Z_DIR:=$(shell readlink -f Unit0Z-Recover)
 UD0Z_FILES:=$(wildcard $(UNIT0Z_DIR)/*.md)
